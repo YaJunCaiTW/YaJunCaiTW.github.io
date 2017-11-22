@@ -17,6 +17,12 @@
 .Contact{
     z-index: 100;
 }
+.HeavyTextShadow{/*DeskNavBar.js用*/
+    text-shadow: 1px 1px 1px #1F0F08;
+}
+.Brightness{/*DeskNavBar.js用*/
+    filter: brightness(150%);
+}
 
 
 .ServiceSideBarItem{
