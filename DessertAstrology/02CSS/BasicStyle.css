@@ -1,0 +1,611 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid lightcoral; */
+    font-family: 微軟正黑體;
+    /* text-overflow: ellipsis; */
+    margin: 0;
+    padding: 0;
+}
+
+
+.DeskNav{
+    width: 75%;
+    position: fixed;
+    left:12.5%;
+    display: flex;
+    z-index: 99;
+}
+.NavItem{
+    flex:1;
+    line-height: 7.685vh;
+    height:7.685vh;
+    background-color: #E7D168;
+    cursor: pointer;
+    box-shadow:  0 0 8px 2px #F9F0CD ;
+    overflow: hidden;
+    /* font-size: calc(7.685vh * 0.6); */
+    font-weight: border;
+    text-align: justify;
+    text-justify: auto;
+    text-align-last: justify;
+    padding: 0 15px;
+}
+.Logo{
+    flex: 2;
+    line-height: 12.5vh;
+    height:12.5vh;
+    background: #CE600A url("/01Materials/HeadLogo.jpg") no-repeat scroll center;
+    background-size: contain;
+}
+
+.HeaderDiv{
+    width: 100%;
+    height: 100vh;
+    background: transparent url("/01Materials/HeadPic.jpg") no-repeat scroll center;
+    background-size: cover;
+}
+
+.ServiceDiv{
+    width: 100%;
+    height: 100vh;
+    background: transparent url("/01Materials/ServiceBG.jpg") no-repeat scroll center;
+    background-size: cover;
+    position: relative;
+}
+.ServiceSideBar{
+    width: 8.438%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:25vh;
+    left:8.333%;
+    text-align: center; 
+    /* line-height: 100% */
+}
+.ServiceSideBarBG{
+    width:50%;
+    height:100%;
+    background: #5A1D03;
+    position: absolute;
+    z-index: 1;
+}
+.ServiceSideBarItem{
+    width: 50%; 
+    flex:1;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    background-color: #E7D168;
+    color: black;
+    font-weight: bold;
+    /* font-size: 20pt;
+    line-height: 30pt; */
+    cursor: pointer;
+}
+.ServiceSideBarItem1Pos{
+    align-self:flex-end;
+}
+.ServiceSideBarItem2Pos{
+    align-self:flex-start;
+}
+.ServiceSideBarItem3Pos{
+    align-self:flex-start;
+}
+#ServiceSideBarItem1{
+    flex: 1;
+}
+#ServiceSideBarItem2{
+    flex: 1;
+}
+#ServiceSideBarItem3{
+    flex: 1;
+}
+.ServiceCircleBtn{
+    width:41.666%;
+    position: absolute;
+    right: 25%;
+    top: 4.6875%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between; 
+    text-align: center;
+    
+}
+.ServiceCircleBtnItem{
+    flex:0 1 8.333vh; 
+    /* border: 1px dotted lightcoral; */
+    border-radius: 50%;
+    width: 8.333vh;
+    height:8.333vh;
+    background-color: #942E01;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Donut{
+    line-height: 8.333vh;
+    transform: scale(1.3);
+    background: #E7D168 url("/01Materials/04ServicePic/02Icon/DONUT_ICON.svg") no-repeat local center;
+    background-size: 80%;
+}
+.Cake{
+    line-height: 8.333vh;
+}
+.Coffee{
+    line-height: 8.333vh;
+}
+.Tea{
+    line-height: 8.333vh;
+}
+.CupCake2Line{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.ServiceContent{
+    position: absolute;
+    width:75%;
+    height:50%;
+    top:25%;
+    left:16.771%;
+}
+.ServiceContentLeftBtn{
+    width: 11.111vh;
+    height: 11.111vh;
+    /* border: 1px dotted lightcoral; */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(100% - 11.111vh);
+    background: transparent url("/01Materials/04ServicePic/02Icon/CircleArrowBtn.jpg") no-repeat local center;
+    background-size:cover;
+    cursor: pointer;
+}
+.ServiceContentRightBtn{
+    width: 11.111vh;
+    height: 11.111vh;
+    /* border: 1px dotted lightcoral; */
+    border-radius: 50%;
+    position: absolute;
+    top: calc(100% - 11.111vh);
+    left: calc(100% - 11.111vh);
+    background: transparent url("/01Materials/04ServicePic/02Icon/CircleArrowBtn.jpg") no-repeat local center;
+    background-size:cover;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+.ServiceContentCards{
+    width: 77.778%;
+    height:100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.ServiceContentCardsSlideArea{
+    width:100%;
+    height: 100%;
+    /* border: 1px solid white; */
+    position: absolute;
+    left:0%; /*用此項控制左右，35%一項目 */
+}
+
+.ServiceContentCardsItem{
+    width:30%;
+    height: 100%;
+    position: absolute;
+    /* border: 2px solid black; */
+}
+.Card1Pos{
+    left:0;
+}
+#Card1Pic{
+    background: transparent url("/01Materials/04ServicePic/01Donut/CHOCO_DONUT.jpg") no-repeat local center top;
+    background-size:cover;
+}
+.Card2Pos{
+    left:35%
+}
+#Card2Pic{
+    background: transparent url("/01Materials/04ServicePic/01Donut/STRAW_DONUT.jpg") no-repeat local center top;
+    background-size:cover;
+}
+.Card3Pos{
+    left:70%
+}
+#Card3Pic{
+
+    background: transparent url("/01Materials/04ServicePic/01Donut/ORIGINAL_DONUT.jpg") no-repeat local center top;
+    background-size:cover;
+    
+}
+.Card4Pos{
+    left:105%
+}
+.Card5Pos{
+    left:140%
+}
+.ServiceContentCardsItemTop{
+    width: 100%;
+    height: 61.803%;
+    position: absolute;
+}
+.ServiceContentCardsItemBottom{
+    width: 100%;
+    height: 38.197%;
+    position: absolute;
+    bottom:0;
+    background-color: #CE600A;
+}
+.ServiceContentCardsItemBottomTextTitle{
+    width: 90%;
+    height: 30%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: calc(100vh * 0.5 * 0.38197 * 0.3);
+    font-size:calc(100vh * 0.5 * 0.38197 * 0.3 * 0.8);
+    font-weight: bold;
+    position: absolute;
+    left:5%;
+}
+.ServiceContentCardsItemBottomTextP{
+    width: 90%;
+    height: 60%;
+    position: absolute;
+    left:5%;
+    bottom:0;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.InfoDiv{
+    width: 100%;
+    height: 100vh;
+    background: transparent url("/01Materials/StarsBG.jpg") no-repeat scroll center;
+    background-size: cover;
+    position: relative; 
+}
+.InfoLeft{
+    width :41.667%;
+    height: 75%;
+    position: absolute;
+    left: 8.333%;
+    top: 12.5%
+}
+.InfoLeftLatest{
+    width:61.803%;
+    height: 100%;
+    position: absolute;
+}
+.InfoLeftLatestPic{
+    width: 95%;
+    height:61.803%;
+    background: #5A1D03 url('/01Materials/Opening.png') no-repeat local center;
+    background-size: contain;
+    margin: 0 auto;
+}
+.InfoLeftLatestText{
+    width: 95%;
+    height:38.197%;
+    margin: 0 auto;
+    background-color: #CE600A;
+    position: absolute;
+    left:2.5%;
+}
+.InfoLeftMid{
+    width:38.197%;
+    height: 60.553%;
+    position: absolute;
+    left:61.803%;
+}
+.InfoLeftMidPic{
+    width: 100%;
+    height:61.803%;
+     background: #5A1D03 url('/01Materials/Hiring.jpg') no-repeat local center;
+    background-size: cover;
+}
+.InfoLeftMidText{
+    width: 100%;
+    height:38.197%;
+    background-color: #CE600A;
+    position: absolute;
+}
+.InfoLeftOld{
+    width:38.197%;
+    height:36.947%;
+    position: absolute;
+    bottom:0;
+    left:61.803%;
+}
+.InfoLeftOldPic{
+    width: 100%;
+    height:61.803%;
+    background: #5A1D03 url('/01Materials/ComingSoon.jpg') no-repeat local center;
+    background-size: cover;
+}
+.InfoLeftOldText{
+    width: 100%;
+    height:38.197%;
+    background-color: #CE600A;
+    position: absolute;
+}
+.InfoLeftTextTitle{
+    width:90%;
+    height:30%;
+    margin:0 auto;
+    position: absolute;
+    left: 5%;
+}
+.InfoLeftTextP{
+    width:90%;
+    height:60%;
+    margin:0 auto;
+    position: absolute;
+    bottom:0;
+    left: 5%;
+    text-align: justify;
+}
+#LatestTitle{
+    line-height: calc(100vh *0.75 *0.38197 *0.3 );
+    font-size: calc(100vh *0.75 *0.38197 *0.3 * 0.8);
+    font-weight: bold;
+}
+#LatestP{
+    font-size: calc(100vh *0.75 *0.38197 *0.3 *0.8 *0.5);
+    font-weight: bold;
+}
+#MidTitle{
+    line-height: calc(100vh *0.75 *0.60553 *0.38197 *0.3 );
+    font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8);
+    font-weight: bold;
+}
+#MidP{
+    font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8 *0.5);
+    font-weight: bold;
+}
+#OldTitle{
+    line-height: calc(100vh *0.75 *0.36947 *0.38197 *0.3 );
+    font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8);
+    font-weight: bold;
+}
+#OldP{
+    font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8 *0.5);
+    font-weight: bold;
+}
+.InfoRight{/*圓圈請參閱Circle.css*/
+    width :41.667%;
+    height: 75%;
+    position: absolute;
+    right: 8.333%;
+    top: 12.5%
+}
+
+.TeamDiv{
+    width: 100%;
+    height: 100vh;
+    background: transparent url("/01Materials/ServiceBG.jpg") no-repeat scroll center;
+    background-size: cover;
+    position: relative;
+}
+.LeftPeople{
+    width: 40%;
+    height:47.685%;
+    position: absolute;
+    left:8.333%;
+    top:26.157%;
+}
+.LeftPeoplePic{
+    width:61.803%;
+    height:100%;
+    background: transparent url("/01Materials/02InfoDivPic/Diviner.jpg") no-repeat scroll center;
+    background-size: cover;
+    position: absolute;
+}
+.LeftPeopleInfo{
+    width:38.197%;
+    height:100%;
+    position: absolute;
+    left:61.803%;
+}
+.LeftPeopleName{
+    width:100%;
+    height:38.197%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    background-color: #62BBD3
+    
+}
+.LeftPeopleCHTTitle{
+    width: 100%;
+    line-height: calc(47.685vh  *0.38197 *0.5);
+    font-size:calc(47.685vh  *0.38197 *0.5 *0.55);
+}
+.LeftPeopleENGTitle{
+    width: 100%;
+    height: 50%;
+    line-height: calc(47.685vh  *0.38197 *0.5 *0.55);
+    font-size:calc(47.685vh  *0.38197 *0.5 *0.6);
+}
+.LeftPeopleText{
+    width: 100%;
+    height:61.803%;
+    position: absolute;
+    bottom:0;
+    text-align: justify;
+    padding: 0 10%;
+    background-color: #29ABE2;
+}
+.RightPeople{
+    width: 40%;
+    height:47.685%;
+    position: absolute;
+    right:8.333%;
+    top:26.157%;
+}
+.RightPeopleInfo{
+    width:38.197%;
+    height:100%;
+    position: absolute;
+}
+.RightPeopleName{
+    width:100%;
+    height:38.197%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    background-color: #E7D168;
+}
+.RightPeopleCHTTitle{
+    width: 100%;
+    height: 50%;
+    line-height: calc(47.685vh  *0.38197 *0.5);
+    font-size:calc(47.685vh  *0.38197 *0.5 *0.55);
+}
+.RightPeopleENGTitle{
+    width: 100%;
+    height: 50%;
+    line-height: calc(47.685vh  *0.38197 *0.5 *0.55);
+    font-size:calc(47.685vh  *0.38197 *0.5 *0.6);
+}
+.RightPeopleText{
+    width: 100%;
+    height:61.803%;
+    position: absolute;
+    bottom:0;
+    text-align: justify;
+    padding: 0 10%;
+    background-color: #CE600A;
+}
+.RightPeoplePic{
+    width:61.803%;
+    height:100%;
+    background: transparent url("/01Materials/02InfoDivPic/PastryChef.jpg") no-repeat scroll center;
+    background-size: cover;
+    position: absolute;
+    left: 38.197%;
+}
+
+.ContactDiv{
+    width: 100%;
+    height: 100vh;
+    background: transparent url("/01Materials/StarsBG.jpg") no-repeat scroll center;
+    background-size: cover;
+    position: relative;  
+}
+.ContactContainer{
+    width: 83.333%;
+    height:44.722%;
+    position: absolute;
+    left: 8.333%;
+    top:10.37%;
+    background-color: #e7d168;
+}
+.ContactMap{
+    width: 38.197%;
+    height: 100%;
+    position: absolute;
+}
+.ContactInfo{
+    width: 61.803%;
+    height: 100%;
+    position: absolute;
+    left:38.197%;;
+}
+.ContactAdd{
+    width: 16.667vw;
+    /* height: 25.673%; */
+    position: absolute;
+    top:30%;
+    left:35.324%;
+    text-align: center;
+    line-height: calc(100vh * 0.44722 * 0.25673);   
+    font-size:  calc(100vh * 0.44722 * 0.25673 * 0.3);
+    font-weight: bold
+}
+.ContactTel{
+    width: 16.667vw;
+    height: 17.184%;
+    position: absolute;
+    top:55.673%;
+    left:35.324%  ;
+    text-align: center;
+    line-height: calc(100vh * 0.44722 * 0.17184);   
+    font-size:  calc(100vh * 0.44722 * 0.17184 * 0.5);
+    letter-spacing: calc(16.667vw / 150.0);
+    font-weight: bold
+}
+.ContactGroup{
+    width: 16.667vw;
+    height:15.079%;
+    position: absolute;
+    bottom: 12.064%;
+    left:35.324%  ;
+    display: flex;
+    justify-content: space-between;
+}
+.ContactFB{
+    width: calc(44.722vh * 0.15079);
+    height: 100%;
+    flex: 0 1 calc(44.722vh * 0.15079);
+    background: transparent url("/01Materials/03ContactPic/FB_LOGO.svg") no-repeat scroll center;
+    background-size: cover;
+
+}
+.ContactIG{
+    width: calc(44.722vh * 0.15079);
+    height: 100%;
+    flex: 0 1 calc(44.722vh * 0.15079);
+    background: transparent url("/01Materials/03ContactPic/IG_LOGO.svg") no-repeat scroll center;
+    background-size: cover;
+
+}
+.ContactFooter{
+    width: 83.333%;
+    height:39.352%;
+    position: absolute;
+    left: 8.333%;
+    bottom: 0;
+}
+.ContactFooterSiteMap{
+    width: 100%;
+    height: 56.941%;
+    display: flex;
+    justify-content: space-between;
+}
+.ContactFooterSiteMapItem{
+    width:12.6875%;
+    height: 100%;
+    flex: 0 1 calc(100vw * 0.83333 * 0.126875);
+}
+.ContactFooterSiteMapTitle{
+    width: 100%;
+    height: 38.197%;
+    text-align: center;
+    line-height: calc(39.352vh *0.56941 *0.38197);
+    font-size: calc(39.352vh *0.56941 *0.38197 *0.5);
+    font-weight: bold
+}
+.ContactFooterSiteMapContent{
+    width: 100%;
+    height: 61.803%;
+    padding: 10%;
+}
+.YellowSiteMapItemTitle{
+    background-color: #d29a26;
+}
+.YellowSiteMapItemContent{
+    background-color: #e7d168;
+}
+.BlueSiteMapItemTitle{
+    background-color: #62bbd3;
+}
+.BlueSiteMapItemContent{
+    background-color: #b2e6f7;
+}
+.ContactFooterCopyRight{
+    text-align: center;
+    line-height: calc(100vh * 0.39352 * 0.43059);
+    color:white;
+}
