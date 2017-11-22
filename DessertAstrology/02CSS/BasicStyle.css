@@ -9,9 +9,9 @@ h1, h2, h3, h4, h5, h6, body, html{
     margin:0;
     padding:0;
 }
-body{
-    /* font-size: 90%; */
-}
+/* body{
+ font-size: 150%;
+} */
 p{
     margin: 0;
 }
@@ -32,7 +32,7 @@ p{
     cursor: pointer;
     overflow: hidden;
     /* font-size: calc(7.685vh * 0.6); */
-    font-weight: border;
+    font-weight: bold;
     text-align: justify;
     text-justify: auto;
     text-align-last: justify;
@@ -557,12 +557,12 @@ p{
     position: absolute;
     top:55.673%;
     left:35.324%  ;
-    text-align: justify;
-    text-align-last: justify;
+    text-align: center;
+    text-align-last: center;
     text-justify: auto;
     line-height: calc(100vh * 0.44722 * 0.17184);   
     /* font-size:  calc(100vh * 0.44722 * 0.17184 * 0.5); */
-    letter-spacing: calc(16.667vw / 40);
+    letter-spacing: calc(16.667vw / 32);
     font-weight: bold
 }
 .ContactGroup{
