@@ -52,6 +52,14 @@ p{
     background: transparent url("../01Materials/HeadPic.jpg") no-repeat scroll center;
     background-size: cover;
 }
+.FakeDivForService{
+    width: 100%;
+    height:12.5vh;
+    position: absolute;
+    bottom:0;
+    /* border:1px solid black; */
+    opacity: 0;
+}
 
 .ServiceDiv{
     width: 100%;
@@ -628,7 +636,7 @@ p{
     width: 60%;
     text-align: justify;
     text-align-last: justify;
-    text-justify: auto;
+    
     font-weight: bold;
 }
 .YellowSiteMapItemTitle{
