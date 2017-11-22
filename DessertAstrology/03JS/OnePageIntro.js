@@ -8,7 +8,7 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
     }
     else{
         var NewZodiacCHTNameArray = ZodiacCHTNameArray.slice(0, 12);        //找出未轉前在頂端的星座，順時針排序
-        switch (ControlObj.innerHTML){
+        switch (ControlObj.getElementsByTagName("h1")[0].innerText){
             case "獅子座":
                 NewZodiacCHTNameArray = ZodiacCHTNameArray.slice(0, 12);
                 break;
@@ -68,9 +68,9 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
                 NewZodiacCHTNameArray = NewZodiacCHTNameArray.concat(ZodiacCHTNameArray);
                 break;
         }
-        console.log(NewZodiacCHTNameArray);
+        // console.log(NewZodiacCHTNameArray);
 
-        ControlObj.innerHTML = ZodiacCHTName;
+        ControlObj.innerHTML = "<h1>"+ZodiacCHTName+"</h1>";
         ControlObj = document.getElementById("CircleOutDegree");
         CircleOutDeg = ControlObj.innerHTML;                    //轉盤度數
         ControlObj = document.getElementById("CircleTextContainer");
@@ -387,7 +387,7 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
 
         }
         // ControlObj = document.getElementsByClassName("CirclSmalleBasic");
-        CircleRotateText(CircleOutDeg);
+        CircleRotateText(CircleOutDeg, ZodiacCHTName);
 
         ControlObj = document.getElementById("CircleOutDegree");
         ControlObj.innerHTML = CircleOutDeg ;
@@ -397,50 +397,58 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
     
 }
 
-function CircleRotateText(RotateTextDegree) {
+function CircleRotateText(RotateTextDegree, ZodiacCHTName) {
     ControlObj1 = document.getElementsByClassName("CirclSmalleBasic");
-    // switch (FinalZodiacCHTName) {
-    //     case "獅子座": 
-    //         RotateTextDegree = 0;
-    //         break;
-    //     case "處女座":
-    //         RotateTextDegree = 30;
-    //         break;
-    //     case "天秤座":
-    //         RotateTextDegree = 60;
-    //         break;
-    //     case "天蠍座":
-    //         RotateTextDegree = 90;
-    //         break;
-    //     case "人馬座":
-    //         RotateTextDegree = 120;
-    //         break;
-    //     case "魔羯座":
-    //         RotateTextDegree = 150;
-    //         break;
-    //     case "水瓶座":
-    //         RotateTextDegree = 180;
-    //         break;
-    //     case "雙魚座":
-    //         RotateTextDegree = 210;
-    //         break;
-    //     case "白羊座":
-    //         RotateTextDegree = 240;
-    //         break;
-    //     case "金牛座":
-    //         RotateTextDegree = 270;
-    //         break;
-    //     case "雙子座":
-    //         RotateTextDegree = 300;
-    //         break;
-    //     case "巨蟹座":
-    //         RotateTextDegree = 330;
-    //         break;
-    // }
+    var ExpandNumber = 0;
+    switch (ZodiacCHTName) {
+        case "獅子座": 
+            ExpandNumber = 0;
+            break;
+        case "處女座":
+            ExpandNumber = 11;
+            break;
+        case "天秤座":
+            ExpandNumber = 10;
+            break;
+        case "天蠍座":
+            ExpandNumber = 9;
+            break;
+        case "人馬座":
+            ExpandNumber = 8;
+            break;
+        case "魔羯座":
+            ExpandNumber = 7;
+            break;
+        case "水瓶座":
+            ExpandNumber = 6;
+            break;
+        case "雙魚座":
+            ExpandNumber = 5;
+            break;
+        case "白羊座":
+            ExpandNumber = 4;
+            break;
+        case "金牛座":
+            ExpandNumber = 3;
+            break;
+        case "雙子座":
+            ExpandNumber = 2;
+            break;
+        case "巨蟹座":
+            ExpandNumber = 1;
+            break;
+    }
 
     RotateTextDegree = RotateTextDegree * -1;
     for (i = 0; i < ControlObj1.length; i++){
-        ControlObj1[i].style.transform = "translate(-50% , -50%) rotate(" + RotateTextDegree + "deg)";
+        if (i === ExpandNumber){
+            ControlObj1[i].style.transform = "translate(-50% , -50%) rotate(" + RotateTextDegree + "deg) scale(1.0)";
+        }
+        else{
+            ControlObj1[i].style.transform = "translate(-50% , -50%) rotate(" + RotateTextDegree + "deg) scale(1.0)";
+        }
+        
+    
     }    
 }
 

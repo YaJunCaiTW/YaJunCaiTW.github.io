@@ -3,8 +3,17 @@
     /* border: 1px solid lightcoral; */
     font-family: 微軟正黑體;
     /* text-overflow: ellipsis; */
+}
+
+h1, h2, h3, h4, h5, h6, body, html{
+    margin:0;
+    padding:0;
+}
+body{
+    /* font-size: 90%; */
+}
+p{
     margin: 0;
-    padding: 0;
 }
 
 
@@ -21,14 +30,13 @@
     height:7.685vh;
     background-color: #E7D168;
     cursor: pointer;
-    box-shadow:  0 0 8px 2px #F9F0CD ;
     overflow: hidden;
     /* font-size: calc(7.685vh * 0.6); */
     font-weight: border;
     text-align: justify;
     text-justify: auto;
     text-align-last: justify;
-    padding: 0 15px;
+    padding: 0 2.5%;
 }
 .Logo{
     flex: 2;
@@ -179,7 +187,7 @@
     width: 77.778%;
     height:100%;
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow-x: hidden; */
     position: relative;
 }
 .ServiceContentCardsSlideArea{
@@ -198,30 +206,40 @@
 }
 .Card1Pos{
     left:0;
+    opacity: 1;
+    display: block;
 }
 #Card1Pic{
     background: transparent url("../01Materials/04ServicePic/01Donut/CHOCO_DONUT.jpg") no-repeat local center top;
     background-size:cover;
 }
 .Card2Pos{
-    left:35%
+    left:35%;
+    opacity: 1;
+    display: block;
 }
 #Card2Pic{
     background: transparent url("../01Materials/04ServicePic/01Donut/STRAW_DONUT.jpg") no-repeat local center top;
     background-size:cover;
 }
 .Card3Pos{
-    left:70%
+    left:70%;
+    opacity: 1;
+    display: block;
 }
 #Card3Pic{
     background: transparent url("../01Materials/04ServicePic/01Donut/ORIGINAL_DONUT.jpg") no-repeat local center top;
     background-size:cover;
 }
 .Card4Pos{
-    left:105%
+    left:105%;
+    opacity: 0;
+    display: none;
 }
 .Card5Pos{
-    left:140%
+    left:140%;
+    opacity: 0;
+    display: none;
 }
 .ServiceContentCardsItemTop{
     width: 100%;
@@ -248,7 +266,7 @@
 }
 .ServiceContentCardsItemBottomTextP{
     width: 90%;
-    height: 60%;
+    height: 70%;
     position: absolute;
     left:5%;
     bottom:0;
@@ -279,25 +297,25 @@
     position: absolute;
 }
 .InfoLeftLatestPic{
-    width: 95%;
+    width: 100%;
     height:61.803%;
     background: #5A1D03 url('../01Materials/Opening.png') no-repeat local center;
     background-size: contain;
     margin: 0 auto;
 }
 .InfoLeftLatestText{
-    width: 95%;
+    width: 100%;
     height:38.197%;
     margin: 0 auto;
     background-color: #CE600A;
     position: absolute;
-    left:2.5%;
+    /* left:2.5%; */
 }
 .InfoLeftMid{
-    width:38.197%;
-    height: 60.553%;
+    width:calc(38.197% - 10px);
+    height: calc(61.803% - 5px);
     position: absolute;
-    left:61.803%;
+    left:Calc(61.803% + 10px);
 }
 .InfoLeftMidPic{
     width: 100%;
@@ -312,11 +330,11 @@
     position: absolute;
 }
 .InfoLeftOld{
-    width:38.197%;
-    height:36.947%;
+    width:calc(38.197% - 10px);
+    height:calc(38.197% - 5px);
     position: absolute;
     bottom:0;
-    left:61.803%;
+    left:Calc(61.803% + 10px);
 }
 .InfoLeftOldPic{
     width: 100%;
@@ -339,38 +357,40 @@
 }
 .InfoLeftTextP{
     width:90%;
-    height:60%;
+    height:70%;
     margin:0 auto;
     position: absolute;
     bottom:0;
     left: 5%;
     text-align: justify;
+    text-justify: auto;
+    text-align-last: left;
 }
 #LatestTitle{
     line-height: calc(100vh *0.75 *0.38197 *0.3 );
-    font-size: calc(100vh *0.75 *0.38197 *0.3 * 0.8);
+    /* font-size: calc(100vh *0.75 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
 #LatestP{
-    font-size: calc(100vh *0.75 *0.38197 *0.3 *0.8 *0.5);
+    /* font-size: calc(100vh *0.75 *0.38197 *0.3 *0.8 *0.5); */
     font-weight: bold;
 }
 #MidTitle{
     line-height: calc(100vh *0.75 *0.60553 *0.38197 *0.3 );
-    font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8);
+    /* font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
 #MidP{
-    font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8 *0.5);
+    /* font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8 *0.5); */
     font-weight: bold;
 }
 #OldTitle{
     line-height: calc(100vh *0.75 *0.36947 *0.38197 *0.3 );
-    font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8);
+    /* font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
 #OldP{
-    font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8 *0.5);
+    /* font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8 *0.5); */
     font-weight: bold;
 }
 .InfoRight{/*圓圈請參閱Circle.css*/
@@ -419,14 +439,15 @@
 }
 .LeftPeopleCHTTitle{
     width: 100%;
+    height:50%;
     line-height: calc(47.685vh  *0.38197 *0.5);
-    font-size:calc(47.685vh  *0.38197 *0.5 *0.55);
+    /* font-size:calc(47.685vh  *0.38197 *0.5 *0.55); */
 }
 .LeftPeopleENGTitle{
     width: 100%;
     height: 50%;
     line-height: calc(47.685vh  *0.38197 *0.5 *0.55);
-    font-size:calc(47.685vh  *0.38197 *0.5 *0.6);
+    /* font-size:calc(47.685vh  *0.38197 *0.5 *0.6); */
 }
 .LeftPeopleText{
     width: 100%;
@@ -434,7 +455,9 @@
     position: absolute;
     bottom:0;
     text-align: justify;
-    padding: 0 10%;
+    text-align-last: left;
+    text-justify: auto;
+    padding: 10%;
     background-color: #29ABE2;
 }
 .RightPeople{
@@ -461,13 +484,13 @@
     width: 100%;
     height: 50%;
     line-height: calc(47.685vh  *0.38197 *0.5);
-    font-size:calc(47.685vh  *0.38197 *0.5 *0.55);
+    /* font-size:calc(47.685vh  *0.38197 *0.5 *0.55); */
 }
 .RightPeopleENGTitle{
     width: 100%;
     height: 50%;
     line-height: calc(47.685vh  *0.38197 *0.5 *0.55);
-    font-size:calc(47.685vh  *0.38197 *0.5 *0.6);
+    /* font-size:calc(47.685vh  *0.38197 *0.5 *0.6); */
 }
 .RightPeopleText{
     width: 100%;
@@ -475,7 +498,9 @@
     position: absolute;
     bottom:0;
     text-align: justify;
-    padding: 0 10%;
+    text-align-last: left;
+    text-justify: auto;
+    padding: 10%;
     background-color: #CE600A;
 }
 .RightPeoplePic{
@@ -519,9 +544,11 @@
     position: absolute;
     top:30%;
     left:35.324%;
-    text-align: center;
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: auto;
     line-height: calc(100vh * 0.44722 * 0.25673);   
-    font-size:  calc(100vh * 0.44722 * 0.25673 * 0.3);
+    /* font-size:  calc(100vh * 0.44722 * 0.25673 * 0.3); */
     font-weight: bold
 }
 .ContactTel{
@@ -530,10 +557,12 @@
     position: absolute;
     top:55.673%;
     left:35.324%  ;
-    text-align: center;
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: auto;
     line-height: calc(100vh * 0.44722 * 0.17184);   
-    font-size:  calc(100vh * 0.44722 * 0.17184 * 0.5);
-    letter-spacing: calc(16.667vw / 150.0);
+    /* font-size:  calc(100vh * 0.44722 * 0.17184 * 0.5); */
+    letter-spacing: calc(16.667vw / 40);
     font-weight: bold
 }
 .ContactGroup{
@@ -582,15 +611,25 @@
 .ContactFooterSiteMapTitle{
     width: 100%;
     height: 38.197%;
-    text-align: center;
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: auto;
+    padding: 0 10%;
     line-height: calc(39.352vh *0.56941 *0.38197);
-    font-size: calc(39.352vh *0.56941 *0.38197 *0.5);
+    /* font-size: calc(39.352vh *0.56941 *0.38197 *0.5); */
     font-weight: bold
 }
 .ContactFooterSiteMapContent{
     width: 100%;
     height: 61.803%;
     padding: 10%;
+}
+.ContactFooterSiteMapContent p{
+    width: 60%;
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: auto;
+    font-weight: bold;
 }
 .YellowSiteMapItemTitle{
     background-color: #d29a26;
