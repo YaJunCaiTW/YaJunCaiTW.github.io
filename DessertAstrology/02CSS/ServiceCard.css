@@ -1,0 +1,38 @@
+#FoodAreaCard1Pic{
+    background: transparent url("../01Materials/04ServicePic/01Donut/CHOCO_DONUT.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#FoodAreaCard2Pic{
+    background: transparent url("../01Materials/04ServicePic/01Donut/STRAW_DONUT.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#FoodAreaCard3Pic{
+    background: transparent url("../01Materials/04ServicePic/01Donut/ORIGINAL_DONUT.jpg") no-repeat local center top;
+    background-size:cover;
+}
+
+#DivineAreaCard1Pic{
+    background: transparent url("../01Materials/04ServicePic/03Divine/Astrology.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#DivineAreaCard2Pic{
+    background: transparent url("../01Materials/04ServicePic/03Divine/Tarot.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#DivineAreaCard3Pic{
+    background: transparent url("../01Materials/04ServicePic/03Divine/Runes.jpg") no-repeat local center top;
+    background-size:cover;
+}
+
+#SetAreaCard1Pic{
+    background: transparent url("../01Materials/04ServicePic/04Set/Set_2.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#SetAreaCard2Pic{
+    background: transparent url("../01Materials/04ServicePic/04Set/Set_3.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#SetAreaCard3Pic{
+    background: transparent url("../01Materials/04ServicePic/04Set/Set_1.jpg") no-repeat local center top;
+    background-size:cover;
+}

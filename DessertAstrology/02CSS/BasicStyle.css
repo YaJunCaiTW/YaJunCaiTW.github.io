@@ -9,9 +9,10 @@ h1, h2, h3, h4, h5, h6, body, html{
     margin:0;
     padding:0;
 }
-/* body{
- font-size: 150%;
-} */
+ body{
+ /* font-size: 150%; */
+ overflow-x: hidden;
+} 
 p{
     margin: 0;
 }
@@ -100,7 +101,7 @@ p{
     cursor: pointer;
 }
 .ServiceSideBarItem1Pos{
-    align-self:flex-end;
+    align-self:flex-start;
 }
 .ServiceSideBarItem2Pos{
     align-self:flex-start;
@@ -120,7 +121,7 @@ p{
 .ServiceCircleBtn{
     width:41.666%;
     position: absolute;
-    right: 25%;
+    left:33.334%;
     top: 4.6875%;
     display: flex;
     align-items: center;
@@ -166,26 +167,28 @@ p{
     height:50%;
     top:25%;
     left:16.771%;
+    overflow: hidden;
 }
 .ServiceContentLeftBtn{
-    width: 11.111vh;
-    height: 11.111vh;
+    width: calc(11.111vh - 10px);
+    height: calc(11.111vh - 10px);
     /* border: 1px dotted lightcoral; */
     border-radius: 50%;
     position: absolute;
     top: calc(100% - 11.111vh);
+    left:10px;
     background: transparent url("../01Materials/04ServicePic/02Icon/CircleArrowBtn.jpg") no-repeat local center;
     background-size:cover;
     cursor: pointer;
 }
 .ServiceContentRightBtn{
-    width: 11.111vh;
-    height: 11.111vh;
+    width: calc(11.111vh - 10px);
+    height: calc(11.111vh - 10px);
     /* border: 1px dotted lightcoral; */
     border-radius: 50%;
     position: absolute;
     top: calc(100% - 11.111vh);
-    left: calc(100% - 11.111vh);
+    right:10px;
     background: transparent url("../01Materials/04ServicePic/02Icon/CircleArrowBtn.jpg") no-repeat local center;
     background-size:cover;
     transform: rotate(180deg);
@@ -195,59 +198,73 @@ p{
     width: 77.778%;
     height:100%;
     margin: 0 auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
+    overflow-y: hidden; 
     position: relative;
 }
-.ServiceContentCardsSlideArea{
+.ServiceContentCardsSlideArea.FoodArea{
+    width:100%;
+    height: 100%;
+    /* border: 1px solid darkmagenta; */
+    position: absolute;
+    left: calc(0% + 5px); /*用此項控制左右，-35%一項目 */
+    top:0%;
+}
+.ServiceContentCardsSlideArea.DivineArea{
     width:100%;
     height: 100%;
     /* border: 1px solid white; */
     position: absolute;
-    left:0%; /*用此項控制左右，35%一項目 */
+    left: calc(0% + 5px); /*用此項控制左右，35%一項目 */
+    top: calc(100% + 5px);
+    
+}
+.ServiceContentCardsSlideArea.SetArea{
+    width:100%;
+    height: 100%;
+    /* border: 1px solid white; */
+    position: absolute;
+    left: calc(0% + 5px); /*用此項控制左右，35%一項目 */
+    top:calc(100% + 5px);
+    
 }
 
 .ServiceContentCardsItem{
-    width:30%;
-    height: 100%;
+    width:calc(30% - 20px);
+    height: calc(100% - 20px);
     position: absolute;
     /* border: 2px solid black; */
 }
 .Card1Pos{
-    left:0;
+    left:5px;
+    top:5px;
     opacity: 1;
     display: block;
-}
-#Card1Pic{
-    background: transparent url("../01Materials/04ServicePic/01Donut/CHOCO_DONUT.jpg") no-repeat local center top;
-    background-size:cover;
 }
 .Card2Pos{
-    left:35%;
+    left:calc(35% + 5px);
+    top:5px;
     opacity: 1;
     display: block;
 }
-#Card2Pic{
-    background: transparent url("../01Materials/04ServicePic/01Donut/STRAW_DONUT.jpg") no-repeat local center top;
-    background-size:cover;
-}
+
 .Card3Pos{
-    left:70%;
+    left:calc(70% + 5px);
+    top:5px;
     opacity: 1;
     display: block;
-}
-#Card3Pic{
-    background: transparent url("../01Materials/04ServicePic/01Donut/ORIGINAL_DONUT.jpg") no-repeat local center top;
-    background-size:cover;
 }
 .Card4Pos{
-    left:105%;
-    opacity: 0;
-    display: none;
+    left:calc(105% + 5px);
+    top:5px;
+    opacity: 1;
+    display: block;
 }
 .Card5Pos{
-    left:140%;
-    opacity: 0;
-    display: none;
+    left:calc(140% + 5px);
+    top:5px;
+    opacity: 1;
+    display: block;
 }
 .ServiceContentCardsItemTop{
     width: 100%;

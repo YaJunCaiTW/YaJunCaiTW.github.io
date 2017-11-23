@@ -1,0 +1,12 @@
+/*DeskNavBar.js用*/
+.HeavyTextShadow{
+    text-shadow: 1px 1px 1px #1F0F08;
+}
+.Brightness{
+    filter: brightness(150%);
+}
+
+/*ServiceSideBar.js用*/
+.SideBarOut{
+    align-self:flex-end;
+}

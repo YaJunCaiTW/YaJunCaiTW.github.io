@@ -8,9 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>點星屋</title>
     <link rel="stylesheet" href="02CSS/normalize.css">
+    <link rel="stylesheet" href="02CSS/aos.css">
     <link rel="stylesheet" href="02CSS/BasicStyle.css">
+    <link rel="stylesheet" href="02CSS/ServiceCard.css">
     <link rel="stylesheet" href="02CSS/Circle.css">
     <link rel="stylesheet" href="02CSS/Shadow_Radius.css">
+    <link rel="stylesheet" href="02CSS/JSEffect.css">
     <style>
         
     </style>
@@ -18,7 +21,7 @@
 
 <body>
 
-    <div class="DeskNav">
+    <div class="DeskNav" data-aos="fade-down">
         <div class="NavItem Service"><h2>點星服務</h2></div>
         <div class="NavItem Info"><h2>點星聞</h2></div>
         <div class="NavItem Logo"></div>
@@ -31,11 +34,11 @@
     </div>
 
     <div class="ServiceDiv">
-        <div class="ServiceSideBar">
+        <div class="ServiceSideBar" data-aos="fade-up-right">
             <div class="ServiceSideBarBG">
 
             </div>
-            <div class="ServiceSideBarItem ServiceSideBarItem1Pos">
+            <div class="ServiceSideBarItem ServiceSideBarItem1Pos SideBarOut">
                 <div id="ServiceSideBarItem1"><h2>餐
                 <br>點</h2></div>
             </div>
@@ -48,7 +51,7 @@
                 <br>合</h2></div>
             </div>
         </div>
-        <div class="ServiceCircleBtn">
+        <div class="ServiceCircleBtn" data-aos="fade-up-left">
             <div class="ServiceCircleBtnItem Donut"></div>
             <div class="ServiceCircleBtnItem Cake"><h3>蛋糕</h3></div>
             <div class="ServiceCircleBtnItem CupCake">
@@ -58,72 +61,148 @@
             <div class="ServiceCircleBtnItem Coffee"><h3>咖啡</h3></div>
             <div class="ServiceCircleBtnItem Tea"><h3>茶飲</h3></div>
         </div>
-        <div class="ServiceContent">
+        <div class="ServiceContent"  data-aos="fade-up-left">
             <div class="ServiceContentLeftBtn"></div>
             <div class="ServiceContentRightBtn"></div>
             <div class="ServiceContentCards">
-                <div class="ServiceContentCardsSlideArea">
 
+                <div class="ServiceContentCardsSlideArea FoodArea">
                     <div class="ServiceContentCardsItem Card1Pos">
-                        <div id="Card1Pic" class="ServiceContentCardsItemTop "></div>
+                        <div id="FoodAreaCard1Pic" class="ServiceContentCardsItemTop "></div>
                         <div class="ServiceContentCardsItemBottom">
-                            <div id="Card1Title" class="ServiceContentCardsItemBottomTextTitle">
+                            <div id="FoodAreaCard1Title" class="ServiceContentCardsItemBottomTextTitle">
                                 <h2>巧克力朵娜</h2>
                             </div>
-                            <div id="Card1P" class="ServiceContentCardsItemBottomTextP">
+                            <div id="FoodAreaCard1P" class="ServiceContentCardsItemBottomTextP">
                                  <p>朵娜上淋上一層苦甜巧克力，苦甜與柔軟的結合如同人生般，苦苦的卻又柔軟。</p> 
                             </div>
                         </div>
                     </div>
 
                     <div class="ServiceContentCardsItem Card2Pos">
-                        <div id="Card2Pic" class="ServiceContentCardsItemTop Card2Pic"></div>
+                        <div id="FoodAreaCard2Pic" class="ServiceContentCardsItemTop Card2Pic"></div>
                         <div class="ServiceContentCardsItemBottom">
-                            <div id="Card2Title" class="ServiceContentCardsItemBottomTextTitle">
+                            <div id="FoodAreaCard2Title" class="ServiceContentCardsItemBottomTextTitle">
                                 <h2>草莓朵娜</h2>
                             </div>
-                            <div id="Card2P" class="ServiceContentCardsItemBottomTextP">
+                            <div id="FoodAreaCard2P" class="ServiceContentCardsItemBottomTextP">
                                  <p>草莓淋醬酸甜的滋味，宛如初戀，咬上一口，彷彿回到那最出色又幸福的時光。</p> 
                             </div>
                         </div>
                     </div>
 
                     <div class="ServiceContentCardsItem Card3Pos">
-                        <div id="Card3Pic" class="ServiceContentCardsItemTop Card3Pic"></div>
+                        <div id="FoodAreaCard3Pic" class="ServiceContentCardsItemTop Card3Pic"></div>
                         <div class="ServiceContentCardsItemBottom">
-                            <div id="Card3Title" class="ServiceContentCardsItemBottomTextTitle">
+                            <div id="FoodAreaCard3Title" class="ServiceContentCardsItemBottomTextTitle">
                                 <h2>烏登朵娜</h2>
                             </div>
-                            <div id="Card3P" class="ServiceContentCardsItemBottomTextP">
+                            <div id="FoodAreaCard3P" class="ServiceContentCardsItemBottomTextP">
                                  <p>烏登是盧恩中的空白符文，是結束也是開始，嘗一口，結束過去，迎接嶄新未來。</p> 
                             </div>
                         </div>
                     </div>
 
                     <div class="ServiceContentCardsItem Card4Pos">
-                        <div id="Card4Pic" class="ServiceContentCardsItemTop Card4Pic">4</div>
+                        <div id="FoodAreaCard4Pic" class="ServiceContentCardsItemTop Card4Pic">4</div>
                         <div class="ServiceContentCardsItemBottom">
-                            <div id="Card4Title" class="ServiceContentCardsItemBottomTextTitle">
-                                食物標題
+                            <div id="FoodAreaCard4Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>食物標題</h2>
                             </div>
-                            <div id="Card4P" class="ServiceContentCardsItemBottomTextP">
-                                簡介內文內文內文內文內感知感知感知
+                            <div id="FoodAreaCard4P" class="ServiceContentCardsItemBottomTextP">
+                                <p>簡介內文內文內文內文內感知感知感知</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="ServiceContentCardsItem Card5Pos">
-                        <div id="Card5Pic" class="ServiceContentCardsItemTop Card5Pic">5</div>
+                        <div id="FoodAreaCard5Pic" class="ServiceContentCardsItemTop Card5Pic">5</div>
                         <div class="ServiceContentCardsItemBottom">
-                            <div id="Card5Title" class="ServiceContentCardsItemBottomTextTitle">
-                                食物標題
+                            <div id="FoodAreaCard5Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>食物標題</h2>
                             </div>
-                            <div id="Card5P" class="ServiceContentCardsItemBottomTextP">
-                                簡介內文內文內文內文內感知感知感知
+                            <div id="FoodAreaCard5P" class="ServiceContentCardsItemBottomTextP">
+                                <p>簡介內文內文內文內文內感知感知感知</p>
                             </div>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="ServiceContentCardsSlideArea DivineArea">
+                    <div class="ServiceContentCardsItem Card1Pos">
+                        <div id="DivineAreaCard1Pic" class="ServiceContentCardsItemTop "></div>
+                        <div class="ServiceContentCardsItemBottom">
+                            <div id="DivineAreaCard1Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>星盤天宮圖</h2>
+                            </div>
+                            <div id="DivineAreaCard1P" class="ServiceContentCardsItemBottomTextP">
+                                <p>星盤像人一樣獨一無二，是宇宙贈與人最棒的禮物，也暗藏過去與未來的訊息。</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="ServiceContentCardsItem Card2Pos">
+                        <div id="DivineAreaCard2Pic" class="ServiceContentCardsItemTop Card2Pic"></div>
+                        <div class="ServiceContentCardsItemBottom">
+                            <div id="DivineAreaCard2Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>塔羅牌</h2>
+                            </div>
+                            <div id="DivineAreaCard2P" class="ServiceContentCardsItemBottomTextP">
+                                <p>藉由牌卡與身心靈溝通，放慢步調，重新省視現況，做出你所希望的決定。</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="ServiceContentCardsItem Card3Pos">
+                        <div id="DivineAreaCard3Pic" class="ServiceContentCardsItemTop Card3Pic"></div>
+                        <div class="ServiceContentCardsItemBottom">
+                            <div id="DivineAreaCard3Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>盧恩符文</h2>
+                            </div>
+                            <div id="DivineAreaCard3P" class="ServiceContentCardsItemBottomTextP">
+                                <p>古老北歐文字，傳說是奧丁倒掛在樹上九天的智慧結晶，讓符文引導你做出決定吧!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ServiceContentCardsSlideArea SetArea">
+                    <div class="ServiceContentCardsItem Card1Pos">
+                        <div id="SetAreaCard1Pic" class="ServiceContentCardsItemTop "></div>
+                        <div class="ServiceContentCardsItemBottom">
+                            <div id="SetAreaCard1Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>財運星盤</h2>
+                            </div>
+                            <div id="SetAreaCard1P" class="ServiceContentCardsItemBottomTextP">
+                                <p>星盤+拿鐵+巧克力杯子蛋糕，發財之路是很辛苦的，從星盤看財運何時出運。</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="ServiceContentCardsItem Card2Pos">
+                        <div id="SetAreaCard2Pic" class="ServiceContentCardsItemTop Card2Pic"></div>
+                        <div class="ServiceContentCardsItemBottom">
+                            <div id="SetAreaCard2Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>戀愛塔羅</h2>
+                            </div>
+                            <div id="SetAreaCard2P" class="ServiceContentCardsItemBottomTextP">
+                                <p>塔羅牌+巧克力+愛的禮物杯子蛋糕+草莓朵娜，從塔羅看最近喜歡的人會不會出現。</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="ServiceContentCardsItem Card3Pos">
+                        <div id="SetAreaCard3Pic" class="ServiceContentCardsItemTop Card3Pic"></div>
+                        <div class="ServiceContentCardsItemBottom">
+                            <div id="SetAreaCard3Title" class="ServiceContentCardsItemBottomTextTitle">
+                                <h2>事業盧恩</h2>
+                            </div>
+                            <div id="SetAreaCard3P" class="ServiceContentCardsItemBottomTextP">
+                                <p>盧恩符文+巧克力朵娜+卡布奇諾，抽選盧恩尋找升官的機會，學學升官的咒語!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -131,7 +210,7 @@
     </div>
 
     <div class="InfoDiv">
-        <div class="InfoLeft">
+        <div class="InfoLeft" data-aos="fade-up-right">
             <div class="InfoLeftLatest">
                 <div class="InfoLeftLatestPic"></div>
                 <div class="InfoLeftLatestText">
@@ -171,7 +250,7 @@
                 </div>
             </div>
         </div>
-        <div class="InfoRight">
+        <div class="InfoRight" data-aos="fade-up-left">
             <div class="CircleContainer">
                 <p id="CircleOutDegree">0</p>
                 <div id="CircleOut" class="CircleOut">
@@ -205,7 +284,7 @@
     </div>
 
     <div class="TeamDiv">
-        <div class="LeftPeople">
+        <div class="LeftPeople" data-aos="fade-up-right">
             <div class="LeftPeoplePic"></div>
             <div class="LeftPeopleInfo">
                 <div class="LeftPeopleName">
@@ -215,7 +294,7 @@
                 <div class="LeftPeopleText"> <p>一位來自鄉下的創意甜點師，夢想用甜點帶給每一位品嘗的人開心的正能量。填滿看看可以放多少的全形中文字，總共是五六字</p> </div>
             </div>
         </div>
-        <div class="RightPeople">
+        <div class="RightPeople" data-aos="fade-up-left">
             <div class="RightPeopleInfo">
                 <div class="RightPeopleName">
                     <div class="RightPeopleCHTTitle"><h1>甜點師</h1></div>
@@ -228,7 +307,7 @@
     </div>
 
     <div class="ContactDiv">
-        <div class="ContactContainer">
+        <div class="ContactContainer" data-aos="fade-down">
             <div id="ContactMap" class="ContactMap"></div>
             <div class="ContactInfo">
                 <div class="ContactAdd"><h2>台中市錦南街17號</h2></div>
@@ -239,7 +318,7 @@
                 </div>
             </div>
         </div>
-        <div class="ContactFooter">
+        <div class="ContactFooter" data-aos="fade-up">
             <div class="ContactFooterSiteMap">
                 <div class="ContactFooterSiteMapItem">
                     <div class="ContactFooterSiteMapTitle YellowSiteMapItemTitle">
@@ -287,6 +366,10 @@
     </div>
 
     <script src="03JS/jquery-3.2.1.min.js"></script>
+    <script src="03JS/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="03JS/Circle.js"></script>
     <script>
         function initMap() {
@@ -305,6 +388,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLlklOtuP1OC0CgNiCzN4Lq-awee-bX8E&callback=initMap">
       </script>
       <script src="03JS/DeskNavBar.js"></script>
+      <script src="03JS/ServiceSideBar.js"></script>
   
 </body>
 
