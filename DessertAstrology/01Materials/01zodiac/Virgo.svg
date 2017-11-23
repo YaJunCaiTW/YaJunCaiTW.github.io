@@ -1,28 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:odm="http://product.corel.com/CGS/11/cddns/"
-   xml:space="preserve"
-   width="155pt"
-   height="188pt"
-   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
-   viewBox="0 0 8268 11692"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   id="svg638"
-   sodipodi:version="0.34"
-   sodipodi:docname="D:\Dokumenty\Wikipedie\images\svg\Astro\virgo.svg"><sodipodi:namedview
-   id="base" /><defs
-   id="defs639"><style
-   type="text/css"
-   id="style640"><![CDATA[
-    .fil0 {fill:#000000}
-   ]]></style></defs><g
-   id="Layer 1"
-   transform="matrix(4.538455,0,0,4.531784,-13030.44,-20143.78)"><path
-   class="fil0"
-   d="M3086 5231l0 1258 -201 0 0 -1457c0,-202 -55,-386 -165,-550l212 0c75,103 126,236 154,397 68,-167 147,-299 236,-397l197 -37c90,116 147,270 171,462 46,-145 128,-287 245,-425l194 -37c109,151 163,318 163,501l0 382c54,-153 112,-274 172,-360l166 -61c143,221 214,454 214,698 0,194 -43,375 -128,545 -85,170 -214,328 -384,475 16,118 85,251 207,400l-236 0c-57,-72 -108,-168 -152,-287 -125,71 -279,121 -461,150l0 -172c172,-35 312,-86 422,-151 -14,-87 -21,-174 -21,-262l0 -1220c0,-199 -28,-349 -86,-451 -142,153 -247,369 -315,646l0 1211 -202 0 0 -1338c0,-249 -30,-422 -88,-519 -139,162 -243,361 -314,599zm1206 1206c118,-120 205,-248 264,-385 58,-137 87,-283 87,-436 0,-161 -35,-317 -105,-468 -100,123 -181,287 -246,492l0 797z"
-   id="path642" /></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg638" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:docname="D:\Dokumenty\Wikipedie\images\svg\Astro\virgo.svg" sodipodi:version="0.34"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-220 326.9 155 188"
+	 style="enable-background:new -220 326.9 155 188;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<sodipodi:namedview  id="base"></sodipodi:namedview>
+<g id="Layer_1" transform="matrix(4.538455,0,0,4.531784,-13030.44,-20143.78)">
+	<path id="path642" class="st0" d="M2828.5,4529.8v20.2h-3.2v-23.4c0-3.2-0.9-6.2-2.7-8.8h3.4c1.2,1.7,2,3.8,2.5,6.4
+		c1.1-2.7,2.4-4.8,3.8-6.4l3.2-0.6c1.4,1.9,2.4,4.3,2.7,7.4c0.7-2.3,2.1-4.6,3.9-6.8l3.1-0.6c1.8,2.4,2.6,5.1,2.6,8.1v6.1
+		c0.9-2.5,1.8-4.4,2.8-5.8l2.7-1c2.3,3.6,3.4,7.3,3.4,11.2c0,3.1-0.7,6-2.1,8.8c-1.4,2.7-3.4,5.3-6.2,7.6c0.3,1.9,1.4,4,3.3,6.4
+		h-3.8c-0.9-1.2-1.7-2.7-2.4-4.6c-2,1.1-4.5,1.9-7.4,2.4v-2.8c2.8-0.6,5-1.4,6.8-2.4c-0.2-1.4-0.3-2.8-0.3-4.2v-19.6
+		c0-3.2-0.5-5.6-1.4-7.3c-2.3,2.5-4,5.9-5.1,10.4v19.5h-3.2v-21.5c0-4-0.5-6.8-1.4-8.3C2831.3,4522.7,2829.7,4525.9,2828.5,4529.8z
+		 M2847.9,4549.2c1.9-1.9,3.3-4,4.2-6.2c0.9-2.2,1.4-4.6,1.4-7c0-2.6-0.6-5.1-1.7-7.5c-1.6,2-2.9,4.6-4,7.9V4549.2z"/>
+</g>
+</svg>

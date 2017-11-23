@@ -1,28 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:odm="http://product.corel.com/CGS/11/cddns/"
-   xml:space="preserve"
-   width="183pt"
-   height="188pt"
-   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
-   viewBox="0 0 8268 11692"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   id="svg620"
-   sodipodi:version="0.34"
-   sodipodi:docname="D:\Dokumenty\Wikipedie\images\svg\Astro\gemini.svg"><sodipodi:namedview
-   id="base" /><defs
-   id="defs621"><style
-   type="text/css"
-   id="style622"><![CDATA[
-    .fil0 {fill:#000000}
-   ]]></style></defs><g
-   id="Layer 1"
-   transform="matrix(5.152124,0,0,5.157475,-9408.358,-14342.93)"><path
-   class="fil0"
-   d="M1524 5048l0 -167c186,-49 359,-84 518,-103l0 -1730c-172,-16 -345,-49 -518,-99l0 -168c300,83 668,125 1104,125 437,0 805,-42 1105,-125l0 168c-174,50 -347,83 -519,99l0 1730c159,19 332,54 519,103l0 167c-342,-90 -710,-134 -1105,-134 -395,0 -763,44 -1104,134zm719 -282c115,-13 243,-19 385,-19 142,0 270,6 385,19l0 -1704c-104,7 -232,11 -385,11 -154,0 -282,-4 -385,-11l0 1704z"
-   id="path624" /></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg620" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:docname="D:\Dokumenty\Wikipedie\images\svg\Astro\gemini.svg" sodipodi:version="0.34"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-206 326.9 183 188"
+	 style="enable-background:new -206 326.9 183 188;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<sodipodi:namedview  id="base"></sodipodi:namedview>
+<g id="Layer_1" transform="matrix(5.152124,0,0,5.157475,-9408.358,-14342.93)">
+	<path id="path624" class="st0" d="M1786.1,2880.8v-2.7c3-0.8,5.8-1.4,8.3-1.7v-27.8c-2.8-0.3-5.5-0.8-8.3-1.6v-2.7
+		c4.8,1.3,10.7,2,17.8,2c7,0,12.9-0.7,17.8-2v2.7c-2.8,0.8-5.6,1.3-8.3,1.6v27.8c2.6,0.3,5.3,0.9,8.3,1.7v2.7
+		c-5.5-1.4-11.4-2.2-17.8-2.2C1797.5,2878.7,1791.6,2879.4,1786.1,2880.8z M1797.7,2876.3c1.8-0.2,3.9-0.3,6.2-0.3
+		c2.3,0,4.3,0.1,6.2,0.3v-27.4c-1.7,0.1-3.7,0.2-6.2,0.2c-2.5,0-4.5-0.1-6.2-0.2V2876.3z"/>
+</g>
+</svg>

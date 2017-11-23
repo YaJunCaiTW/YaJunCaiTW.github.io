@@ -1,28 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:odm="http://product.corel.com/CGS/11/cddns/"
-   xml:space="preserve"
-   width="147pt"
-   height="188pt"
-   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
-   viewBox="0 0 8268 11692"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   id="svg632"
-   sodipodi:version="0.34"
-   sodipodi:docname="D:\Dokumenty\Wikipedie\images\svg\Astro\leo.svg"><sodipodi:namedview
-   id="base" /><defs
-   id="defs633"><style
-   type="text/css"
-   id="style634"><![CDATA[
-    .fil0 {fill:#000000}
-   ]]></style></defs><g
-   id="Layer 1"
-   transform="matrix(4.260087,0,0,4.260933,-12024.51,-18381.66)"><path
-   class="fil0"
-   d="M4866 6842c-157,144 -307,216 -451,216 -124,0 -229,-41 -314,-124 -84,-83 -126,-185 -126,-306 0,-162 85,-423 255,-784l130 -277c100,-214 150,-388 150,-521 0,-170 -49,-306 -148,-409 -99,-104 -230,-155 -393,-155 -153,0 -276,46 -371,137 -94,93 -141,213 -141,362 0,138 44,299 132,483l53 110c88,182 132,315 132,402 0,137 -53,258 -157,360 -104,102 -228,153 -370,153 -146,0 -271,-51 -373,-154 -103,-103 -154,-228 -154,-376 0,-142 50,-265 152,-368 101,-103 222,-155 362,-155 51,0 107,9 168,28 -97,-187 -146,-352 -146,-496 0,-187 67,-343 202,-467 136,-125 306,-187 510,-187 224,0 404,66 540,197 135,132 203,307 203,525 0,108 -11,202 -34,280 -22,79 -76,209 -160,390l-93 203c-166,360 -250,592 -250,698 0,78 23,142 70,192 46,51 106,76 178,76 95,0 204,-54 326,-162l118 129zm-1996 -881c0,106 36,196 107,269 71,72 158,109 262,109 102,0 188,-37 260,-110 72,-73 108,-162 108,-266 0,-106 -36,-195 -107,-268 -72,-72 -159,-109 -263,-109 -102,0 -188,37 -260,110 -71,73 -107,161 -107,265z"
-   id="path636" /></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg632" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:docname="D:\Dokumenty\Wikipedie\images\svg\Astro\leo.svg" sodipodi:version="0.34"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-224 326.9 147 188"
+	 style="enable-background:new -224 326.9 147 188;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<sodipodi:namedview  id="base"></sodipodi:namedview>
+<g id="Layer_1" transform="matrix(4.260087,0,0,4.260933,-12024.51,-18381.66)">
+	<path id="path636" class="st0" d="M2804.5,4431.4c-2.5,2.3-4.9,3.5-7.3,3.5c-2,0-3.7-0.7-5-2c-1.4-1.3-2-3-2-4.9
+		c0-2.6,1.4-6.8,4.1-12.6l2.1-4.5c1.6-3.4,2.4-6.2,2.4-8.4c0-2.7-0.8-4.9-2.4-6.6c-1.6-1.7-3.7-2.5-6.3-2.5c-2.5,0-4.4,0.7-6,2.2
+		c-1.5,1.5-2.3,3.4-2.3,5.8c0,2.2,0.7,4.8,2.1,7.8l0.9,1.8c1.4,2.9,2.1,5.1,2.1,6.5c0,2.2-0.9,4.1-2.5,5.8c-1.7,1.6-3.7,2.5-5.9,2.5
+		c-2.3,0-4.4-0.8-6-2.5c-1.7-1.7-2.5-3.7-2.5-6c0-2.3,0.8-4.3,2.4-5.9c1.6-1.7,3.6-2.5,5.8-2.5c0.8,0,1.7,0.1,2.7,0.5
+		c-1.6-3-2.3-5.7-2.3-8c0-3,1.1-5.5,3.2-7.5c2.2-2,4.9-3,8.2-3c3.6,0,6.5,1.1,8.7,3.2c2.2,2.1,3.3,4.9,3.3,8.4
+		c0,1.7-0.2,3.2-0.5,4.5c-0.4,1.3-1.2,3.4-2.6,6.3l-1.5,3.3c-2.7,5.8-4,9.5-4,11.2c0,1.3,0.4,2.3,1.1,3.1c0.7,0.8,1.7,1.2,2.9,1.2
+		c1.5,0,3.3-0.9,5.2-2.6L2804.5,4431.4z M2772.4,4417.2c0,1.7,0.6,3.2,1.7,4.3c1.1,1.2,2.5,1.8,4.2,1.8c1.6,0,3-0.6,4.2-1.8
+		s1.7-2.6,1.7-4.3c0-1.7-0.6-3.1-1.7-4.3c-1.2-1.2-2.6-1.8-4.2-1.8c-1.6,0-3,0.6-4.2,1.8C2773,4414.1,2772.4,4415.5,2772.4,4417.2z"
+		/>
+</g>
+</svg>
