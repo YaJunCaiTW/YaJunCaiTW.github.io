@@ -48,12 +48,16 @@
     width: 15%;
     line-height: calc(41.667vw * 0.15 * 0.9);
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     text-align: center;
     color: white;
     font-size: calc(41.667vw * 0.15 * 0.9 *0.35);
     font-weight: bolder;
     background-color: #19657F;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: 60%;
     cursor: pointer;
     transition: transform 1s;
     
@@ -64,7 +68,8 @@
     position: absolute;
     top: 7.5%;
     left: 50%;
-    /* transform: translate(-50%, -16.666%) scale(1.33); */
+    transform: translate(-50%, -16.666%) scale(1.4);
+    background-image: url("../01Materials/01zodiac/Leo.svg");
 }
 
 .CircleNorthEast{

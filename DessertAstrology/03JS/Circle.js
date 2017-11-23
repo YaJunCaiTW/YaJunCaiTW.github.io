@@ -1,9 +1,9 @@
 function LoadPicStory(Link, ZodiacCHTName, event) {
-    var ControlObj = document.getElementById("ZodicName");
+    var ControlObj = document.getElementById("ZodicName");                  //取得顯示星座名的物件
     var ZodiacCHTNameArray = [  "獅子座","巨蟹座","雙子座","金牛座","白羊座","雙魚座",
                                 "水瓶座","魔羯座","人馬座","天蠍座","天秤座","處女座"];
-    var CircleOutDeg = 0;
-    if (ControlObj.innerHTML === ZodiacCHTName){
+    var CircleOutDeg = 0;                                                   //記錄外圍圓圈的度數
+    if (ControlObj.innerText === ZodiacCHTName){                            //如果名稱依樣就不要做事情
         return;
     }
     else{
@@ -70,12 +70,12 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
         }
         // console.log(NewZodiacCHTNameArray);
 
-        ControlObj.innerHTML = "<h1>"+ZodiacCHTName+"</h1>";
-        ControlObj = document.getElementById("CircleOutDegree");
-        CircleOutDeg = ControlObj.innerHTML;                    //轉盤度數
-        ControlObj = document.getElementById("CircleTextContainer");
+        ControlObj.innerHTML = "<h1>"+ZodiacCHTName+"</h1>";            //更新星座名稱
+        ControlObj = document.getElementById("CircleOutDegree");        //取得紀錄度數的物件
+        CircleOutDeg = ControlObj.innerHTML;                            //紀錄轉盤度數
+        /*ControlObj = document.getElementById("CircleTextContainer");    
         ControlObj.style.backgroundImage = "url(" + Link + ")";
-        /*ControlObj = document.getElementById("LeftStoryTitle");
+        ControlObj = document.getElementById("LeftStoryTitle");
         ControlObj.innerHTML = ControlObj.innerHTML.replace(ControlObj.innerHTML.substr(0, 3), ZodiacCHTName);
         ControlObj = document.getElementById("RightStoryTitle");
         ControlObj.innerHTML = ControlObj.innerHTML.replace(ControlObj.innerHTML.substr(0, 3), ZodiacCHTName);*/
@@ -387,7 +387,7 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
 
         }
         // ControlObj = document.getElementsByClassName("CirclSmalleBasic");
-        CircleRotateText(CircleOutDeg, ZodiacCHTName);
+        CircleRotateText(CircleOutDeg, ZodiacCHTName, Link);
 
         ControlObj = document.getElementById("CircleOutDegree");
         ControlObj.innerHTML = CircleOutDeg ;
@@ -397,52 +397,121 @@ function LoadPicStory(Link, ZodiacCHTName, event) {
     
 }
 
-function CircleRotateText(RotateTextDegree, ZodiacCHTName) {
-    ControlObj1 = document.getElementsByClassName("CirclSmalleBasic");
-    var ExpandNumber = 0;
-    switch (ZodiacCHTName) {
+function CircleRotateText(RotateTextDegree, ZodiacCHTName, Link) {
+    ControlObj1 = document.getElementsByClassName("CirclSmalleBasic");  //取得所有小圓圈的控制權
+    var ExpandNumber = 0;                                               //紀錄要被放大的是第幾個小圓圈
+    var TranslateX = 0;                                                 //紀錄要被放大的小圓圈座標轉換
+    var TranslateY = 0;
+    for(i = 0; i < ControlObj1.length; i++){                            //初始化小圓圈背景與文字
+        ControlObj1[i].style.backgroundImage = "none";
+        switch (i){
+            case 0:
+            ControlObj1[i].innerHTML="獅子";
+            break;
+            case 1:
+            ControlObj1[i].innerHTML="巨蟹";
+            break;
+            case 2:
+            ControlObj1[i].innerHTML="雙子";
+            break;
+            case 3:
+            ControlObj1[i].innerHTML="金牛";
+            break;
+            case 4:
+            ControlObj1[i].innerHTML="白羊";
+            break;
+            case 5:
+            ControlObj1[i].innerHTML="雙子";
+            break;
+            case 6:
+            ControlObj1[i].innerHTML="水瓶";
+            break;
+            case 7:
+            ControlObj1[i].innerHTML="魔羯";
+            break;
+            case 8:
+            ControlObj1[i].innerHTML="人馬";
+            break;
+            case 9:
+            ControlObj1[i].innerHTML="天蠍";
+            break;
+            case 10:
+            ControlObj1[i].innerHTML="天秤";
+            break;
+            case 11:
+            ControlObj1[i].innerHTML="處女";
+            break;
+        }
+    }
+    switch (ZodiacCHTName) {                                            //依據不同星座給予不同變數數值
         case "獅子座": 
             ExpandNumber = 0;
+            TranslateX = -50;
+            TranslateY = -16.666;
             break;
         case "處女座":
             ExpandNumber = 11;
+            TranslateX = -33.334;
+            TranslateY = -21.132;
             break;
         case "天秤座":
             ExpandNumber = 10;
+            TranslateX = -21.132;
+            TranslateY = -33.334;
             break;
         case "天蠍座":
             ExpandNumber = 9;
+            TranslateX = -16.666;
+            TranslateY = -50;
             break;
         case "人馬座":
             ExpandNumber = 8;
+            TranslateX = -21.132;
+            TranslateY = -66.666;
             break;
         case "魔羯座":
             ExpandNumber = 7;
+            TranslateX = -33.334;
+            TranslateY = -71.132;            
             break;
         case "水瓶座":
             ExpandNumber = 6;
+            TranslateX = -50;
+            TranslateY =-83.334;
             break;
         case "雙魚座":
             ExpandNumber = 5;
+            TranslateX = -66.666;
+            TranslateY = -71.132;
             break;
         case "白羊座":
             ExpandNumber = 4;
+            TranslateX = -71.132;
+            TranslateY = -66.666;
             break;
         case "金牛座":
             ExpandNumber = 3;
+            TranslateX = -83.334;
+            TranslateY = -50;
             break;
         case "雙子座":
             ExpandNumber = 2;
+            TranslateX = -71.132;
+            TranslateY = -33.334;
             break;
         case "巨蟹座":
             ExpandNumber = 1;
+            TranslateX = -66.666;
+            TranslateY = -21.132;
             break;
     }
 
-    RotateTextDegree = RotateTextDegree * -1;
-    for (i = 0; i < ControlObj1.length; i++){
+    RotateTextDegree = RotateTextDegree * -1;                           //修正小圓圈的度數
+    for (i = 0; i < ControlObj1.length; i++){                           //依據ExpandNumber給予不同的配置
         if (i === ExpandNumber){
-            ControlObj1[i].style.transform = "translate(-50% , -50%) rotate(" + RotateTextDegree + "deg) scale(1.0)";
+            ControlObj1[i].innerHTML="　　";                            //靠文字稱行高
+            ControlObj1[i].style.transform = "translate(" + TranslateX + "% , "+ TranslateY +"%) rotate(" + RotateTextDegree + "deg) scale(1.4)";
+            ControlObj1[i].style.backgroundImage = "url(" + Link + ")";
         }
         else{
             ControlObj1[i].style.transform = "translate(-50% , -50%) rotate(" + RotateTextDegree + "deg) scale(1.0)";
