@@ -98,7 +98,7 @@ function GoToServiceSelectFood(){
     GoToService();
     $(".ServiceSideBarItem1Pos").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".ServiceSideBarItem1Pos").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);   
+    setTimeout(clearInterval, 2800, ShiningObj);   
 }
 
 function GoToServiceSelectDivine() {
@@ -106,7 +106,7 @@ function GoToServiceSelectDivine() {
     GoToService();
     $(".ServiceSideBarItem2Pos").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".ServiceSideBarItem2Pos").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function GoToServiceSelectSet() {
@@ -114,42 +114,42 @@ function GoToServiceSelectSet() {
     GoToService();
     $(".ServiceSideBarItem3Pos").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".ServiceSideBarItem3Pos").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function GoToInfoSelectAnnounce(){
     GoToInfo();
     $(".InfoLeft").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".InfoLeft").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function GoToInfoSelectFate(){
     GoToInfo();
     $(".InfoRight").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".InfoRight").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function GoToTeamSelectDiviner(){
     GoToTeam();
     $(".LeftPeople").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".LeftPeople").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function GoToTeamSelectPastryChef(){
     GoToTeam();
     $(".RightPeople").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".RightPeople").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj); 
+    setTimeout(clearInterval, 2800, ShiningObj); 
 }
 
 function GoToContactMap(){
     GoToSContact();
     $(".ContactMap").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".ContactMap").toggleClass("Brightness") }, 500);
-    setTimeout(clearInterval, 3000, ShiningObj);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function GoToFB(){
