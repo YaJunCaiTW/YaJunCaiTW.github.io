@@ -47,6 +47,7 @@
 .CirclSmalleBasic{
     width: 15%;
     line-height: calc(41.667vw * 0.15 * 0.9);
+    height: calc(41.667vw * 0.15 * 0.9);
     border-radius: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;

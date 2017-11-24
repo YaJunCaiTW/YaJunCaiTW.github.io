@@ -9,10 +9,12 @@ h1, h2, h3, h4, h5, h6, body, html{
     margin:0;
     padding:0;
 }
- body{
- /* font-size: 150%; */
- overflow-x: hidden;
-} 
+body{
+    overflow-x: hidden;
+    font-size: 133%;
+}
+
+
 p{
     margin: 0;
 }
@@ -127,6 +129,7 @@ p{
     align-items: center;
     justify-content:space-between; 
     text-align: center;
+   
     
 }
 .ServiceCircleBtnItem{
@@ -136,16 +139,17 @@ p{
     width: 8.333vh;
     height:8.333vh;
     background-color: #942E01;
+    background: #942E01 none no-repeat local center;
+    background-size: 65%;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 1s;
 }
 
 .Donut{
     line-height: 8.333vh;
-    transform: scale(1.3);
-    background: #E7D168 url("../01Materials/04ServicePic/02Icon/DONUT_ICON.svg") no-repeat local center;
-    background-size: 80%;
+    background-image:  url("../01Materials/04ServicePic/02Icon/DONUT_ICON.svg");
 }
 .Cake{
     line-height: 8.333vh;
@@ -582,13 +586,17 @@ p{
     position: absolute;
     top:55.673%;
     left:35.324%  ;
-    text-align: center;
+    /* text-align: center;
     text-align-last: center;
-    text-justify: auto;
-    line-height: calc(100vh * 0.44722 * 0.17184);   
+    text-justify: auto; */
+    /* line-height: calc(100vh * 0.44722 * 0.17184);    */
     /* font-size:  calc(100vh * 0.44722 * 0.17184 * 0.5); */
-    letter-spacing: calc(16.667vw / 32);
-    font-weight: bold
+    /* letter-spacing: calc(16.667vw / 32); */
+    font-weight: bold;
+    display: flex;
+}
+.ContactTelNum{
+    flex: 1 1 auto;
 }
 .ContactGroup{
     width: 16.667vw;
@@ -642,7 +650,8 @@ p{
     padding: 0 10%;
     line-height: calc(39.352vh *0.56941 *0.38197);
     /* font-size: calc(39.352vh *0.56941 *0.38197 *0.5); */
-    font-weight: bold
+    font-weight: bold;
+    cursor: pointer;
 }
 .ContactFooterSiteMapContent{
     width: 100%;
@@ -653,7 +662,6 @@ p{
     width: 60%;
     text-align: justify;
     text-align-last: justify;
-    
     font-weight: bold;
 }
 .YellowSiteMapItemTitle{
@@ -672,4 +680,15 @@ p{
     text-align: center;
     line-height: calc(100vh * 0.39352 * 0.43059);
     color:white;
+}
+
+@media screen and (max-width: 1400px){
+    body{
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1300px){
+    body{
+        font-size: 90%;
+    }
 }
