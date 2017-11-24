@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="02CSS/normalize.css">
     <link rel="stylesheet" href="02CSS/aos.css">
     <link rel="stylesheet" href="02CSS/BasicStyle.css">
+    <link rel="stylesheet" href="02CSS/PhoneBasicStyle.css">
     <link rel="stylesheet" href="02CSS/ServiceCard.css">
     <link rel="stylesheet" href="02CSS/Circle.css">
     <link rel="stylesheet" href="02CSS/Shadow_Radius.css">
@@ -35,13 +36,15 @@
             <h2>聯絡點星</h2>
         </div>
     </div>
-
+    <div class="FakeDivForPhone"></div>
     <div class="HeaderDiv">
         <div class="FakeDivForService"></div>
     </div>
 
     <div class="ServiceDiv">
+
         <div class="ServiceSideBar" data-aos="fade-up-right">
+            
             <div class="ServiceSideBarBG"></div>
             
             <div class="ServiceSideBarItem ServiceSideBarItem1Pos SideBarOut">
@@ -423,7 +426,9 @@
     <script src="03JS/jquery-3.2.1.min.js"></script>
     <script src="03JS/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+             disable: 'mobile'
+        });
     </script>
 
     <script>

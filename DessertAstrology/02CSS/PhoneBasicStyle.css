@@ -1,3 +1,5 @@
+@media screen and (max-width: 1199px){
+
 *{
     box-sizing: border-box;
     /* border: 1px solid lightcoral; */
@@ -11,7 +13,7 @@ h1, h2, h3, h4, h5, h6, body, html{
 }
 body{
     overflow-x: hidden;
-    font-size: 133%;
+    font-size: 55%;
 }
 
 
@@ -21,9 +23,9 @@ p{
 
 
 .DeskNav{
-    width: 75%;
+    width: 100%;
     position: fixed;
-    left:12.5%;
+    left:0%;
     display: flex;
     z-index: 99;
 }
@@ -40,66 +42,65 @@ p{
     text-justify: auto;
     text-align-last: justify;
     padding: 0 2.5%;
-    display:block;
+    display:none;
 }
 .Logo{
     flex: 2;
-    line-height: 12.5vh;
-    height:12.5vh;
+    line-height: 7.685vh;
+    height:7.685vh;
     background: #CE600A url("../01Materials/HeadLogo.jpg") no-repeat scroll center;
     background-size: contain;
     display:block;
 }
-
 .FakeDivForPhone{
     width:100%;
     height:7.685vh;
-    display: none; 
+    display: block; 
 }
 .HeaderDiv{
     width: 100%;
-    height: 100vh;
+    height: calc( 100vw * 0.36 );
     background: transparent url("../01Materials/HeadPic.jpg") no-repeat scroll center;
     background-size: cover;
 }
 .FakeDivForService{
     width: 100%;
-    height:12.5vh;
+    height:7.685vh;
     position: absolute;
-    top:87.5vh;
-    /* border:1px solid black; */
+    top:calc( 100vw * 0.36 );
+    /* border:1px solid pink; */
     opacity: 0;
 }
 
 .ServiceDiv{
     width: 100%;
-    height: 100vh;
-    background: transparent url("../01Materials/ServiceBG.jpg") no-repeat scroll center;
+    height: 148.148vw;
+    background: transparent url("../01Materials/05PhoneBG/PhoneServiceBG.jpg") no-repeat scroll center;
     background-size: cover;
     position: relative;
 }
 .ServiceSideBar{
-    width: 8.438%;
-    height: 50vh;
+    width: calc(100% - 30px);
+    height:7.407vw;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     position: absolute;
-    top:25vh;
-    left:8.333%;
+    top:12.5vw;
+    left:15px;
     text-align: center; 
     /* line-height: 100% */
 }
 .ServiceSideBarBG{
-    width:50%;
+    width:100%;
     height:100%;
-    background: #5A1D03;
+    background: transparent;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
 }
 .ServiceSideBarItem{
-    width: 50%; 
-    flex:1;
+    width: 16.66667vw; 
+    flex:0 1 16.6667vw;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -129,24 +130,25 @@ p{
     flex: 1;
 }
 .ServiceCircleBtn{
-    width:41.666%;
+    width:47.222vw;
+    height:24.074vw;
     position: absolute;
-    left:33.334%;
-    top: 4.6875%;
+    left:26.389vw;
+    top: 108.981vw;
     display: flex;
     align-items: center;
     justify-content:space-between; 
     text-align: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
    
     
 }
 .ServiceCircleBtnItem{
-    flex:0 1 8.333vh; 
+    flex:0 1 calc(24.074vw * 0.35385); 
     /* border: 1px dotted lightcoral; */
     border-radius: 50%;
-    width: 8.333vh;
-    height:8.333vh;
+    width: calc(24.074vw * 0.35385);
+    height:35.385%;
     background-color: #942E01;
     background: #942E01 none no-repeat local center;
     background-size: 65%;
@@ -154,38 +156,39 @@ p{
     font-weight: bold;
     cursor: pointer;
     transition: transform 1s;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .Donut{
-    line-height: 8.333vh;
+    line-height: calc(24.074vw * 0.35385);
     background-image:  url("../01Materials/04ServicePic/02Icon/DONUT_ICON.svg");
-    flex:0 1 8.333vh;
-    order:1;
-}
-.Cake{
-    line-height: 8.333vh;
-    flex:0 1 8.333vh;
-    order:2;
-}
-.Coffee{
-    line-height: 8.333vh;
-    flex:0 1 8.333vh;
+    flex:0 1 calc(24.074vw * 0.35385); 
     order:3;
 }
-.Tea{
-    line-height: 8.333vh;
-    flex:0 1 8.333vh;
+.Cake{
+    line-height: calc(24.074vw * 0.35385);
+    flex:0 1 calc(24.074vw * 0.35385); 
     order:4;
 }
+.Coffee{
+    line-height:calc(24.074vw * 0.35385);
+    flex:0 1 calc(24.074vw * 0.35385);
+    order:1; 
+}
+.Tea{
+    line-height: calc(24.074vw * 0.35385);
+    flex:0 1 calc(24.074vw * 0.35385);
+    
+}
 .CupCake{
-    flex:0 1 8.333vh;
-    order:5;
+    flex:0 1 calc(24.074vw * 0.35385);
+    order:5;  
 }
 .CupCake2Line{
     position: relative;
     top:50%;
     transform: translateY(-50%);
+    
 }
 .ServiceContent{
     position: absolute;
@@ -330,80 +333,82 @@ p{
 
 .InfoDiv{
     width: 100%;
-    height: 100vh;
-    background: transparent url("../01Materials/StarsBG.jpg") no-repeat scroll center;
+    height: 246.081vw ;
+    background: transparent url("../01Materials/05PhoneBG/PhoneInfoBG.jpg") no-repeat scroll center;
     background-size: cover;
     position: relative; 
 }
 .InfoLeft{
-    width :41.667%;
-    height: 75%;
+    width :calc(100% - 30px);
+    height: 123.796vw;
     position: absolute;
-    left: 8.333%;
-    top: 12.5%
+    left: 15px;
+    top: 0;
 }
 .InfoLeftLatest{
-    width:61.803%;
-    height: 100%;
+    width:100%;
+    height: 30%;
     position: absolute;
 }
 .InfoLeftLatestPic{
-    width: 100%;
-    height:61.803%;
+    width: 38.197%;
+    height:100%;
     background: #5A1D03 url('../01Materials/Opening.png') no-repeat local center;
     background-size: contain;
-    margin: 0 auto;
-    float:none;
+    margin: 0 0; 
+    float:left 
 }
 .InfoLeftLatestText{
-    width: 100%;
-    height:38.197%;
-    margin: 0 auto;
+    width: 61.803%;
+    height:100%;
+    margin: 0 0; 
     background-color: #CE600A;
-    position: absolute;
-    float:none;
+    position: relative;
+    float:right; 
 }
 .InfoLeftMid{
-    width:calc(38.197% - 10px);
-    height: calc(61.803% - 5px);
+    width:100%;
+    height: 30%;
     position: absolute;
-    left:Calc(61.803% + 10px);
-    top:0;
+    left:0;
+    top:35%
 }
 .InfoLeftMidPic{
-    width: 100%;
-    height:61.803%;
+    width: 38.197%;
+    height:100%;
     background: #5A1D03 url('../01Materials/Hiring.jpg') no-repeat local center;
-    background-size: cover;
-    float:none;
+    background-size: contain;
+    float: right;
+    
 }
 .InfoLeftMidText{
-    width: 100%;
-    height:38.197%;
+    width: 61.803%;
+    height:100%;
     background-color: #CE600A;
     position: absolute;
-    float:none;
+    float: right;
 }
 .InfoLeftOld{
-    width:calc(38.197% - 10px);
-    height:calc(38.197% - 5px);
+    width:100%;
+    height: 30%;
     position: absolute;
-    bottom:0;
-    left:Calc(61.803% + 10px);
+    bottom:0%;
+    left:0;
+    
 }
 .InfoLeftOldPic{
-    width: 100%;
-    height:61.803%;
+    width: 38.197%;
+    height:100%;
     background: #5A1D03 url('../01Materials/ComingSoon.jpg') no-repeat local center;
-    background-size: cover;
-    float:none;
+    background-size: contain;
+    float: left;
 }
 .InfoLeftOldText{
-    width: 100%;
-    height:38.197%;
+    width: 61.803%;
+    height:100%;
     background-color: #CE600A;
-    position: absolute;
-    float:none;
+    position: relative;
+    float: right;
 }
 .InfoLeftTextTitle{
     width:90%;
@@ -424,7 +429,7 @@ p{
     text-align-last: left;
 }
 #LatestTitle{
-    line-height: calc(100vh *0.75 *0.38197 *0.3 );
+    line-height: calc(246.081vh *0.50307 * 0.3 * 0.3);
     /* font-size: calc(100vh *0.75 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
@@ -433,7 +438,7 @@ p{
     font-weight: bold;
 }
 #MidTitle{
-    line-height: calc(100vh *0.75 *0.60553 *0.38197 *0.3 );
+    line-height: calc(246.081vh *0.50307 * 0.3 * 0.3);
     /* font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
@@ -442,7 +447,7 @@ p{
     font-weight: bold;
 }
 #OldTitle{
-    line-height: calc(100vh *0.75 *0.36947 *0.38197 *0.3 );
+    line-height: calc(246.081vh *0.50307 * 0.3 * 0.3);
     /* font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
@@ -451,26 +456,26 @@ p{
     font-weight: bold;
 }
 .InfoRight{/*圓圈請參閱Circle.css*/
-    width :41.667%;
-    height: 75%;
+    width :calc(100vw - 30px);
+    height: calc(100vw - 30px);
     position: absolute;
-    right: 8.333%;
-    top: 12.5%
+    right: 15px;
+    top: 136.296vw;
 }
 
 .TeamDiv{
     width: 100%;
-    height: 100vh;
-    background: transparent url("../01Materials/ServiceBG.jpg") no-repeat scroll center;
+    height: 148.148vw;
+    background: transparent url("../01Materials/05PhoneBG/PhoneTeamBG.jpg") no-repeat scroll center;
     background-size: cover;
     position: relative;
 }
 .LeftPeople{
-    width: 40%;
-    height:47.685%;
+    width: calc(100vw - 30px);
+    height:64.815vw;;
     position: absolute;
-    left:8.333%;
-    top:26.157%;
+    left:15px;
+    top:71.065vw;
 }
 .LeftPeoplePic{
     width:61.803%;
@@ -518,11 +523,11 @@ p{
     background-color: #29ABE2;
 }
 .RightPeople{
-    width: 40%;
-    height:47.685%;
+    width: calc(100vw - 30px);
+    height: 64.815vw;
     position: absolute;
-    right:8.333%;
-    top:26.157%;
+    right:15px;
+    top:0;
 }
 .RightPeopleInfo{
     width:38.197%;
@@ -571,50 +576,51 @@ p{
 
 .ContactDiv{
     width: 100%;
-    height: 100vh;
-    background: transparent url("../01Materials/StarsBG.jpg") no-repeat scroll center;
+    height: 148.148vw;
+    background: transparent url("../01Materials/05PhoneBG/PhoneContactBG.jpg") no-repeat scroll center;
     background-size: cover;
     position: relative;  
 }
 .ContactContainer{
-    width: 83.333%;
-    height:44.722%;
+    width: 100%;
+    height:135.926vw;
     position: absolute;
-    left: 8.333%;
-    top:10.37%;
-    background-color: #e7d168;
+    left: 0%;
+    top:0%;
+    background-color: transparent;
 }
 .ContactMap{
-    width: 38.197%;
-    height: 100%;
+    width: 100%;
+    height: 64.815vw;
     position: absolute;
 }
 .ContactInfo{
-    width: 61.803%;
-    height: 100%;
+    width: calc(100% - 30px);
+    height: 71.111vw;
     position: absolute;
-    left:38.197%;;
-    top:0;
+    background-color: #e7d168;
+    left:15px;
+    top:64.815vw;
 }
 .ContactAdd{
-    width: 16.667vw;
+    width: 33.333%;
     /* height: 25.673%; */
     position: absolute;
     top:30%;
-    left:35.324%;
+    left:33.3333%;
     text-align: justify;
     text-align-last: justify;
     text-justify: auto;
-    line-height: calc(100vh * 0.44722 * 0.25673);   
+    line-height: calc( 71.111vw * 0.05357);   
     /* font-size:  calc(100vh * 0.44722 * 0.25673 * 0.3); */
     font-weight: bold
 }
 .ContactTel{
-    width: 16.667vw;
-    height: 17.184%;
+    width: 33.333%;
+    height: 5.098%;
     position: absolute;
-    top:55.673%;
-    left:35.324%  ;
+    top:53.091%;
+    left:33.3333%  ;
     /* text-align: center;
     text-align-last: center;
     text-justify: auto; */
@@ -629,26 +635,26 @@ p{
     flex: 1 1 auto;
 }
 .ContactGroup{
-    width: 16.667vw;
-    height:15.079%;
+    width: 33.333%;
+    height:10.557%;
     position: absolute;
-    bottom: 12.064%;
-    left:35.324%  ;
+    bottom: 30.374%;
+    left:33.333%  ;
     display: flex;
     justify-content: space-between;
 }
 .ContactFB{
-    width: calc(44.722vh * 0.15079);
+    width: calc(71.111vw * 0.10557);
     height: 100%;
-    flex: 0 1 calc(44.722vh * 0.15079);
+    flex: 0 1 calc(71.111vw * 0.10557);
     background: transparent url("../01Materials/03ContactPic/FB_LOGO.svg") no-repeat scroll center;
     background-size: cover;
 
 }
 .ContactIG{
-    width: calc(44.722vh * 0.15079);
+    width: calc(71.111vw * 0.10557);
     height: 100%;
-    flex: 0 1 calc(44.722vh * 0.15079);
+    flex: 0 1 calc(71.111vw * 0.10557);
     background: transparent url("../01Materials/03ContactPic/IG_LOGO.svg") no-repeat scroll center;
     background-size: cover;
 
@@ -659,7 +665,7 @@ p{
     position: absolute;
     left: 8.333%;
     bottom: 0;
-    display: block;
+    display: none;
 }
 .ContactFooterSiteMap{
     width: 100%;
@@ -711,15 +717,7 @@ p{
     text-align: center;
     line-height: calc(100vh * 0.39352 * 0.43059);
     color:white;
+
 }
 
-@media screen and (max-width: 1400px){
-    body{
-        font-size: 100%;
-    }
-}
-@media screen  and (max-width: 1300px){
-    body{
-        font-size: 90%;
-    }
 }
