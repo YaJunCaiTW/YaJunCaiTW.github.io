@@ -78,14 +78,12 @@ $(document).ready(
         ControlObj.addEventListener("mouseout", function () { ChangeToNoShadow(this) });
         //FB_LOGO，借用Service.js的ChangeSideBarShadow來做回饋
         ControlObj = document.getElementsByClassName("ContactFB");
-        console.log(ControlObj);
         ControlObj[0].style.cursor = "pointer";
         ControlObj[0].addEventListener("click", GoToFB);
         ControlObj[0].addEventListener("mouseover", function () { ChangeSideBarShadow(this) });
         ControlObj[0].addEventListener("mouseout", function () { ChangeSideBarShadow(this) });
         //IG_LOGO，借用Service.js的ChangeSideBarShadow來做回饋
         ControlObj = document.getElementsByClassName("ContactIG");
-        console.log(ControlObj);
         ControlObj[0].style.cursor = "pointer";
         ControlObj[0].addEventListener("click", GoToIG);
         ControlObj[0].addEventListener("mouseover", function () { ChangeSideBarShadow(this) });

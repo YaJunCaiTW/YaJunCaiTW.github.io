@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="02CSS/normalize.css">
     <link rel="stylesheet" href="02CSS/aos.css">
     <link rel="stylesheet" href="02CSS/BasicStyle.css">
-    <link rel="stylesheet" href="02CSS/PhoneBasicStyle.css">
     <link rel="stylesheet" href="02CSS/ServiceCard.css">
     <link rel="stylesheet" href="02CSS/Circle.css">
     <link rel="stylesheet" href="02CSS/Shadow_Radius.css">
+    <link rel="stylesheet" href="02CSS/PhoneBasicStyle.css">
     <link rel="stylesheet" href="02CSS/JSEffect.css">
     <style>
     </style>
@@ -28,14 +28,84 @@
         <div class="NavItem Info">
             <h2>點星聞</h2>
         </div>
-        <div class="NavItem Logo"></div>
+        <div class="NavItem Logo">
+            
+        </div>
         <div class="NavItem Team">
             <h2>點星人</h2>
         </div>
         <div class="NavItem Contact">
             <h2>聯絡點星</h2>
         </div>
+        <div class="PhoneMenuLogo">
+            <div id="PhoneTopLine1" class="PhoneTopLine1"></div>
+            <div id="PhoneTopLine2" class="PhoneTopLine2"></div>
+            <div id="PhoneTopLine3" class="PhoneTopLine3"></div>
+        </div>
     </div>
+
+    <div class="PhoneMenu">
+
+        <div class="PhoneMenuItem PhoneService">
+            <div class="PhoneMenuItemName">
+                <h1>點星服務</h1>
+            </div>
+            <div class="PhoneDropBtn"></div>
+        </div>
+        <div class="PhoneMenuItemArea PhoneMenuServiceArea">
+            <div class="PhoneMenuContent">
+                <span id="PhoneMenuFood"><h2>餐點</h2></span>
+                <span id="PhoneMenuDivine"><h2>占卜</h2></span>
+                <span id="PhoneMenuSet"><h2>組合</h2></span>
+            </div>
+        </div>
+        <div class="PhoneMenuFakeDiv"></div>
+
+        <div class="PhoneMenuItem PhoneInfo">
+            <div class="PhoneMenuItemName">
+                <h1>點星聞</h1>
+            </div>
+            <div class="PhoneDropBtn"></div>
+        </div>
+        <div class="PhoneMenuItemArea PhoneMenuInfoArea">
+            <div class="PhoneMenuContent">
+                <span id="PhoneMenuAnnouce"><h2>星消息</h2></span>
+                <span id="PhoneMenuFate"><h2>星運勢</h2></span>
+            </div>
+        </div>
+        <div class="PhoneMenuFakeDiv"></div>
+
+        <div class="PhoneMenuItem PhoneTeam">
+            <div class="PhoneMenuItemName">
+                <h1>點星人</h1>
+            </div>
+            <div class="PhoneDropBtn"></div>
+        </div>
+        <div class="PhoneMenuItemArea PhoneMenuTeamArea">
+            <div class="PhoneMenuContent">
+                <span id="PhoneMenuDiviner"><h2>占星師</h2></span>
+                <span id="PhoneMenuPastryChef"><h2>甜點師</h2></span>
+            </div>
+        </div>
+        <div class="PhoneMenuFakeDiv"></div>
+
+        <div class="PhoneMenuItem PhoneContact">
+            <div class="PhoneMenuItemName">
+                <h1>聯絡點星</h1>
+            </div>
+            <div class="PhoneDropBtn"></div>
+        </div>
+        <div class="PhoneMenuItemArea PhoneMenuContactArea">
+            <div class="PhoneMenuContent">
+                <span id="PhoneMenuMap"><h2>地圖</h2></span>
+                <span id="PhoneMenuFB"><h2>FB粉絲團</h2></span>
+                <span id="PhoneMenuIG"><h2>IG</h2></span>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="FakeDivForPhone"></div>
     <div class="HeaderDiv">
         <div class="FakeDivForService"></div>
@@ -44,12 +114,13 @@
     <div class="ServiceDiv">
 
         <div class="ServiceSideBar" data-aos="fade-up-right">
-            
+
             <div class="ServiceSideBarBG"></div>
-            
+
             <div class="ServiceSideBarItem ServiceSideBarItem1Pos SideBarOut">
                 <div id="ServiceSideBarItem1">
-                    <h2>餐<br>點</h2>
+                    <h2>餐
+                        <br>點</h2>
                 </div>
             </div>
 
@@ -356,18 +427,42 @@
                     <h2>台中市錦南街17號</h2>
                 </div>
                 <div class="ContactTel">
-                    <div class="ContactTelNum"><h2>0</h2></div>
-                    <div class="ContactTelNum"><h2>4</h2></div>
-                    <div class="ContactTelNum"><h2>-</h2></div>
-                    <div class="ContactTelNum"><h2>2</h2></div>
-                    <div class="ContactTelNum"><h2>2</h2></div>
-                    <div class="ContactTelNum"><h2>3</h2></div>
-                    <div class="ContactTelNum"><h2>1</h2></div>
-                    <div class="ContactTelNum"><h2>-</h2></div>
-                    <div class="ContactTelNum"><h2>8</h2></div>
-                    <div class="ContactTelNum"><h2>8</h2></div>
-                    <div class="ContactTelNum"><h2>7</h2></div>
-                    <div class="ContactTelNum"><h2>8</h2></div>
+                    <div class="ContactTelNum">
+                        <h2>0</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>4</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>-</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>2</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>2</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>3</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>1</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>-</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>8</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>8</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>7</h2>
+                    </div>
+                    <div class="ContactTelNum">
+                        <h2>8</h2>
+                    </div>
                     <!-- <h2>04-2232-8878</h2> -->
                 </div>
                 <div class="ContactGroup">
@@ -383,9 +478,15 @@
                         <h2>點星服務</h2>
                     </div>
                     <div class="ContactFooterSiteMapContent YellowSiteMapItemContent">
-                        <p><span id="FooterFood">餐點</span><p>
-                        <p><span id="FooterDivine">占卜</span></p>
-                        <p><span id="FooterSet">組合</span></p>
+                        <p>
+                            <span id="FooterFood">餐點</span>
+                            <p>
+                                <p>
+                                    <span id="FooterDivine">占卜</span>
+                                </p>
+                                <p>
+                                    <span id="FooterSet">組合</span>
+                                </p>
                     </div>
                 </div>
                 <div class="ContactFooterSiteMapItem ">
@@ -393,8 +494,12 @@
                         <h2>點星聞</h2>
                     </div>
                     <div class="ContactFooterSiteMapContent BlueSiteMapItemContent">
-                        <p><span id="FooterAnnounce">星消息</span></p>
-                        <p><span id="FooterFate">星運勢</span></p>
+                        <p>
+                            <span id="FooterAnnounce">星消息</span>
+                        </p>
+                        <p>
+                            <span id="FooterFate">星運勢</span>
+                        </p>
                     </div>
                 </div>
                 <div class="ContactFooterSiteMapItem">
@@ -402,8 +507,12 @@
                         <h2>點星人</h2>
                     </div>
                     <div class="ContactFooterSiteMapContent YellowSiteMapItemContent">
-                        <p><span id="FooterDiviner">占星師</span></p>
-                        <p><span id="FooterPastryChef">甜點師</span></p>
+                        <p>
+                            <span id="FooterDiviner">占星師</span>
+                        </p>
+                        <p>
+                            <span id="FooterPastryChef">甜點師</span>
+                        </p>
                     </div>
                 </div>
                 <div class="ContactFooterSiteMapItem">
@@ -411,15 +520,21 @@
                         <h2>聯絡點星</h2>
                     </div>
                     <div class="ContactFooterSiteMapContent BlueSiteMapItemContent">
-                        <p><span id="FooterMap">地圖</span></p>
-                        <p><span id="FooterFB">FB紛絲團</span></p>
-                        <p><span id="FooterIG">IG</span></p>
+                        <p>
+                            <span id="FooterMap">地圖</span>
+                        </p>
+                        <p>
+                            <span id="FooterFB">FB紛絲團</span>
+                        </p>
+                        <p>
+                            <span id="FooterIG">IG</span>
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="ContactFooterCopyRight">
-                Copyright © 2017 點星屋 保留一切權利
-            </div>
+        </div>
+        <div class="ContactFooterCopyRight">
+            Copyright © 2017 點星屋 保留一切權利
         </div>
     </div>
 
@@ -427,7 +542,7 @@
     <script src="03JS/aos.js"></script>
     <script>
         AOS.init({
-             disable: 'mobile'
+            disable: 'mobile'
         });
     </script>
 
@@ -450,6 +565,7 @@
     <script src="03JS/Service.js"></script>
     <script src="03JS/Circle.js"></script>
     <script src="03JS/Footer.js"></script>
+    <script src="03JS/PhoneEftect.js"></script>
 
 </body>
 

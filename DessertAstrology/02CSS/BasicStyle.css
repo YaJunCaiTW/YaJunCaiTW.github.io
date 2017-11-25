@@ -51,9 +51,11 @@ p{
     display:block;
 }
 
+.PhoneMenu{
+    display: none;
+}
+
 .FakeDivForPhone{
-    width:100%;
-    height:7.685vh;
     display: none; 
 }
 .HeaderDiv{
@@ -130,6 +132,7 @@ p{
 }
 .ServiceCircleBtn{
     width:41.666%;
+    height:8.333vh;
     position: absolute;
     left:33.334%;
     top: 4.6875%;
@@ -162,25 +165,30 @@ p{
     background-image:  url("../01Materials/04ServicePic/02Icon/DONUT_ICON.svg");
     flex:0 1 8.333vh;
     order:1;
+    align-self: center;
 }
 .Cake{
     line-height: 8.333vh;
     flex:0 1 8.333vh;
     order:2;
+    align-self: center;
 }
 .Coffee{
     line-height: 8.333vh;
     flex:0 1 8.333vh;
     order:3;
+    align-self: center;
 }
 .Tea{
     line-height: 8.333vh;
     flex:0 1 8.333vh;
     order:4;
+    align-self: center;
 }
 .CupCake{
     flex:0 1 8.333vh;
     order:5;
+    align-self: center;
 }
 .CupCake2Line{
     position: relative;
@@ -206,6 +214,7 @@ p{
     background: transparent url("../01Materials/04ServicePic/02Icon/CircleArrowBtn.jpg") no-repeat local center;
     background-size:cover;
     cursor: pointer;
+    display: block;
 }
 .ServiceContentRightBtn{
     width: calc(11.111vh - 10px);
@@ -219,6 +228,7 @@ p{
     background-size:cover;
     transform: rotate(180deg);
     cursor: pointer;
+    display: block;
 }
 .ServiceContentCards{
     width: 77.778%;
@@ -242,7 +252,7 @@ p{
     /* border: 1px solid white; */
     position: absolute;
     left: calc(0% + 5px); /*用此項控制左右，35%一項目 */
-    top: calc(100% + 5px);
+    top:calc(100% + 5px);
     
 }
 .ServiceContentCardsSlideArea.SetArea{
@@ -655,15 +665,15 @@ p{
 }
 .ContactFooter{
     width: 83.333%;
-    height:39.352%;
+    height:23.00742232%;
     position: absolute;
     left: 8.333%;
-    bottom: 0;
+    bottom: 16.34457768vh;
     display: block;
 }
 .ContactFooterSiteMap{
     width: 100%;
-    height: 56.941%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -708,9 +718,12 @@ p{
     background-color: #b2e6f7;
 }
 .ContactFooterCopyRight{
+    width: 100%;
+    line-height:16.34457768vh;
     text-align: center;
-    line-height: calc(100vh * 0.39352 * 0.43059);
     color:white;
+    position: absolute;
+    bottom: 0;    
 }
 
 @media screen and (max-width: 1400px){
