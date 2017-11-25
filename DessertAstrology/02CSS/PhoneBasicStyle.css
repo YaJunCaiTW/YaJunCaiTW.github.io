@@ -166,11 +166,11 @@ p{
     transition: 1s;
 }
 .PhoneService .PhoneDropBtn, .PhoneTeam .PhoneDropBtn{
-    background: transparent url('/01Materials/PhoneDropDown1.jpg') no-repeat local center;
+    background: transparent url('../01Materials/PhoneDropDown1.jpg') no-repeat local center;
     background-size: cover;
 }
 .PhoneInfo .PhoneDropBtn, .PhoneContact .PhoneDropBtn{
-    background: transparent url('/01Materials/PhoneDropDown2.jpg') no-repeat local center;
+    background: transparent url('../01Materials/PhoneDropDown2.jpg') no-repeat local center;
     background-size: cover;
 }
 .PhoneMenuItemArea{
@@ -240,6 +240,7 @@ p{
     background: transparent url("../01Materials/05PhoneBG/PhoneServiceBG.jpg") no-repeat scroll center;
     background-size: cover;
     position: relative;
+    overflow-x: hidden;
 }
 .ServiceSideBar{
     width: calc(100% - 30px);

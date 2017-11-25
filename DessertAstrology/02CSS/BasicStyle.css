@@ -79,6 +79,7 @@ p{
     background: transparent url("../01Materials/ServiceBG.jpg") no-repeat scroll center;
     background-size: cover;
     position: relative;
+    overflow-x: hidden
 }
 .ServiceSideBar{
     width: 8.438%;
