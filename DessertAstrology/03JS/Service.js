@@ -27,15 +27,24 @@ $(document).ready(
 )
 
 function SideOut(ControlObj) {
+
     if ($(ControlObj).hasClass("SideBarOut")) {                      //點到一樣的分類直接返回
         return;
     }
+    var vw = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
 
     $(".ServiceSideBarItem").removeClass("SideBarOut");             //全部.SideBarOut移除
     $(ControlObj).addClass("SideBarOut");                           //點的標籤加上.SideBarOut
 
     if ($(ControlObj).hasClass("ServiceSideBarItem1Pos")) {          //點倒是山點的話
-        $(".ServiceCircleBtn").animate({ left: "33.334%" }, 500);   //讓餐點的分類出來
+        if(vw <=1200){
+            $(".ServiceCircleBtn").animate({ left: 0.25 * vw + "px" }, 500);//手機板出來的位置
+        }
+        else{
+            $(".ServiceCircleBtn").animate({ left: "33.334%" }, 500);   //讓餐點的分類出來
+        }        
     }
     else {
         $(".ServiceCircleBtn").animate({ left: "110%" }, 500, );     //其他標籤則不讓餐點的分類出來

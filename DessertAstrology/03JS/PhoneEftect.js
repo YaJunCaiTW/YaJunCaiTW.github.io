@@ -304,7 +304,6 @@ function PhoneGoToContactMap(){
 }
 
 function TouchAreaStart(ControlObj, event, TouchPoint){
-    event.preventDefault();
     TouchPoint[0] = event.touches[0].pageX;
     TouchPoint[1] = event.touches[0].pageY;
     
@@ -347,18 +346,6 @@ function TouchAreaEnd(ControlObj, event, TouchPoint){
     TouchPoint[1] = -1;
 }
 
-function ChangeSideBarBackGroundColor(ControlObj){
-    //取得Viewport Width的方式
-    var vw = window.innerWidth
-    || document.documentElement.clientWidth
-    || document.body.clientWidth;
-    $(".ServiceSideBarItem").removeClass("PhoneSideBarChangeBackgroundColor");
-    ControlObj.classList.add("PhoneSideBarChangeBackgroundColor");
-    if ($(ControlObj).hasClass("ServiceSideBarItem1Pos")) {//點倒是山點的話
-        $(".ServiceCircleBtn").stop();//先結束掉電腦版的動畫          
-        $(".ServiceCircleBtn").animate({ left: 0.26389 * vw + "px" }, 500);   //讓餐點的分類出來
-    }
-}
 
 function ChangeHTMLTags(){
     var ControlObj = document.getElementById("ServiceSideBarItem1");
