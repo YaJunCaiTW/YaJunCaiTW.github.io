@@ -10,6 +10,14 @@
     background: transparent url("../01Materials/04ServicePic/01Donut/ORIGINAL_DONUT.jpg") no-repeat local center top;
     background-size:cover;
 }
+#FoodAreaCard4Pic{
+    background: transparent url("../01Materials/04ServicePic/Fake-19.jpg") no-repeat local center top;
+    background-size:cover;
+}
+#FoodAreaCard5Pic{
+    background: transparent url("../01Materials/04ServicePic/Fake-19.jpg") no-repeat local center top;
+    background-size:cover;
+}
 
 #DivineAreaCard1Pic{
     background: transparent url("../01Materials/04ServicePic/03Divine/Astrology.jpg") no-repeat local center top;

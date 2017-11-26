@@ -9,6 +9,8 @@
 /*ServiceSideBar.js用*/
 .SideBarOut{
     align-self:flex-end;
+    background-color: #CE600A;
+    color:white;
 }
 .CircleBtnItemSelected{
     background-color: #CE600A;
@@ -16,12 +18,14 @@
 }
 .ChangeSideBarShadow{
     box-shadow:  2px 2px 8px 5px #1F0F08 ;
+    
 }
 .ChangeBtnShadow{
     box-shadow:  0px 2px 8px 5px #1F0F08 ;
 }
 .ChangeRightBtnShadow{
     box-shadow:  0px -2px 8px 5px #1F0F08 ;
+    
 }
 
 /*PhoneEffect.js用*/
@@ -31,5 +35,12 @@
 .PhoneMenuBtnDirection{
     transform: translateY(1.25vw) rotate(180deg);
     box-shadow:  0px -2px 8px 3px #1F0F08 ;
+}
+.PhoneSideBarChangeBackgroundColor{
+    background-color: #942E01;
+    color:white;
+}
+.PhoneMenuPop{
+    min-height:100vh;
 }
 

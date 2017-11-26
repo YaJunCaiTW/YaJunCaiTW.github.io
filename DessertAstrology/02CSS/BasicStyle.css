@@ -142,8 +142,6 @@ p{
     justify-content:space-between; 
     text-align: center;
     flex-wrap: nowrap;
-   
-    
 }
 .ServiceCircleBtnItem{
     flex:0 1 8.333vh; 
@@ -611,7 +609,7 @@ p{
     width: 16.667vw;
     /* height: 25.673%; */
     position: absolute;
-    top:30%;
+    top:21.032%;
     left:35.324%;
     text-align: justify;
     text-align-last: justify;
@@ -624,7 +622,7 @@ p{
     width: 16.667vw;
     height: 17.184%;
     position: absolute;
-    top:55.673%;
+    top:46.705%;
     left:35.324%  ;
     /* text-align: center;
     text-align-last: center;
@@ -643,7 +641,7 @@ p{
     width: 16.667vw;
     height:15.079%;
     position: absolute;
-    bottom: 12.064%;
+    bottom: 21.032%;
     left:35.324%  ;
     display: flex;
     justify-content: space-between;
@@ -734,6 +732,6 @@ p{
 }
 @media screen  and (max-width: 1300px){
     body{
-        font-size: 90%;
+        font-size:90%;
     }
 }

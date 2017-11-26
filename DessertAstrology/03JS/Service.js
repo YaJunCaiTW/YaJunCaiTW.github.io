@@ -94,6 +94,7 @@ function ServiceContentGoLeft() {
                 return;
             }
             else {
+                $(".ServiceContentCards > .ServiceContentCardsSlideArea:nth-child(" + (i + 1) + ") ").stop(true,true);//快速點擊時的防呆
                 $(".ServiceContentCards > .ServiceContentCardsSlideArea:nth-child(" + (i + 1) + ") ").animate({ left: "-=35%" }, 500);
             }
         }
@@ -105,11 +106,12 @@ function ServiceContentGoRight() {
     for (i = 0; i < $(".ServiceSideBarItem").length; i++) {
         //找出哪一個是被選到的
         if ($($(".ServiceSideBarItem")[i]).hasClass("SideBarOut")) {
-            //比較現在的又移位治是否已經到底(Left > 0(基準有L:5PX))
+            //比較現在的又移位治是否已經到底(Left > 0(基準有Left:5PX))
             if ($(".ServiceContentCards > .ServiceContentCardsSlideArea:nth-child(" + (i + 1) + ") ").css("left").slice(0, -2) >= 0 ){
                 return;
             }
             else {
+                $(".ServiceContentCards > .ServiceContentCardsSlideArea:nth-child(" + (i + 1) + ") ").stop(true,true);//快速點擊時的防呆
                 $(".ServiceContentCards > .ServiceContentCardsSlideArea:nth-child(" + (i + 1) + ") ").animate({ left: "+=35%" }, 500);
             }
         }
@@ -165,11 +167,11 @@ function ChangeFoodArea(ControlObj){
         document.getElementById("FoodAreaCard3Title").innerHTML="<h2>烏登朵娜</h2>";
         document.getElementById("FoodAreaCard3P").innerHTML="<p>烏登是盧恩中的空白符文，是結束也是開始，嘗一口，結束過去，迎接嶄新未來。</p> ";
 
-        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard4Title").innerHTML="<h2>國王的朵娜</h2>";
         document.getElementById("FoodAreaCard4P").innerHTML="<p>聰明的人才看的到的朵娜，又大又圓又好吃。</p> ";
 
-        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard5Title").innerHTML="<h2>國王的朵娜</h2>";
         document.getElementById("FoodAreaCard5P").innerHTML="<p>聰明的人才看的到的朵娜，又大又圓又好吃。</p> ";
     }
@@ -184,15 +186,15 @@ function ChangeFoodArea(ControlObj){
         document.getElementById("FoodAreaCard2Title").innerHTML="<h2>方提拉米蘇</h2>";
         document.getElementById("FoodAreaCard2P").innerHTML="<p>和圓的吃起來一樣，適合獨享，代表地、遼闊。</p> ";
 
-        document.getElementById("FoodAreaCard3Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard3Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard3Title").innerHTML="<h2>國王的蛋糕</h2>";
         document.getElementById("FoodAreaCard3P").innerHTML="<p>聰明的人才看的到的蛋糕，又小又綿又好吃。</p>";
 
-        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard4Title").innerHTML="<h2>國王的蛋糕</h2";
         document.getElementById("FoodAreaCard4P").innerHTML="<p>聰明的人才看的到的蛋糕，又小又綿又好吃。</p>";
 
-        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard5Title").innerHTML="<h2>國王的蛋糕</h2>";
         document.getElementById("FoodAreaCard5P").innerHTML="<p>聰明的人才看的到的蛋糕，又小又綿又好吃。</p>";
     }
@@ -211,11 +213,11 @@ function ChangeFoodArea(ControlObj){
         document.getElementById("FoodAreaCard3Title").innerHTML="<h2>發財杯子</h2>";
         document.getElementById("FoodAreaCard3P").innerHTML="<p>菲胡的符號在爐恩符文中帶有財富之義，塊多吃幾個，準備發財。</p> ";
 
-        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard4Title").innerHTML="<h2>國王的杯子</h2>";
         document.getElementById("FoodAreaCard4P").innerHTML="<p>聰明的人才看的到的杯子，又大又高又好吃。</p> ";
 
-        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard5Title").innerHTML="<h2>國王的杯子</h2>";
         document.getElementById("FoodAreaCard5P").innerHTML="<p>聰明的人才看的到的杯子，又大又高又好吃。</p> ";
     }
@@ -230,38 +232,38 @@ function ChangeFoodArea(ControlObj){
         document.getElementById("FoodAreaCard2Title").innerHTML="<h2>愛的摩卡</h2>";
         document.getElementById("FoodAreaCard2P").innerHTML="<p>巧克力與咖啡的結合，蹦出愛的火花。</p> ";
 
-        document.getElementById("FoodAreaCard3Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard3Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard3Title").innerHTML="<h2>國王的咖啡</h2>";
         document.getElementById("FoodAreaCard3P").innerHTML="<p>聰明的人才看的到的咖啡，又苦又濃又好喝。</p> ";
 
-        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard4Title").innerHTML="<h2>國王的咖啡</h2>";
         document.getElementById("FoodAreaCard4P").innerHTML="<p>聰明的人才看的到的咖啡，又苦又濃又好喝。</p> ";
 
-        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard5Title").innerHTML="<h2>國王的咖啡</h2>";
         document.getElementById("FoodAreaCard5P").innerHTML="<p>聰明的人才看的到的咖啡，又苦又濃又好喝。</p> ";
     }
     else if($(ControlObj).hasClass("Tea")){
         $(ControlObj).css("background-image" , "url('01Materials/04ServicePic/02Icon/TEA_ICON.svg')");
 
-        document.getElementById("FoodAreaCard1Pic").style.backgroundImage="url('01Materials/04ServicePic/08Tea/Tea1.png')";
-        document.getElementById("FoodAreaCard1Title").innerHTML="<h2>紅茶</h2>";
-        document.getElementById("FoodAreaCard1P").innerHTML="<p>紅茶</p> ";
+        document.getElementById("FoodAreaCard1Pic").style.backgroundImage="url('01Materials/04ServicePic/08Tea/Tea1.jpg')";
+        document.getElementById("FoodAreaCard1Title").innerHTML="<h2>純粹紅茶</h2>";
+        document.getElementById("FoodAreaCard1P").innerHTML="<p>純粹、簡單、無加糖，紅茶香味四溢</p> ";
 
-        document.getElementById("FoodAreaCard2Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard2Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard2Title").innerHTML="<h2>國王的茶飲</h2>";
         document.getElementById("FoodAreaCard2P").innerHTML="<p>聰明的人才看的到的茶飲，又清又香又好喝。</p> ";
 
-        document.getElementById("FoodAreaCard3Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard3Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard3Title").innerHTML="<h2>國王的茶飲</h2>";
         document.getElementById("FoodAreaCard3P").innerHTML="<p>聰明的人才看的到的茶飲，又清又香又好喝。</p> ";
 
-        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard4Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard4Title").innerHTML="<h2>國王的茶飲</h2>";
         document.getElementById("FoodAreaCard4P").innerHTML="<p>聰明的人才看的到的茶飲，又清又香又好喝。</p> ";
 
-        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="none";
+        document.getElementById("FoodAreaCard5Pic").style.backgroundImage="url('01Materials/04ServicePic/Fake-19.jpg')";
         document.getElementById("FoodAreaCard5Title").innerHTML="<h2>國王的茶飲</h2>";
         document.getElementById("FoodAreaCard5P").innerHTML="<p>聰明的人才看的到的茶飲，又清又香又好喝。</p> ";
     }

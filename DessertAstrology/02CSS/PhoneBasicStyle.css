@@ -1,4 +1,4 @@
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1200px){
 
 *{
     box-sizing: border-box;
@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, body, html{
 }
 body{
     overflow-x: hidden;
-    font-size: 55%;
+    font-size: 130%;
 }
 
 
@@ -123,9 +123,6 @@ p{
     overflow: hidden;
     transition: all 1s;
 }
-.PhoneMenuPop{
-    min-height:100vh;
-}
 .PhoneMenuItem{
     width: 100%;
     height:12.5vw;
@@ -175,7 +172,6 @@ p{
 }
 .PhoneMenuItemArea{
     width: 100%;
-    
     /* height: 20vw; */
     padding: 0 calc(15px + 10vw);
     float: left;
@@ -183,26 +179,30 @@ p{
 }
 .PhoneMenuServiceArea{
     background-color:#E7D168;
-    opacity: 1; 
+    opacity: 1;
+    line-height: 6vw; 
 }
 .PhoneMenuInfoArea{
     background-color:#62BBD3;
     opacity: 1;
+    line-height: 9vw;
 }
 .PhoneMenuTeamArea{
     background-color:#E7D168;
     opacity: 1;
+    line-height: 9vw;
 }
 .PhoneMenuContactArea{
     background-color:#62BBD3;
     opacity: 1;
+    line-height: 6vw;
 }
 .PhoneMenuContent{
     width: 15vw;
     text-align: justify;
     text-align-last: justify;
     text-justify: auto;
-    line-height: 6vw;
+    
     height: 0;/*控制單項此高度開合 0  20vw*/
     transition: all 1s;
 }
@@ -293,25 +293,24 @@ p{
     flex: 1;
 }
 .ServiceCircleBtn{
-    width:47.222vw;
+    width:50vw;
     height:24.074vw;
     position: absolute;
-    left:26.389vw;
+    left:25vw;
     top: 108.981vw;
     display: flex;
     align-items: center;
     justify-content:space-between; 
     text-align: center;
     flex-wrap: wrap;
-   z-index: 50;
-    
+    z-index: 50; 
 }
 .ServiceCircleBtnItem{
-    flex:0 1 calc(24.074vw * 0.35385); 
+    flex:0 0 calc(24.074vw * 0.415);  
     /* border: 1px dotted lightcoral; */
     border-radius: 50%;
-    width: calc(24.074vw * 0.35385);
-    height:35.385%;
+    width: calc(24.074vw * 0.415);
+    height:calc(24.074vw * 0.415);
     background-color: #942E01;
     background: #942E01 none no-repeat local center;
     background-size: 65%;
@@ -319,36 +318,36 @@ p{
     font-weight: bold;
     cursor: pointer;
     transition: transform 1s;
-    flex-wrap: wrap;
+    
 }
 
 .Donut{
-    line-height: calc(24.074vw * 0.35385);
+    line-height: calc(24.074vw * 0.415);
     background-image:  url("../01Materials/04ServicePic/02Icon/DONUT_ICON.svg");
-    flex:0 1 calc(24.074vw * 0.35385); 
+    /* flex:0 0 calc(24.074vw * 0.45);  */
     order:1;
     align-self: flex-end;
 }
 .Cake{
-    line-height: calc(24.074vw * 0.35385);
-    flex:0 1 calc(24.074vw * 0.35385); 
+    line-height: calc(24.074vw * 0.415);
+    /* flex:0 1 calc(24.074vw * 0.50);  */
     order:3;
     align-self: flex-end;
 }
 .Coffee{
-    line-height:calc(24.074vw * 0.35385);
-    flex:0 1 calc(24.074vw * 0.35385);
+    line-height:calc(24.074vw * 0.415);
+    /* flex:0 1 calc(24.074vw * 0.50); */
     order:2;
     align-self: flex-start; 
 }
 .Tea{
-    line-height: calc(24.074vw * 0.35385);
-    flex:0 1 calc(24.074vw * 0.35385);
+    line-height: calc(24.074vw* 0.415);
+    /* flex:0 1 calc(24.074vw * 0.50); */
     order:4;
     align-self: flex-start; 
 }
 .CupCake{
-    flex:0 1 calc(24.074vw * 0.35385);
+    /* flex:0 1 calc(24.074vw * 0.50); */
     order:5;
     align-self: flex-end;  
 }
@@ -561,7 +560,7 @@ p{
     height: 123.796vw;
     position: absolute;
     left: 15px;
-    top: 0;
+    top: 6.25vw;
 }
 .InfoLeftLatest{
     width:100%;
@@ -647,7 +646,7 @@ p{
     text-align-last: left;
 }
 #LatestTitle{
-    line-height: calc(246.081vh *0.50307 * 0.3 * 0.3);
+    line-height: calc(123.796vw * 0.3 * 0.3);
     /* font-size: calc(100vh *0.75 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
@@ -656,7 +655,7 @@ p{
     font-weight: bold;
 }
 #MidTitle{
-    line-height: calc(246.081vh *0.50307 * 0.3 * 0.3);
+    line-height: calc(123.796vw * 0.3 * 0.3);
     /* font-size: calc(100vh *0.75 *0.60553 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
@@ -665,7 +664,7 @@ p{
     font-weight: bold;
 }
 #OldTitle{
-    line-height: calc(246.081vh *0.50307 * 0.3 * 0.3);
+    line-height: calc(123.796vw * 0.3 * 0.3);
     /* font-size: calc(100vh *0.75 *0.36947 *0.38197 *0.3 * 0.8); */
     font-weight: bold;
 }
@@ -678,7 +677,7 @@ p{
     height: calc(100vw - 30px);
     position: absolute;
     right: 15px;
-    top: 136.296vw;
+    top: 142.546vw;
 }
 
 .TeamDiv{
@@ -693,7 +692,7 @@ p{
     height:64.815vw;;
     position: absolute;
     left:15px;
-    top:71.065vw;
+    top:77.615vw;
 }
 .LeftPeoplePic{
     width:61.803%;
@@ -745,7 +744,7 @@ p{
     height: 64.815vw;
     position: absolute;
     right:15px;
-    top:0;
+    top:6.25vw;
 }
 .RightPeopleInfo{
     width:38.197%;
@@ -801,10 +800,10 @@ p{
 }
 .ContactContainer{
     width: 100%;
-    height:135.926vw;
+    height:129.676vw;
     position: absolute;
     left: 0%;
-    top:0%;
+    top: 6.25vw;
     background-color: transparent;
 }
 .ContactMap{
@@ -814,31 +813,31 @@ p{
 }
 .ContactInfo{
     width: calc(100% - 30px);
-    height: 71.111vw;
+    height: 58.611vw;
     position: absolute;
     background-color: #e7d168;
     left:15px;
-    top:64.815vw;
+    top:71.065vw;
 }
 .ContactAdd{
-    width: 33.333%;
+    width: 50%;
     /* height: 25.673%; */
     position: absolute;
     top:30%;
-    left:33.3333%;
+    left:25%;
     text-align: justify;
     text-align-last: justify;
     text-justify: auto;
-    line-height: calc( 71.111vw * 0.05357);   
+    line-height: calc( 58.611vw * 0.05357);   
     /* font-size:  calc(100vh * 0.44722 * 0.25673 * 0.3); */
     font-weight: bold
 }
 .ContactTel{
-    width: 33.333%;
+    width: 50%;
     height: 5.098%;
     position: absolute;
     top:47.571%;
-    left:33.3333%  ;
+    left:25%  ;
     /* text-align: center;
     text-align-last: center;
     text-justify: auto; */
@@ -853,26 +852,26 @@ p{
     flex: 1 1 auto;
 }
 .ContactGroup{
-    width: 33.333%;
+    width: 50%;
     height:10.557%;
     position: absolute;
     bottom: 30.374%;
-    left:33.333%  ;
+    left:25%  ;
     display: flex;
     justify-content: space-between;
 }
 .ContactFB{
-    width: calc(71.111vw * 0.10557);
+    width: calc(58.611vw * 0.10557);
     height: 100%;
-    flex: 0 1 calc(71.111vw * 0.10557);
+    flex: 0 1 calc(58.611vw * 0.10557);
     background: transparent url("../01Materials/03ContactPic/FB_LOGO.svg") no-repeat scroll center;
     background-size: cover;
 
 }
 .ContactIG{
-    width: calc(71.111vw * 0.10557);
+    width: calc(58.611vw * 0.10557);
     height: 100%;
-    flex: 0 1 calc(71.111vw * 0.10557);
+    flex: 0 1 calc(58.611vw * 0.10557);
     background: transparent url("../01Materials/03ContactPic/IG_LOGO.svg") no-repeat scroll center;
     background-size: cover;
 
@@ -940,4 +939,16 @@ p{
     bottom: 0;
 }
 
+}
+
+@media screen and (max-width: 768px){
+body{
+    font-size: 120%;
+}
+}
+
+@media screen and (max-width: 576px){
+    body{
+        font-size: 70%;
+    }
 }

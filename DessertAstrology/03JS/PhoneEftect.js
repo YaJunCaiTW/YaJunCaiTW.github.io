@@ -7,10 +7,19 @@ $(document).ready(
         if(vw < 1200){
             ChangeToPhoneFunction();
         }
+
         window.addEventListener("resize",
             function(){
-                if(vw < 1200){
+                var vw = window.innerWidth             
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;//取得Viewport Width的方式
+                if(vw <= 1200){
                     ChangeToPhoneFunction();
+                    console.log("phone");
+                }
+                else if(vw >1200){
+                    AntiPhoneFunction();
+                    console.log("Anti");
                 }
             }
         )
@@ -71,8 +80,84 @@ function ChangeToPhoneFunction(){
     //改點選LOGO時回到的位置
     ControlObj = document.getElementsByClassName("NavItem");
     ControlObj[2].removeEventListener("click",function(){});
-    ControlObj[2].addEventListener("click", PhoneGoToTop );
+    ControlObj[2].addEventListener("click", PhoneGoToTop )
+    //滑動卡片區域
+    var TouchPoint =[-1,-1]//閉包變數
+    ControlObj = document.getElementsByClassName("ServiceContentCardsSlideArea")
+    for(i=0; i<ControlObj.length; i++){
+        ControlObj[i].addEventListener("touchstart", function (event) { TouchAreaStart(this, event, TouchPoint);});
+        ControlObj[i].addEventListener("touchmove",function (event) { TouchAreaMove(this, event, TouchPoint);})
+        ControlObj[i].addEventListener("touchend",function (event) { TouchAreaEnd(this, event, TouchPoint);})
+    }
+    //更換TAG
+    ChangeHTMLTags();
+}
 
+function AntiPhoneFunction(){
+    //PhoneMenuBar取消註冊點選監聽器
+    var ControlObj = document.getElementsByClassName("PhoneMenuLogo");
+    ControlObj[0].removeEventListener("click",function(){});
+    //取消註冊PhoneMenu裡面的DropDownBtnClick事件
+    ControlObj = document.getElementsByClassName("PhoneDropBtn");
+    ControlObj[0].removeEventListener("click", function () { })    
+    ControlObj[1].removeEventListener("click", function () { })   
+    ControlObj[2].removeEventListener("click", function () { })  
+    ControlObj[3].removeEventListener("click", function () { })
+    //取消PhoneMenu裡面各個項目的超連結
+    //PhoneMenuFood餐點
+    ControlObj = document.getElementById("PhoneMenuFood");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuDivine占卜
+    ControlObj = document.getElementById("PhoneMenuDivine");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuSet組合
+    ControlObj = document.getElementById("PhoneMenuSet");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuAnnouce消息
+    ControlObj = document.getElementById("PhoneMenuAnnouce");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuFate運勢
+    ControlObj = document.getElementById("PhoneMenuFate");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuDiviner占星師
+    ControlObj = document.getElementById("PhoneMenuDiviner");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuPastryChef甜點師
+    ControlObj = document.getElementById("PhoneMenuPastryChef");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuMap地圖
+    ControlObj = document.getElementById("PhoneMenuMap");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuFB
+    ControlObj = document.getElementById("PhoneMenuFB");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //PhoneMenuIG
+    ControlObj = document.getElementById("PhoneMenuIG");
+    ControlObj.style.cursor = "pointer";
+    ControlObj.removeEventListener("click", function () { });
+    //改點選LOGO時回到的位置
+    ControlObj = document.getElementsByClassName("NavItem");
+    ControlObj[2].removeEventListener("click",function(){});
+    ControlObj[2].addEventListener("click", GoToTop );
+    //滑動卡片區域取消，卡片回到電腦版初始位置
+    ControlObj = document.getElementsByClassName("ServiceContentCardsSlideArea")
+    for(i=0; i<ControlObj.length; i++){
+        ControlObj[i].removeEventListener("touchstart", function (event) { TouchAreaStart(this, event, TouchPoint);});
+        ControlObj[i].removeEventListener("touchmove",function (event) { TouchAreaMove(this, event, TouchPoint);})
+        ControlObj[i].removeEventListener("touchend",function (event) { TouchAreaEnd(this, event, TouchPoint);})
+        ControlObj[i].style.left = "5px";
+    }
+    //更換TAG
+    AntiChangeHTMLTags();
 }
 
 function PhoneMenuPop() {
@@ -115,7 +200,6 @@ function PhoneMenuPop() {
 
 function PhoneDropDownService(BtnObj){
     var ControlObj = document.getElementsByClassName('PhoneMenuContent');
-    console.log(ControlObj);
     ControlObj[0].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
@@ -144,6 +228,9 @@ function PhoneGoToTop() {
     document.querySelector('.FakeDivForPhone').scrollIntoView({
         behavior: 'smooth'
     });
+    $(".HeaderDiv").addClass("Brightness");
+    var ShiningObj = setInterval(function () { $(".HeaderDiv").toggleClass("Brightness") }, 500);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 
 function PhoneGoToInfoSelectAnnouce(){
@@ -210,4 +297,101 @@ function PhoneGoToContactMap(){
     $(".ContactMap").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".ContactMap").toggleClass("Brightness") }, 500);
     setTimeout(clearInterval, 2800, ShiningObj);
+}
+
+function TouchAreaStart(ControlObj, event, TouchPoint){
+    event.preventDefault();
+    TouchPoint[0] = event.touches[0].pageX;
+    TouchPoint[1] = event.touches[0].pageY;
+    
+}
+
+function TouchAreaMove(ControlObj, event, TouchPoint){
+    event.preventDefault();
+    if(event.changedTouches[0].pageX >  TouchPoint[0]){
+        $(ControlObj).css("left" , "+=1.5%")
+    }
+    else{
+        $(ControlObj).css("left" , "-=1.5%")
+    }
+    TouchPoint[0] = event.changedTouches[0].pageX;
+    TouchPoint[1] = event.changedTouches[0].pageY;
+}
+
+function TouchAreaEnd(ControlObj, event, TouchPoint){
+    //取得Viewport Width的方式
+    var vw = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+    var TooLeftValue = 0
+    if($(ControlObj).hasClass("FoodArea")){
+        TooLeftValue = -1.37315 * vw - 5
+    }
+    else{
+        TooLeftValue = -0.91751 * vw - 5
+    }
+
+
+    if($(ControlObj).css("left").slice(0,-2) > 5)
+    {
+        $(ControlObj).animate({left:"5px"},100);
+    }
+    else if( $(ControlObj).css("left").slice(0,-2) < TooLeftValue){
+        $(ControlObj).animate({left: TooLeftValue + "px"},100);
+    }
+    TouchPoint[0] = -1;
+    TouchPoint[1] = -1;
+}
+
+function ChangeSideBarBackGroundColor(ControlObj){
+    //取得Viewport Width的方式
+    var vw = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+    $(".ServiceSideBarItem").removeClass("PhoneSideBarChangeBackgroundColor");
+    ControlObj.classList.add("PhoneSideBarChangeBackgroundColor");
+    if ($(ControlObj).hasClass("ServiceSideBarItem1Pos")) {//點倒是山點的話
+        $(".ServiceCircleBtn").stop();//先結束掉電腦版的動畫          
+        $(".ServiceCircleBtn").animate({ left: 0.26389 * vw + "px" }, 500);   //讓餐點的分類出來
+    }
+}
+
+function ChangeHTMLTags(){
+    var ControlObj = document.getElementById("ServiceSideBarItem1");
+    ControlObj.innerHTML="<h1>餐點</h1>";
+    ControlObj = document.getElementById("ServiceSideBarItem2");
+    ControlObj.innerHTML = "<h1>占卜</h1>";
+    ControlObj = document.getElementById("ServiceSideBarItem3");
+    ControlObj.innerHTML = "<h1>組合</h1>";
+    ControlObj = document.getElementById("LatestP");
+    ControlObj.innerHTML = "<h3>2022-08-01<br> 開幕慶活動，消費金額滿500元，贈塔羅牌占卜一次。</h3>";
+    ControlObj = document.getElementById("MidTitle");
+    ControlObj.innerHTML = "<h1>點星點將</h1>";
+    ControlObj = document.getElementById("MidP");
+    ControlObj.innerHTML = "<h3>2022-05-01<br> 點星屋即將正式營運，服務生、甜點助手招募中，請私訊FB粉絲團。</h3>";
+    ControlObj = document.getElementById("OldTitle");
+    ControlObj.innerHTML = "<h1>開幕預告</h1>";
+    ControlObj = document.getElementById("OldP");
+    ControlObj.innerHTML = "<h3>2022-01-01<br> 點星屋將於今年八月正式開始營運，請各位繼續關注本站、FB粉絲團及IG喔!</h3>";
+    
+}
+
+function AntiChangeHTMLTags(){
+    var ControlObj = document.getElementById("ServiceSideBarItem1");
+    ControlObj.innerHTML="<h1>餐點</h1>";
+    ControlObj = document.getElementById("ServiceSideBarItem2");
+    ControlObj.innerHTML = "<h1>占卜</h1>";
+    ControlObj = document.getElementById("ServiceSideBarItem3");
+    ControlObj.innerHTML = "<h1>組合</h1>";
+    ControlObj = document.getElementById("LatestP");
+    ControlObj.innerHTML = "<h2>2022-08-01<br> 開幕慶活動，消費金額滿500元，贈塔羅牌占卜一次。</h2>";
+    ControlObj = document.getElementById("MidTitle");
+    ControlObj.innerHTML = "<h3>點星點將</h3>";
+    ControlObj = document.getElementById("MidP");
+    ControlObj.innerHTML = "<h4>2022-05-01<br> 點星屋即將正式營運，服務生、甜點助手招募中，請私訊FB粉絲團。</h4>";
+    ControlObj = document.getElementById("OldTitle");
+    ControlObj.innerHTML = "<h5>開幕預告</h5>";
+    ControlObj = document.getElementById("OldP");
+    ControlObj.innerHTML = "<h6>2022-01-01<br> 點星屋將於今年八月正式開始營運，請各位繼續關注本站、FB粉絲團及IG喔!</h6>";
+    
 }
