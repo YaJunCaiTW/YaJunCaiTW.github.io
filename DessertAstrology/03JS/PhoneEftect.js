@@ -15,11 +15,11 @@ $(document).ready(
                 || document.body.clientWidth;//取得Viewport Width的方式
                 if(vw <= 1200){
                     ChangeToPhoneFunction();
-                    console.log("phone");
+                    // console.log("phone");
                 }
                 else if(vw >1200){
                     AntiPhoneFunction();
-                    console.log("Anti");
+                    // console.log("Anti");
                 }
             }
         )
@@ -27,6 +27,8 @@ $(document).ready(
 )
 
 function ChangeToPhoneFunction(){
+    //卷軸事件聽器移除
+    window.removeEventListener("scroll", function(){});
     //PhoneMenuBar註冊點選監聽器
     var ControlObj = document.getElementsByClassName("PhoneMenuLogo");
     ControlObj[0].addEventListener("click", PhoneMenuPop);
@@ -94,6 +96,8 @@ function ChangeToPhoneFunction(){
 }
 
 function AntiPhoneFunction(){
+    //註冊轉軸監聽事件，用DeskNavBar.js裡面的HightLightTextAtDiv()
+    window.addEventListener("scroll", HightLightTextAtDiv);
     //PhoneMenuBar取消註冊點選監聽器
     var ControlObj = document.getElementsByClassName("PhoneMenuLogo");
     ControlObj[0].removeEventListener("click",function(){});

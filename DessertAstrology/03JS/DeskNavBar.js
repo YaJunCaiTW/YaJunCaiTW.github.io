@@ -51,6 +51,10 @@ function GoToTop() {
     document.querySelector('.HeaderDiv').scrollIntoView({
         behavior: 'smooth'
     });
+    $(".HeaderDiv").addClass("Brightness");
+    //閃爍
+    var ShiningObj = setInterval(function () { $(".HeaderDiv").toggleClass("Brightness") }, 500);
+    setTimeout(clearInterval, 2800, ShiningObj);
 }
 //捲動到Team位置
 function GoToTeam() {                            
