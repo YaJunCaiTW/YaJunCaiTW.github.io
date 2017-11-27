@@ -4,6 +4,7 @@ $(document).ready(
         var vw = window.innerWidth             
             || document.documentElement.clientWidth
             || document.body.clientWidth;//取得Viewport Width的方式
+        var VwOld = vw;
         if(vw < 1200){
             ChangeToPhoneFunction();
         }
@@ -13,14 +14,15 @@ $(document).ready(
                 var vw = window.innerWidth             
                 || document.documentElement.clientWidth
                 || document.body.clientWidth;//取得Viewport Width的方式
-                if(vw <= 1200){
+                if (vw <= 1200 && VwOld > 1200){
                     ChangeToPhoneFunction();
                     // console.log("phone");
                 }
-                else if(vw >1200){
+                else if (vw > 1200 && VwOld<=1200){
                     AntiPhoneFunction();
                     // console.log("Anti");
                 }
+                VwOld = vw;
             }
         )
     }
@@ -184,6 +186,7 @@ function PhoneMenuPop() {
 
 function PhoneDropDownService(BtnObj){
     var ControlObj = document.getElementsByClassName("PhoneMenuContent");
+    console.log(ControlObj[0]);
     ControlObj[0].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
