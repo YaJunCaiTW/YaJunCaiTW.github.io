@@ -34,10 +34,10 @@ function ChangeToPhoneFunction(){
     ControlObj[0].addEventListener("click", PhoneMenuPop);
     //註冊PhoneMenu裡面的DropDownBtnClick事件
     ControlObj = document.getElementsByClassName("PhoneDropBtn");
-    ControlObj[0].addEventListener("click", function () { PhoneDropDownService(this)})    
-    ControlObj[1].addEventListener("click", function () { PhoneDropDownInfo(this) })   
-    ControlObj[2].addEventListener("click", function () { PhoneDropDownTeam(this) })  
-    ControlObj[3].addEventListener("click", function () { PhoneDropDownContact(this) })
+    ControlObj[0].addEventListener("touchend", function () { PhoneDropDownService(this)})    
+    ControlObj[1].addEventListener("touchend", function () { PhoneDropDownInfo(this) })   
+    ControlObj[2].addEventListener("touchend", function () { PhoneDropDownTeam(this) })  
+    ControlObj[3].addEventListener("touchend", function () { PhoneDropDownContact(this) })
     //PhoneMenu裡面各個項目的超連結
     //PhoneMenuFood餐點
     ControlObj = document.getElementById("PhoneMenuFood");
@@ -103,10 +103,10 @@ function AntiPhoneFunction(){
     ControlObj[0].removeEventListener("click",function(){});
     //取消註冊PhoneMenu裡面的DropDownBtnClick事件
     ControlObj = document.getElementsByClassName("PhoneDropBtn");
-    ControlObj[0].removeEventListener("click", function () { })    
-    ControlObj[1].removeEventListener("click", function () { })   
-    ControlObj[2].removeEventListener("click", function () { })  
-    ControlObj[3].removeEventListener("click", function () { })
+    ControlObj[0].removeEventListener("touchend", function () { })    
+    ControlObj[1].removeEventListener("touchend", function () { })   
+    ControlObj[2].removeEventListener("touchend", function () { })  
+    ControlObj[3].removeEventListener("touchend", function () { })
     //取消PhoneMenu裡面各個項目的超連結
     //PhoneMenuFood餐點
     ControlObj = document.getElementById("PhoneMenuFood");
@@ -155,9 +155,9 @@ function AntiPhoneFunction(){
     //滑動卡片區域取消，卡片回到電腦版初始位置
     ControlObj = document.getElementsByClassName("ServiceContentCardsSlideArea")
     for(i=0; i<ControlObj.length; i++){
-        ControlObj[i].removeEventListener("touchstart", function (event) { TouchAreaStart(this, event, TouchPoint);});
-        ControlObj[i].removeEventListener("touchmove",function (event) { TouchAreaMove(this, event, TouchPoint);})
-        ControlObj[i].removeEventListener("touchend",function (event) { TouchAreaEnd(this, event, TouchPoint);})
+        ControlObj[i].removeEventListener("touchstart", function () {});
+        ControlObj[i].removeEventListener("touchmove",function () { })
+        ControlObj[i].removeEventListener("touchend",function () { })
         ControlObj[i].style.left = "5px";
     }
     //更換TAG
@@ -216,14 +216,12 @@ function PhoneDropDownInfo(BtnObj) {
 
 function PhoneDropDownTeam(BtnObj) {
     var ControlObj = document.getElementsByClassName('PhoneMenuContent');
-    console.log(ControlObj);
     ControlObj[2].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
 
 function PhoneDropDownContact(BtnObj) {
     var ControlObj = document.getElementsByClassName('PhoneMenuContent');
-    console.log(ControlObj);
     ControlObj[3].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
@@ -310,13 +308,8 @@ function TouchAreaStart(ControlObj, event, TouchPoint){
 }
 
 function TouchAreaMove(ControlObj, event, TouchPoint){
-    event.preventDefault();
-    if(event.changedTouches[0].pageX >  TouchPoint[0]){
-        $(ControlObj).css("left" , "+=1.5%")
-    }
-    else{
-        $(ControlObj).css("left" , "-=1.5%")
-    }
+
+    $(ControlObj).css("left" , "+="+ (event.changedTouches[0].pageX - TouchPoint[0]) + "px")
     TouchPoint[0] = event.changedTouches[0].pageX;
     TouchPoint[1] = event.changedTouches[0].pageY;
 }

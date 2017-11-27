@@ -121,7 +121,7 @@ p{
     background-color: #F9F0CD;
     opacity: 0.95;
     overflow: hidden;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .PhoneMenuItem{
     width: 100%;
@@ -160,7 +160,7 @@ p{
     transform: translateY(1.25vw);
     float: right;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 .PhoneService .PhoneDropBtn, .PhoneTeam .PhoneDropBtn{
     background: transparent url('../01Materials/PhoneDropDown1.jpg') no-repeat local center;
@@ -176,6 +176,7 @@ p{
     padding: 0 calc(15px + 10vw);
     float: left;
     overflow: hidden;
+    transition: all 0.5s;
 }
 .PhoneMenuServiceArea{
     background-color:#E7D168;
@@ -224,12 +225,13 @@ p{
     height: calc( 100vw * 0.36 );
     background: transparent url("../01Materials/HeadPic.jpg") no-repeat scroll center;
     background-size: cover;
+    position: relative;
 }
 .FakeDivForService{
     width: 100%;
     height:12.5vw;
     position: absolute;
-    top:calc( 100vw * 0.36 );
+    top:calc(( 100vw * 0.36 ) - 12.5vw);
     /* border:1px solid pink; */
     opacity: 0;
 }
