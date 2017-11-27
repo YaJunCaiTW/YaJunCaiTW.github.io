@@ -35,13 +35,16 @@ $(document).ready(
     }
 )
 //捲動到Service位置
-function GoToService() {                         
+function GoToService() {
+    console.log(document.querySelector(".FakeDivForService")) ;                        
     document.querySelector(".FakeDivForService").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
     });
 }
  //捲動到Info位置
-function GoToInfo() {                           
+function GoToInfo() {
+    console.log(document.querySelector(".InfoDiv"));                           
     document.querySelector(".InfoDiv").scrollIntoView({
         behavior: "smooth"
     });

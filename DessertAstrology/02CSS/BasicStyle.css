@@ -63,6 +63,7 @@ p{
     height: 100vh;
     background: transparent url("../01Materials/HeadPic.jpg") no-repeat scroll center;
     background-size: cover;
+    position: relative;
 }
 .FakeDivForService{
     width: 100%;
@@ -70,7 +71,7 @@ p{
     position: absolute;
     top:87.5vh;
     /* border:1px solid black; */
-    opacity: 0;
+    opacity: 1;
 }
 
 .ServiceDiv{
