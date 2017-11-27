@@ -169,15 +169,15 @@ function PhoneMenuPop() {
     //DropContent回復
     var ControlObj = document.getElementsByClassName("PhoneMenuContent");
     for (i = 0; i < ControlObj.length; i++){
-        if (ControlObj[i].contains("PhoneMenuContentPop")){
-            ControlObj[i].remove("PhoneMenuContentPop");
+        if (ControlObj[i].classList.contains("PhoneMenuContentPop")){
+            ControlObj[i].classList.remove("PhoneMenuContentPop");
         }
     }
     //DropBtn回復
     ControlObj = document.getElementsByClassName("PhoneDropBtn");
     for (i = 0; i < ControlObj.length; i++) {
-        if (ControlObj[i].contains("PhoneMenuBtnDirection")) {
-            ControlObj[i].remove("PhoneMenuBtnDirection");
+        if (ControlObj[i].classList.contains("PhoneMenuBtnDirection")) {
+            ControlObj[i].classList.remove("PhoneMenuBtnDirection");
         }
     }
 }
