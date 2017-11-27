@@ -36,20 +36,20 @@ $(document).ready(
 )
 //捲動到Service位置
 function GoToService() {                         
-    document.querySelector('.FakeDivForService').scrollIntoView({
-        behavior: 'smooth'
+    document.querySelector(".FakeDivForService").scrollIntoView({
+        behavior: "smooth"
     });
 }
  //捲動到Info位置
 function GoToInfo() {                           
-    document.querySelector('.InfoDiv').scrollIntoView({
-        behavior: 'smooth'
+    document.querySelector(".InfoDiv").scrollIntoView({
+        behavior: "smooth"
     });
 }
 //捲動到頂端
 function GoToTop() {                             
-    document.querySelector('.HeaderDiv').scrollIntoView({
-        behavior: 'smooth'
+    document.querySelector(".HeaderDiv").scrollIntoView({
+        behavior: "smooth"
     });
     $(".HeaderDiv").addClass("Brightness");
     //閃爍
@@ -58,14 +58,14 @@ function GoToTop() {
 }
 //捲動到Team位置
 function GoToTeam() {                            
-    document.querySelector('.TeamDiv').scrollIntoView({
-        behavior: 'smooth'
+    document.querySelector(".TeamDiv").scrollIntoView({
+        behavior: "smooth"
     });
 }
 //捲動到連絡位置
 function GoToSContact() {                        
-    document.querySelector('.ContactDiv').scrollIntoView({
-        behavior: 'smooth'
+    document.querySelector(".ContactDiv").scrollIntoView({
+        behavior: "smooth"
     });
 }
 //文字用強調與移除強調效果
@@ -89,23 +89,23 @@ function HightLightTextAtDiv() {
     var vh = window.innerHeight                 //取得Viiewport Height的方式
         || document.documentElement.clientHeight
         || document.body.clientHeight;
-    $('.NavItem').removeClass("HeavyTextShadow");//清除所有強調效果
-    $('.NavItem').removeClass("Brightness");
+    $(".NavItem").removeClass("HeavyTextShadow");//清除所有強調效果
+    $(".NavItem").removeClass("Brightness");
 
 
     if ($(window).scrollTop() < (0.875 * vh)) {   //依據畫面滾動條位置決定誰被強調
-        $('.NavItem:nth-child(3)').addClass("Brightness");
+        $(".NavItem:nth-child(3)").addClass("Brightness");
     }
     else if ($(window).scrollTop() < (2.0 * vh)) {
-        $('.NavItem:nth-child(1)').addClass("HeavyTextShadow");
+        $(".NavItem:nth-child(1)").addClass("HeavyTextShadow");
     }
     else if ($(window).scrollTop() < (3.0 * vh)) {
-        $('.NavItem:nth-child(2)').addClass("HeavyTextShadow");
+        $(".NavItem:nth-child(2)").addClass("HeavyTextShadow");
     }
     else if ($(window).scrollTop() < (4.0 * vh)) {
-        $('.NavItem:nth-child(4)').addClass("HeavyTextShadow");
+        $(".NavItem:nth-child(4)").addClass("HeavyTextShadow");
     }
     else if ($(window).scrollTop() < (5.0 * vh)) {
-        $('.NavItem:nth-child(5)').addClass("HeavyTextShadow");
+        $(".NavItem:nth-child(5)").addClass("HeavyTextShadow");
     }
 }

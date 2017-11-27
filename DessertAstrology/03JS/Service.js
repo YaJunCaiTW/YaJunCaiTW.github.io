@@ -145,7 +145,7 @@ function ChangeFoodArea(ControlObj){
             break;
 
             case 2:
-            document.getElementsByClassName("ServiceCircleBtnItem")[i].innerHTML='<div class="CupCake2Line"><h3>杯子<br>蛋糕</h3></div>';
+            document.getElementsByClassName("ServiceCircleBtnItem")[i].innerHTML="<div class="+"CupCake2Line"+"><h3>杯子<br>蛋糕</h3></div>";
             break;
 
             case 3:

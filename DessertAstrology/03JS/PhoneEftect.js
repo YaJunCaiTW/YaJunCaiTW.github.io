@@ -167,14 +167,14 @@ function PhoneMenuPop() {
     PhoneMenuLine2.classList.toggle("PhoneTopLine2Pop");
     PhoneMenuLine3.classList.toggle("PhoneTopLine3Pop");
     //DropContent回復
-    var ControlObj = document.getElementsByClassName('PhoneMenuContent');
+    var ControlObj = document.getElementsByClassName("PhoneMenuContent");
     for (i = 0; i < ControlObj.length; i++){
         if (ControlObj[i].contains("PhoneMenuContentPop")){
             ControlObj[i].remove("PhoneMenuContentPop");
         }
     }
     //DropBtn回復
-    ControlObj = document.getElementsByClassName('PhoneDropBtn');
+    ControlObj = document.getElementsByClassName("PhoneDropBtn");
     for (i = 0; i < ControlObj.length; i++) {
         if (ControlObj[i].contains("PhoneMenuBtnDirection")) {
             ControlObj[i].remove("PhoneMenuBtnDirection");
@@ -183,32 +183,32 @@ function PhoneMenuPop() {
 }
 
 function PhoneDropDownService(BtnObj){
-    var ControlObj = document.getElementsByClassName('PhoneMenuContent');
+    var ControlObj = document.getElementsByClassName("PhoneMenuContent");
     ControlObj[0].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
 
 function PhoneDropDownInfo(BtnObj) {
-    var ControlObj = document.getElementsByClassName('PhoneMenuContent');
+    var ControlObj = document.getElementsByClassName("PhoneMenuContent");
     ControlObj[1].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
 
 function PhoneDropDownTeam(BtnObj) {
-    var ControlObj = document.getElementsByClassName('PhoneMenuContent');
+    var ControlObj = document.getElementsByClassName("PhoneMenuContent");
     ControlObj[2].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
 
 function PhoneDropDownContact(BtnObj) {
-    var ControlObj = document.getElementsByClassName('PhoneMenuContent');
+    var ControlObj = document.getElementsByClassName("PhoneMenuContent");
     ControlObj[3].classList.toggle("PhoneMenuContentPop");
     BtnObj.classList.toggle("PhoneMenuBtnDirection");
 }
 
 function PhoneGoToTop() {
-    document.querySelector('.FakeDivForPhone').scrollIntoView({
-        behavior: 'smooth'
+    document.querySelector(".FakeDivForPhone").scrollIntoView({
+        behavior: "smooth"
     });
     $(".HeaderDiv").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".HeaderDiv").toggleClass("Brightness") }, 500);
@@ -222,7 +222,7 @@ function PhoneGoToInfoSelectAnnouce(){
         || document.body.clientWidth;
     window.scrollTo({
         top: 1.84148 * vw,
-        behavior: 'smooth'
+        behavior: "smooth"
     });
     $(".InfoLeft").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".InfoLeft").toggleClass("Brightness") }, 500);
@@ -235,7 +235,7 @@ function PhoneGoToInfoSelectFate(){
         || document.body.clientWidth;
     window.scrollTo({
         top: 3.20444 * vw,
-        behavior: 'smooth'
+        behavior: "smooth"
     });
     $(".InfoRight").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".InfoRight").toggleClass("Brightness") }, 500);
@@ -248,7 +248,7 @@ function PhoneGoToTeamSelectDiviner(){
         || document.body.clientWidth;
     window.scrollTo({
         top: 5.01294 * vw,
-        behavior: 'smooth'
+        behavior: "smooth"
     });
     $(".LeftPeople").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".LeftPeople").toggleClass("Brightness") }, 500);
@@ -261,7 +261,7 @@ function PhoneGoToTeamSelectPastryChef(){
         || document.body.clientWidth;
     window.scrollTo({
         top: 4.330229 * vw,
-        behavior: 'smooth'
+        behavior: "smooth"
     });
     $(".RightPeople").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".RightPeople").toggleClass("Brightness") }, 500);
@@ -274,7 +274,7 @@ function PhoneGoToContactMap(){
         || document.body.clientWidth;
     window.scrollTo({
         top: 5.78377 * vw,
-        behavior: 'smooth'
+        behavior: "smooth"
     });
     $(".ContactMap").addClass("Brightness");
     var ShiningObj = setInterval(function () { $(".ContactMap").toggleClass("Brightness") }, 500);

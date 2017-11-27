@@ -151,8 +151,8 @@ function GoToContactMap(){
 }
 
 function GoToFB(){
-    window.open('http://www.facebook.com.tw','facebook');
+    window.open("http://www.facebook.com.tw","facebook");
 }
 function GoToIG() {
-    window.open('https://www.instagram.com/', 'Instagram');
+    window.open("https://www.instagram.com/", "Instagram");
 }
