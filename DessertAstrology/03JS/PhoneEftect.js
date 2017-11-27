@@ -34,10 +34,10 @@ function ChangeToPhoneFunction(){
     ControlObj[0].addEventListener("click", PhoneMenuPop);
     //註冊PhoneMenu裡面的DropDownBtnClick事件
     ControlObj = document.getElementsByClassName("PhoneDropBtn");
-    ControlObj[0].addEventListener("touchend", function () { PhoneDropDownService(this)})    
-    ControlObj[1].addEventListener("touchend", function () { PhoneDropDownInfo(this) })   
-    ControlObj[2].addEventListener("touchend", function () { PhoneDropDownTeam(this) })  
-    ControlObj[3].addEventListener("touchend", function () { PhoneDropDownContact(this) })
+    ControlObj[0].addEventListener("click", function () { PhoneDropDownService(this)})    
+    ControlObj[1].addEventListener("click", function () { PhoneDropDownInfo(this) })   
+    ControlObj[2].addEventListener("click", function () { PhoneDropDownTeam(this) })  
+    ControlObj[3].addEventListener("click", function () { PhoneDropDownContact(this) })
     //PhoneMenu裡面各個項目的超連結
     //PhoneMenuFood餐點
     ControlObj = document.getElementById("PhoneMenuFood");
@@ -93,10 +93,10 @@ function AntiPhoneFunction(){
     ControlObj[0].removeEventListener("click",function(){});
     //取消註冊PhoneMenu裡面的DropDownBtnClick事件
     ControlObj = document.getElementsByClassName("PhoneDropBtn");
-    ControlObj[0].removeEventListener("touchend", function () { })    
-    ControlObj[1].removeEventListener("touchend", function () { })   
-    ControlObj[2].removeEventListener("touchend", function () { })  
-    ControlObj[3].removeEventListener("touchend", function () { })
+    ControlObj[0].removeEventListener("click", function () { })    
+    ControlObj[1].removeEventListener("click", function () { })   
+    ControlObj[2].removeEventListener("click", function () { })  
+    ControlObj[3].removeEventListener("click", function () { })
     //取消PhoneMenu裡面各個項目的超連結
     //PhoneMenuFood餐點
     ControlObj = document.getElementById("PhoneMenuFood");
@@ -169,15 +169,15 @@ function PhoneMenuPop() {
     //DropContent回復
     var ControlObj = document.getElementsByClassName('PhoneMenuContent');
     for (i = 0; i < ControlObj.length; i++){
-        if ($(ControlObj).hasClass("PhoneMenuContentPop")){
-            $(ControlObj).removeClass("PhoneMenuContentPop");
+        if (ControlObj[i].contains("PhoneMenuContentPop")){
+            ControlObj[i].remove("PhoneMenuContentPop");
         }
     }
     //DropBtn回復
     ControlObj = document.getElementsByClassName('PhoneDropBtn');
     for (i = 0; i < ControlObj.length; i++) {
-        if ($(ControlObj).hasClass("PhoneMenuBtnDirection")) {
-            $(ControlObj).removeClass("PhoneMenuBtnDirection");
+        if (ControlObj[i].contains("PhoneMenuBtnDirection")) {
+            ControlObj[i].remove("PhoneMenuBtnDirection");
         }
     }
 }
