@@ -41,43 +41,33 @@ function ChangeToPhoneFunction(){
     //PhoneMenu裡面各個項目的超連結
     //PhoneMenuFood餐點
     ControlObj = document.getElementById("PhoneMenuFood");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { GoToServiceSelectFood(); PhoneMenuPop();}, );
     //PhoneMenuDivine占卜
     ControlObj = document.getElementById("PhoneMenuDivine");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { GoToServiceSelectDivine(); PhoneMenuPop();}, );
     //PhoneMenuSet組合
     ControlObj = document.getElementById("PhoneMenuSet");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { GoToServiceSelectSet(); PhoneMenuPop(); }, );
     //PhoneMenuAnnouce消息
     ControlObj = document.getElementById("PhoneMenuAnnouce");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { PhoneGoToInfoSelectAnnouce(); PhoneMenuPop(); }, );
     //PhoneMenuFate運勢
     ControlObj = document.getElementById("PhoneMenuFate");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { PhoneGoToInfoSelectFate(); PhoneMenuPop(); }, );
     //PhoneMenuDiviner占星師
     ControlObj = document.getElementById("PhoneMenuDiviner");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { PhoneGoToTeamSelectDiviner(); PhoneMenuPop(); }, );
     //PhoneMenuPastryChef甜點師
     ControlObj = document.getElementById("PhoneMenuPastryChef");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { PhoneGoToTeamSelectPastryChef(); PhoneMenuPop(); }, );
     //PhoneMenuMap地圖
     ControlObj = document.getElementById("PhoneMenuMap");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { PhoneGoToContactMap(); PhoneMenuPop(); }, );
     //PhoneMenuFB
     ControlObj = document.getElementById("PhoneMenuFB");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { GoToFB(); PhoneMenuPop(); }, );
     //PhoneMenuIG
     ControlObj = document.getElementById("PhoneMenuIG");
-    ControlObj.style.cursor = "pointer";
     ControlObj.addEventListener("click", function () { GoToIG(); PhoneMenuPop(); }, );
     //改點選LOGO時回到的位置
     ControlObj = document.getElementsByClassName("NavItem");
@@ -110,43 +100,33 @@ function AntiPhoneFunction(){
     //取消PhoneMenu裡面各個項目的超連結
     //PhoneMenuFood餐點
     ControlObj = document.getElementById("PhoneMenuFood");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuDivine占卜
     ControlObj = document.getElementById("PhoneMenuDivine");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuSet組合
     ControlObj = document.getElementById("PhoneMenuSet");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuAnnouce消息
     ControlObj = document.getElementById("PhoneMenuAnnouce");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuFate運勢
     ControlObj = document.getElementById("PhoneMenuFate");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuDiviner占星師
     ControlObj = document.getElementById("PhoneMenuDiviner");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuPastryChef甜點師
     ControlObj = document.getElementById("PhoneMenuPastryChef");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuMap地圖
     ControlObj = document.getElementById("PhoneMenuMap");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuFB
     ControlObj = document.getElementById("PhoneMenuFB");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //PhoneMenuIG
     ControlObj = document.getElementById("PhoneMenuIG");
-    ControlObj.style.cursor = "pointer";
     ControlObj.removeEventListener("click", function () { });
     //改點選LOGO時回到的位置
     ControlObj = document.getElementsByClassName("NavItem");

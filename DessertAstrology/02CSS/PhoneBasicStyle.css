@@ -232,8 +232,8 @@ p{
     height:12.5vw;
     position: absolute;
     top:calc(( 100vw * 0.36 ) - 12.5vw);
-    /* border:1px solid pink; */
-    opacity: 0;
+     border:1px solid pink;
+    opacity: 1;
 }
 
 .ServiceDiv{
