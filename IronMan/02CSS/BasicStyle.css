@@ -1,72 +1,296 @@
-*{
+* {
     box-sizing: border-box;
-    /* border:1px dashed lightsalmon; */
+    border: 1px dashed darkorchid;
 }
-html{
+
+html {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
-    font-family: "微軟正黑體"
+    font-family: "微軟正黑體";
+    overflow-x: hidden;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     padding: 0;
     margin: 0;
 }
-#NavBarLogo{
+
+#NavBarLogo {
     background: transparent url('../01Materials/NavBarLogo.png') no-repeat local center;
     background-size: cover;
     height: 68px;
-    width: 68px; 
+    width: 68px;
 }
-.NavBarBgC{
+
+.NavBarBgC {
     background-color: #000000CC;
 }
-.NavBarItem{
+
+.NavBarItem {
     text-decoration: underline;
 }
 
-#FooterLineLogo{
+#FooterLineLogo {
     background: white url('../01Materials/02Icons/line.svg') no-repeat local center;
     background-size: cover;
     height: 68px;
-    width: 68px; 
+    width: 68px;
 }
-#FooterFBLogo{
+
+#FooterFBLogo {
     background: white url('../01Materials/02Icons/facebook-icon.svg') no-repeat local center;
     background-size: cover;
     height: 68px;
-    width: 68px; 
+    width: 68px;
 }
-#FooterMapLogo{
+
+#FooterMapLogo {
     background: #D82627 url('../01Materials/02Icons/map-icon.svg') no-repeat local center;
     background-size: cover;
     height: 68px;
-    width: 68px; 
+    width: 68px;
 }
-#FooterOpen{
-    text-align-last: justify;
-}
-#FooterAdd{
+
+#FooterOpen {
     text-align-last: justify;
 }
 
-.HomePageDiv{
-    background: red url('../01Materials/bg2.jpg') no-repeat local center;
+#FooterAdd {
+    text-align-last: justify;
+}
+
+
+/* HomePage */
+
+.HomePageDiv {
+    background: #000000CC url('../01Materials/01BG/HomePageBG.jpg') no-repeat local center;
     background-size: cover;
-    top:0;
-    left:0; 
+    top: 0;
+    left: 100%;
     /* height: 100vh; */
+}
 
+#InformationArea {
+    top: 100px;
+    right: 0px;
+    height: auto;
 }
-#InformationArea{
-    bottom:100px;
-    right:0px;
-    height: 25%;
-}
-#InformationGrayBG{
+
+#InformationGrayBG {
     background-color: #000000CC;
-    color:whitesmoke
+    color: whitesmoke;
+    height: 100%
+}
+
+#InformationItem1,
+#InformationItem2,
+#InformationItem3 {
+    cursor: pointer;
+}
+
+#InformationText1,
+#InformationText2,
+#InformationText3 {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: text;
+}
+
+
+/* Menu */
+
+.MenuDiv {
+    background: #000000CC url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
+    background-size: cover;
+    top: 0;
+    left: 100%;
+}
+
+
+/*MenuButton*/
+
+#MenuButtonAreaRow {
+    top: 100px;
+}
+
+.MenuAreaButton {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#MenuAreaButton1 {
+    background: transparent url('../01Materials/04Menu/Btn1.png') no-repeat local center;
+    background-size: cover;
+}
+
+#MenuAreaButton2 {
+    background: transparent url('../01Materials/04Menu/Btn2.png') no-repeat local center;
+    background-size: cover;
+}
+
+#MenuAreaButton3 {
+    background: transparent url('../01Materials/04Menu/Btn3.png') no-repeat local center;
+    background-size: cover;
+}
+
+#MenuAreaButton4 {
+    background: transparent url('../01Materials/04Menu/Btn4.png') no-repeat local center;
+    background-size: cover;
+}
+
+
+/* MenuSet */
+
+#MenuSetContentRow {
+    top: 200px;
+    right: 0%;
+    transition: all 0.5s;
+}
+
+#MenuSetContainer {
+    height: 50vh;
+    background-color: #02051680;
+}
+
+#SetArea {
+    background: transparent url('../01Materials/03Set/DeskTopSetPic.png') no-repeat local center;
+    background-size: contain;
+}
+
+#AddArea {
+    background: transparent url('../01Materials/03Set/AddPrice.png') no-repeat local center;
+    background-size: contain;
+}
+
+
+/* MenuSoup */
+
+#MenuSoupContentRow {
+    top: 200px;
+    right: -100%;
+    transition: all 0.5s;
+}
+
+#MenuSoupContainer {
+    height: 50vh;
+    background-color: #02051680;
+}
+
+#SoupPicArea {
+    background: transparent url('../01Materials/05Soup/SoupPic.png') no-repeat local center;
+    background-size: contain;
+}
+
+#SoupTextArea {
+    background: transparent url('../01Materials/05Soup/SoupText.png') no-repeat local center;
+    background-size: contain;
+}
+
+
+/* MenuDry */
+
+#MenuDryContentRow {
+    top: 200px;
+    right: -100%;
+    transition: all 0.5s;
+}
+
+#MenuDryContainer {
+    height: 50vh;
+    background-color: #02051680;
+}
+
+#DryPicArea {
+    background: transparent url('../01Materials/06Dry/DryPic.png') no-repeat local center;
+    background-size: contain;
+}
+
+#DryTextArea {
+    background: transparent url('../01Materials/06Dry/DryText.png') no-repeat local center;
+    background-size: contain;
+}
+
+
+/* MenuLimit */
+
+#MenuLimitContentRow {
+    top: 200px;
+    right: -100%;
+    transition: all 0.5s;
+}
+
+#MenuLimitContainer {
+    height: 50vh;
+    background-color: #02051680;
+}
+
+#LimitPicArea {
+    background: transparent url('../01Materials/06Dry/DryPic.png') no-repeat local center;
+    background-size: contain;
+}
+
+#LimitTextArea {
+    background: transparent url('../01Materials/06Dry/DryText.png') no-repeat local center;
+    background-size: contain;
+}
+
+
+/* StoryDiv */
+
+.StoryDiv {
+    background: #000000CC url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
+    background-size: cover;
+    top: 0;
+    left: 0%;
+}
+
+#OffsetRow {
+    width: 100%;
+    height: 100px;
+}
+
+#StoryContentRow1 {
+    width: 100%;
+    height: 40vh;
+}
+
+#StoryPic {
+    background: #000000CC url('../01Materials/07Story/Boss.jpg') no-repeat local center;
+    background-size: cover;
+}
+
+#StoryText {
+    height: 85%;
+    background: #000000CC;
+    color: whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: justify;
+}
+
+#StoryContentRow2 {
+    width: 100%;
+    height: 12.5vh;
+}
+
+#StorySlogan {
+    background: #000000CC;
+    height: 100%;
+    color: whitesmoke;
+    text-align: center;
+    text-justify: inter-word;
+    text-align-last: center;
 }
