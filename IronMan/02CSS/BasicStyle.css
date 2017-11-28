@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    /* border:1px dashed lightsalmon; */
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "微軟正黑體"
+}
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+#NavBarLogo{
+    background: transparent url('../01Materials/NavBarLogo.png') no-repeat local center;
+    background-size: cover;
+    height: 68px;
+    width: 68px; 
+}
+.NavBarBgC{
+    background-color: #000000CC;
+}
+.NavBarItem{
+    text-decoration: underline;
+}
+
+#FooterLineLogo{
+    background: white url('../01Materials/02Icons/line.svg') no-repeat local center;
+    background-size: cover;
+    height: 68px;
+    width: 68px; 
+}
+#FooterFBLogo{
+    background: white url('../01Materials/02Icons/facebook-icon.svg') no-repeat local center;
+    background-size: cover;
+    height: 68px;
+    width: 68px; 
+}
+#FooterMapLogo{
+    background: #D82627 url('../01Materials/02Icons/map-icon.svg') no-repeat local center;
+    background-size: cover;
+    height: 68px;
+    width: 68px; 
+}
+#FooterOpen{
+    text-align-last: justify;
+}
+#FooterAdd{
+    text-align-last: justify;
+}
+
+.HomePageDiv{
+    background: red url('../01Materials/bg2.jpg') no-repeat local center;
+    background-size: cover;
+    top:0;
+    left:0; 
+    /* height: 100vh; */
+
+}
+#InformationArea{
+    bottom:100px;
+    right:0px;
+    height: 25%;
+}
+#InformationGrayBG{
+    background-color: #000000CC;
+    color:whitesmoke
+}
