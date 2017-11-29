@@ -2,6 +2,13 @@
     html {
         font-size: 75%;
     }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "微軟正黑體";
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
     #NavBarLogo {
         background: transparent url('../01Materials/NavBarLogo.png') no-repeat local center;
         background-size: cover;
