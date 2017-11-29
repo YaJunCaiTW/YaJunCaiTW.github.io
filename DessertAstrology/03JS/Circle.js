@@ -296,7 +296,7 @@ function CircleRotateText(RotateTextDegree, ZodiacCHTName, Link) {
     var ExpandNumber = 0;                                               //紀錄要被放大的是第幾個小圓圈
     var TranslateX = 0;                                                 //紀錄要被放大的小圓圈座標轉換
     var TranslateY = 0;
-    for (i = 0; i < ControlObj1.length; i++) {                            //初始化小圓圈背景與文字
+    for (i = 0; i < ControlObj1.length; i++) {                          //初始化小圓圈背景與文字
         ControlObj1[i].style.backgroundImage = "none";
         switch (i) {
             case 0:
