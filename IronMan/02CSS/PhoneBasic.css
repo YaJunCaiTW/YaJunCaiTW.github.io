@@ -26,10 +26,9 @@
         height: 12.5vw;
         width: 12.5vw;
     }
-    #FooterOpen {
-        text-align-last: justify;
-    }
-    #FooterAdd {
-        text-align-last: justify;
+    #InformationArea {
+        top: calc(12.5vw + 24px);
+        right: 0px;
+        height: auto;
     }
 }

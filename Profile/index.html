@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>亞峻的積累之作</title>
+    <link rel="stylesheet" href="02CSS/normalize.css">
+    <link rel="stylesheet" href="02CSS/swiper.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #000;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: local;
+            background-position: center;
+        }
+
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .gallery-thumbs .swiper-slide {
+            width: 10%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('01Materials/01HandWrite/RemoteControllorDesign.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/02FloatChart/ATMNoMoneyFlowChart.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/02FloatChart/VendingMachineFlowChart.jpg')"></div>
+            <!-- ps -->
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/APPLE.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/SOCCER.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/HOTBALLON.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/AppleLight.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/ShyShy.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/WEDDING.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/RedPaperBag.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/SOYSAUCE.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/20171018_Snow_cs6OK.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/20171019_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/YaHow.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/20171018_Car_v2.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/Strapple.jpg')"></div>
+            <!-- AI -->
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/Poster_Mockup3_Ball_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/Poster_Mockup2_Cone_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/Poster_Mockup1_Cylinder_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/20171128_LOGO_v1-01.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/20171027_LipStick_MockUP_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/20171025ButterFly-01.jpg')"></div>
+            <!-- BSCard -->
+            <div class="swiper-slide" style="background-image:url('01Materials/05Card/20171016_BusinessCard_Mockup_F2.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/05Card/20171027_BusniessCardMockUp_V4.jpg')"></div>
+            <!-- OnePage -->
+            <div class="swiper-slide" style="background-image:url('01Materials/20171129OnePageMockup.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/Start-01.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171017_OnePage_v2-All.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171116_OnePage_v11_cs6OK_Desk_Final.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/P_20171129_041855.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171118_OnePage_v12_cs6OK_Desk+Phone_V3-1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171119OneExPlainV1-01.jpg')"></div>
+            <!-- Project -->
+            <div class="swiper-slide" style="background-image:url('01Materials/ProjectMockUp.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/P_20171129_041757.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/P_20171129_041743.jpg')"></div>
+
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('01Materials/01HandWrite/RemoteControllorDesign.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/02FloatChart/ATMNoMoneyFlowChart.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/02FloatChart/VendingMachineFlowChart.jpg')"></div>
+            <!--PS-->
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/APPLE.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/SOCCER.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/HOTBALLON.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/AppleLight.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/ShyShy.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/WEDDING.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/RedPaperBag.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/SOYSAUCE.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/20171018_Snow_cs6OK.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/20171019_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/YaHow.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/20171018_Car_v2.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/03PS/Strapple.jpg')"></div>
+            <!-- AI -->
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/Poster_Mockup3_Ball_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/Poster_Mockup2_Cone_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/Poster_Mockup1_Cylinder_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/20171128_LOGO_v1-01.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/20171027_LipStick_MockUP_v1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/04AI/20171025ButterFly-01.jpg')"></div>
+            <!-- BSCard -->
+            <div class="swiper-slide" style="background-image:url('01Materials/05Card/20171016_BusinessCard_Mockup_F2.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/05Card/20171027_BusniessCardMockUp_V4.jpg')"></div>
+            <!-- OnePage -->
+            <div class="swiper-slide" style="background-image:url('01Materials/20171129OnePageMockup.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/Start-01.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171017_OnePage_v2-All.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171116_OnePage_v11_cs6OK_Desk_Final.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/P_20171129_041855.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171118_OnePage_v12_cs6OK_Desk+Phone_V3-1.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/20171119OneExPlainV1-01.jpg')" onclick="window.open(' https://yajuncaitw.github.io/DessertAstrology/ ', '點星屋');"></div>
+            <!-- Project -->
+            <div class="swiper-slide" style="background-image:url('01Materials/ProjectMockUp.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/P_20171129_041757.jpg')"></div>
+            <div class="swiper-slide" style="background-image:url('01Materials/P_20171129_041743.jpg')" onclick="window.open(' https://yajuncaitw.github.io/IronMan/ ', '鉄人麵倉')"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="03JS/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var galleryTop = new Swiper('.gallery-top', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+        });
+        galleryTop.controller.control = galleryThumbs;
+        galleryThumbs.controller.control = galleryTop;
+    </script>
+</body>
+
+</html>
