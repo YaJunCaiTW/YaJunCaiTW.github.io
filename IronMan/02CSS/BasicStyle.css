@@ -71,6 +71,11 @@ p {
 }
 
 
+/*MainContentSlideArea*/
+
+#MainContentSlideArea{
+    overflow: hidden;
+}
 /* HomePage */
 
 .HomePageDiv {
