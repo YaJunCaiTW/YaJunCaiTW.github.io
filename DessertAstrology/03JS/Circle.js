@@ -315,7 +315,7 @@ function CircleRotateText(RotateTextDegree, ZodiacCHTName, Link) {
                 ControlObj1[i].innerHTML = "白羊";
                 break;
             case 5:
-                ControlObj1[i].innerHTML = "雙子";
+                ControlObj1[i].innerHTML = "雙魚";
                 break;
             case 6:
                 ControlObj1[i].innerHTML = "水瓶";
