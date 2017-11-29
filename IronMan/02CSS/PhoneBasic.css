@@ -1,0 +1,35 @@
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 75%;
+    }
+    #NavBarLogo {
+        background: transparent url('../01Materials/NavBarLogo.png') no-repeat local center;
+        background-size: cover;
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+    #FooterLineLogo {
+        background: white url('../01Materials/02Icons/line.svg') no-repeat local center;
+        background-size: cover;
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+    #FooterFBLogo {
+        background: white url('../01Materials/02Icons/facebook-icon.svg') no-repeat local center;
+        background-size: cover;
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+    #FooterMapLogo {
+        background: #D82627 url('../01Materials/02Icons/map-icon.svg') no-repeat local center;
+        background-size: cover;
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+    #FooterOpen {
+        text-align-last: justify;
+    }
+    #FooterAdd {
+        text-align-last: justify;
+    }
+}
