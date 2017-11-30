@@ -120,6 +120,10 @@ p {
     height: 0;
     overflow: hidden;
     cursor: text;
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    text-indent: 2em
 }
 
 
@@ -273,8 +277,9 @@ p {
 #MenuLimitRow1Text {
     color: whitesmoke;
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: distribute;
     text-align-last: left;
+    text-indent: 2em;
 }
 
 #MenuLimitRow2Pic {
@@ -285,8 +290,9 @@ p {
 #MenuLimitRow2Text {
     color: whitesmoke;
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: distribute;
     text-align-last: left;
+    text-indent: 2em
 }
 
 
@@ -322,6 +328,7 @@ p {
     text-align: justify;
     text-justify: distribute;
     text-align-last: left;
+    text-indent: 2em
 }
 
 #StoryContentRow2 {
@@ -395,7 +402,10 @@ p {
 #MaterialsSoupText {
     background: #02051680;
     color: whitesmoke;
-    text-align: center;
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    text-indent: 2em;
 }
 
 
@@ -424,6 +434,10 @@ p {
 
 #RamenText {
     color: whitesmoke;
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    text-indent: 2em;
 }
 
 #YellowmenArea {
@@ -438,6 +452,10 @@ p {
 
 #YellowmenText {
     color: whitesmoke;
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    text-indent: 2em;
 }
 
 

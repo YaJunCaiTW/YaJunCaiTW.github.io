@@ -61,8 +61,12 @@
         overflow-y: scroll;
     }
     .SeparateBar {
-        background: transparent url('../01Materials/03Set/Phone/PhoneSeparate.svg') no-repeat local center;
-        background-size: contain;
+        height:3vh;
+        background: transparent url('../01Materials/03Set/Phone/PhoneSeparate.png') no-repeat local center;
+        background-size: cover;
+    }
+    #SetArea {
+        background-image: none;
     }
     #SetAPic {
         height: 50vh;
