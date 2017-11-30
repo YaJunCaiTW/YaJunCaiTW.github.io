@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    /* border: 1px dashed darkorchid; */
+    border: 1px dashed darkorchid;
 }
 
 html {
@@ -73,9 +73,11 @@ p {
 
 /*MainContentSlideArea*/
 
-#MainContentSlideArea{
+#MainContentSlideArea {
     overflow: hidden;
 }
+
+
 /* HomePage */
 
 .HomePageDiv {
@@ -120,9 +122,8 @@ p {
     background: #000000CC url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
-    left: 100%;
+    left: -100%;
 }
-
 
 /*MenuButton*/
 
@@ -156,6 +157,9 @@ p {
     background-size: cover;
 }
 
+.MenuContent {
+    /* display: none !important; */
+}
 
 /* MenuSet */
 
@@ -185,7 +189,7 @@ p {
 
 #MenuSoupContentRow {
     top: 200px;
-    right: -100%;
+    right: 100%;
     transition: all 0.5s;
 }
 
@@ -209,7 +213,7 @@ p {
 
 #MenuDryContentRow {
     top: 200px;
-    right: -100%;
+    right: 100%;
     transition: all 0.5s;
 }
 
@@ -233,7 +237,7 @@ p {
 
 #MenuLimitContentRow {
     top: 200px;
-    right: -100%;
+    right: 100%;
     transition: all 0.5s;
 }
 
@@ -242,14 +246,38 @@ p {
     background-color: #02051680;
 }
 
-#LimitPicArea {
-    background: transparent url('../01Materials/06Dry/DryPic.png') no-repeat local center;
+#MenuLimitRow1 {
+    width: 100%;
+    height: 25vh;
+}
+
+#MenuLimitRow2 {
+    width: 100%;
+    height: 25vh;
+}
+
+#MenuLimitRow1Pic {
+    background: transparent url('../01Materials/08Limit/Veg.png') no-repeat local center;
     background-size: contain;
 }
 
-#LimitTextArea {
-    background: transparent url('../01Materials/06Dry/DryText.png') no-repeat local center;
+#MenuLimitRow1Text {
+    color: whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+}
+
+#MenuLimitRow2Pic {
+    background: transparent url('../01Materials/08Limit/SourDrink.png') no-repeat local center;
     background-size: contain;
+}
+
+#MenuLimitRow2Text {
+    color: whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
 }
 
 
@@ -259,7 +287,7 @@ p {
     background: #000000CC url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
-    left: 100%;
+    left: -100%;
 }
 
 #OffsetRow {
@@ -298,4 +326,107 @@ p {
     text-align: center;
     text-justify: inter-word;
     text-align-last: center;
+}
+
+
+/* Materials */
+
+.MaterialsDiv {
+    background: #000000CC url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
+    background-size: cover;
+    top: 0;
+    left: -100%;
+}
+
+#MaterialsButtonAreaRow {
+    top: 100px;
+}
+
+.MaterialsAreaButton {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#MaterialsAreaButton1 {
+    background: transparent url('../01Materials/04Menu/Btn1.png') no-repeat local center;
+    background-size: cover;
+}
+
+#MaterialsAreaButton2 {
+    background: transparent url('../01Materials/04Menu/Btn2.png') no-repeat local center;
+    background-size: cover;
+}
+
+#MaterialsAreaButton3 {
+    background: transparent url('../01Materials/04Menu/Btn3.png') no-repeat local center;
+    background-size: cover;
+}
+
+.MaterialsContent {
+    /* display: none !important; */
+}
+
+/*SoupMaterials*/
+
+#MaterialsSoupContentRow {
+    top: 200px;
+    Right: 0%;
+    transition: all 0.5s;
+}
+
+#MaterialsSoupContainer {
+    height: 50vh;
+    background: transparent url('../01Materials/09Material/SoupBG.jpg') no-repeat local bottom;
+    background-size: cover;
+}
+
+#MaterialsSoupText {
+    background: #00000070;
+    color: whitesmoke;
+    text-align: center;  
+}
+/* MaterialsMen */
+#MaterialsMenContentRow{
+    top: 200px;
+    Right: 100%;
+    transition: all 0.5s;
+}
+
+#MaterialsMenContainer{
+    background: #00000070;
+    height: 50vh;
+}
+#RamenArea{
+    height: 25vh;
+}
+#RamenPic{
+    height: 100%;
+    background: transparent url('../01Materials/09Material/YellowMen.png') no-repeat local bottom;
+    background-size: cover;
+}
+#RamenText{
+    color: whitesmoke;
+}
+#YellowmenArea{
+    height: 25vh;
+}
+#YellowmenPic{
+    height:100%;
+    background: transparent url('../01Materials/09Material/Ramen.png') no-repeat local bottom;
+    background-size: cover;
+}
+#YellowmenText{
+    color: whitesmoke;
+}
+/* MaterialsGoods */
+#MaterialsGoodsContentRow{
+    top: 200px;
+    Right: 100%;
+    transition: all 0.5s;
+}
+#MaterialsGoodsContainer{
+    background: #00000070 url('../01Materials/09Material/Goods.png') no-repeat local bottom;
+    background-size: contain;
+    height: 50vh;
 }
