@@ -60,35 +60,47 @@
         overflow-x: hidden;
         overflow-y: scroll;
     }
-    .SeparateBar {
-        height:3vh;
+    .PhoneSeparateBar {
+        height: 3vh;
         background: transparent url('../01Materials/03Set/Phone/PhoneSeparate.png') no-repeat local center;
         background-size: cover;
     }
-    #SetArea {
+    #PhoneSetArea {
         background-image: none;
     }
-    #SetAPic {
+    #PhoneSetAPic {
         height: 50vh;
         background: transparent url('../01Materials/03Set/Phone/SetA.svg') no-repeat local center;
         background-size: contain;
     }
-    #SetBPic {
+    #PhoneSetBPic {
         height: 50vh;
         background: transparent url('../01Materials/03Set/Phone/SetB.svg') no-repeat local center;
         background-size: contain;
     }
-    #SetCPic {
+    #PhoneSetCPic {
         height: 50vh;
         background: transparent url('../01Materials/03Set/Phone/SetC.svg') no-repeat local center;
         background-size: contain;
     }
-    #SetDPic {
+    #PhoneSetDPic {
         height: 50vh;
         background: transparent url('../01Materials/03Set/Phone/SetD.svg') no-repeat local center;
         background-size: contain;
     }
-    #AddArea {
+    #PhoneSetAddTitle {
+        height: 4vh;
+        background: transparent url('../01Materials/03Set/Phone/PhoneSetAddTitle.png') no-repeat local center;
+        background-size: cover;
+    }
+    #PhoneSetAddTen {
         height: 50vh;
+        background: transparent url('../01Materials/03Set/Phone/PhoneSetAddTen.png') no-repeat local center;
+        background-size: contain;
+    }
+    #PhoneSetAddTwenty {
+        height: 50vh;
+        background: transparent url('../01Materials/03Set/Phone/PhoneSetAddTwenty.png') no-repeat local center;
+        background-size: contain;
     }
 }
