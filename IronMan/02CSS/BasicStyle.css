@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: 1px dashed darkorchid;
+    /* border: 1px dashed darkorchid; */
 }
 
 html {
@@ -13,6 +13,10 @@ body {
     padding: 0;
     font-family: "微軟正黑體";
     overflow-x: hidden;
+    background: #02051680 url('../01Materials/01BG/StoryBG.jpg') repeat local center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 h1,
@@ -34,7 +38,7 @@ p {
 }
 
 .NavBarBgC {
-    background-color: #000000CC;
+    background-color: #02051680;
 }
 
 .NavBarItem {
@@ -81,11 +85,10 @@ p {
 /* HomePage */
 
 .HomePageDiv {
-    background: #000000CC url('../01Materials/01BG/HomePageBG.jpg') no-repeat local center;
+    background: #02051680 url('../01Materials/01BG/HomePageBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
     left: 0%;
-    /* height: 100vh; */
 }
 
 #InformationArea {
@@ -95,15 +98,16 @@ p {
 }
 
 #InformationGrayBG {
-    background-color: #000000CC;
+    background-color: #02051680;
     color: whitesmoke;
-    height: 100%
+    height: auto;
 }
 
 #InformationItem1,
 #InformationItem2,
 #InformationItem3 {
     cursor: pointer;
+    height: auto;
 }
 
 #InformationText1,
@@ -111,7 +115,6 @@ p {
 #InformationText3 {
     height: 0;
     overflow: hidden;
-    transition: all 0.5s;
     cursor: text;
 }
 
@@ -119,11 +122,12 @@ p {
 /* Menu */
 
 .MenuDiv {
-    background: #000000CC url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
+    background: #02051680 url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
     left: -100%;
 }
+
 
 /*MenuButton*/
 
@@ -161,6 +165,7 @@ p {
     /* display: none !important; */
 }
 
+
 /* MenuSet */
 
 #MenuSetContentRow {
@@ -189,7 +194,7 @@ p {
 
 #MenuSoupContentRow {
     top: 200px;
-    right: 100%;
+    right: 1000%;
     transition: all 0.5s;
 }
 
@@ -213,7 +218,7 @@ p {
 
 #MenuDryContentRow {
     top: 200px;
-    right: 100%;
+    right: 1000%;
     transition: all 0.5s;
 }
 
@@ -237,7 +242,7 @@ p {
 
 #MenuLimitContentRow {
     top: 200px;
-    right: 100%;
+    right: 1000%;
     transition: all 0.5s;
 }
 
@@ -284,7 +289,7 @@ p {
 /* StoryDiv */
 
 .StoryDiv {
-    background: #000000CC url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
+    background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
     left: -100%;
@@ -301,17 +306,18 @@ p {
 }
 
 #StoryPic {
-    background: #000000CC url('../01Materials/07Story/Boss.jpg') no-repeat local center;
+    height: 100%;
+    background: #02051680 url('../01Materials/07Story/Boss.jpg') no-repeat local center;
     background-size: cover;
 }
 
 #StoryText {
     height: 85%;
-    background: #000000CC;
+    background: #02051680;
     color: whitesmoke;
     text-align: justify;
     text-justify: inter-word;
-    text-align-last: justify;
+    text-align-last: left;
 }
 
 #StoryContentRow2 {
@@ -320,7 +326,7 @@ p {
 }
 
 #StorySlogan {
-    background: #000000CC;
+    background: #02051680;
     height: 100%;
     color: whitesmoke;
     text-align: center;
@@ -367,6 +373,7 @@ p {
     /* display: none !important; */
 }
 
+
 /*SoupMaterials*/
 
 #MaterialsSoupContentRow {
@@ -382,51 +389,64 @@ p {
 }
 
 #MaterialsSoupText {
-    background: #00000070;
+    background: #02051680;
     color: whitesmoke;
-    text-align: center;  
+    text-align: center;
 }
+
+
 /* MaterialsMen */
-#MaterialsMenContentRow{
+
+#MaterialsMenContentRow {
     top: 200px;
-    Right: 100%;
+    Right: 1000%;
     transition: all 0.5s;
 }
 
-#MaterialsMenContainer{
-    background: #00000070;
+#MaterialsMenContainer {
+    background: #02051680;
     height: 50vh;
 }
-#RamenArea{
+
+#RamenArea {
     height: 25vh;
 }
-#RamenPic{
+
+#RamenPic {
     height: 100%;
     background: transparent url('../01Materials/09Material/YellowMen.png') no-repeat local bottom;
     background-size: cover;
 }
-#RamenText{
+
+#RamenText {
     color: whitesmoke;
 }
-#YellowmenArea{
+
+#YellowmenArea {
     height: 25vh;
 }
-#YellowmenPic{
-    height:100%;
+
+#YellowmenPic {
+    height: 100%;
     background: transparent url('../01Materials/09Material/Ramen.png') no-repeat local bottom;
     background-size: cover;
 }
-#YellowmenText{
+
+#YellowmenText {
     color: whitesmoke;
 }
+
+
 /* MaterialsGoods */
-#MaterialsGoodsContentRow{
+
+#MaterialsGoodsContentRow {
     top: 200px;
-    Right: 100%;
+    Right: 1000%;
     transition: all 0.5s;
 }
-#MaterialsGoodsContainer{
-    background: #00000070 url('../01Materials/09Material/Goods.png') no-repeat local bottom;
+
+#MaterialsGoodsContainer {
+    background: #02051680 url('../01Materials/09Material/Goods.png') no-repeat local bottom;
     background-size: contain;
     height: 50vh;
 }
