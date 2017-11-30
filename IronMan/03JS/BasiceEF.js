@@ -32,19 +32,19 @@ function ChangeContainer(ActiveObj){
     //左移現在的DIV
     if( $("#HomePageDiv").css("left").slice(0,-2) >= 0 ){
         
-        $("#HomePageDiv").animate({left:"-100%"},500,"swing");
+        $("#HomePageDiv").animate({left:"-1000%"},500,"swing");
     }
     if( $("#MenuDiv").css("left").slice(0,-2) >= 0 ){
         
-        $("#MenuDiv").animate({left:"-100%"},500,"swing");
+        $("#MenuDiv").animate({left:"-1000%"},500,"swing");
     }
     if( $("#StoryDiv").css("left").slice(0,-2) >= 0 ){
         
-        $("#StoryDiv").animate({left:"-100%"},500,"swing");
+        $("#StoryDiv").animate({left:"-1000%"},500,"swing");
     }
     if( $("#MaterialsDiv").css("left").slice(0,-2) >= 0 ){
         
-        $("#MaterialsDiv").animate({left:"-100%"},500,"swing");
+        $("#MaterialsDiv").animate({left:"-1000%"},500,"swing");
     }
     //移出選定的DIV
     switch (ActiveObj.id){
@@ -94,7 +94,6 @@ function PopInformation(ActiveObj){
     //選到的先結束收和動畫並展開
     switch (ActiveObj.id){
         case "InformationItem1":
-            console.log($("#InformationText1").height());
             $(".InformationText").stop(true, true);
                 $("#InformationText1").animate({ height: "100%", opacity:"1" }, 500, "swing")
 

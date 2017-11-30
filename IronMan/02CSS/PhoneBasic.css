@@ -12,12 +12,14 @@
         overflow-x: hidden;
         overflow-y: hidden;
     }
+    /* NavBar */
     #NavBarLogo {
         background: transparent url('../01Materials/NavBarLogo.png') no-repeat local center;
         background-size: cover;
         height: 12.5vw;
         width: 12.5vw;
     }
+    /* Footer */
     #FooterLineLogo {
         background: white url('../01Materials/02Icons/line.svg') no-repeat local center;
         background-size: cover;
@@ -40,5 +42,49 @@
         top: calc(12.5vw + 24px);
         right: 0px;
         height: auto;
+    }
+    /*MenuButton*/
+    #MenuButtonAreaRow {
+        top: calc(12.5vw + 24px);
+    }
+    .MenuAreaButton {
+        height: 20vw;
+        width: 20vw;
+        border-radius: 50%;
+    }
+    /*MenuSet*/
+    #MenuSetContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MenuSetContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .SeparateBar {
+        background: transparent url('../01Materials/03Set/Phone/PhoneSeparate.svg') no-repeat local center;
+        background-size: contain;
+    }
+    #SetAPic {
+        height: 50vh;
+        background: transparent url('../01Materials/03Set/Phone/SetA.svg') no-repeat local center;
+        background-size: contain;
+    }
+    #SetBPic {
+        height: 50vh;
+        background: transparent url('../01Materials/03Set/Phone/SetB.svg') no-repeat local center;
+        background-size: contain;
+    }
+    #SetCPic {
+        height: 50vh;
+        background: transparent url('../01Materials/03Set/Phone/SetC.svg') no-repeat local center;
+        background-size: contain;
+    }
+    #SetDPic {
+        height: 50vh;
+        background: transparent url('../01Materials/03Set/Phone/SetD.svg') no-repeat local center;
+        background-size: contain;
+    }
+    #AddArea {
+        height: 50vh;
     }
 }

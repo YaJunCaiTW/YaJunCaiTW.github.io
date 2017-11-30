@@ -149,8 +149,8 @@
     <div id="MenuDiv" class="container-fluid p-0 m-0 w-100 h-100  position-absolute MenuDiv">
         <div id="MenuContainer" class="container position-relative h-100 w-100 p-0 flex-wrap">
             <!-- MenuButton-->
-            <div id="MenuButtonAreaRow" class="position-absolute px-0 py-3 m-0 col-12 d-flex justify-content-end flex-wrap">
-                <div id="MenuButtonAreaColum" class="p-0 m-0 col-6 d-flex justify-content-around">
+            <div id="MenuButtonAreaRow" class="position-absolute px-0 py-3 m-0 col-12 d-flex justify-content-center justify-content-md-end flex-wrap">
+                <div id="MenuButtonAreaColum" class="p-0 m-0 col-12 col-md-6 d-flex justify-content-around">
                     <div id="MenuAreaButton1" class="col-auto MenuAreaButton" ></div>
                     <div id="MenuAreaButton2" class="col-auto MenuAreaButton"></div>
                     <div id="MenuAreaButton3" class="col-auto MenuAreaButton"></div>
@@ -193,11 +193,17 @@
 
             <!-- MenuContent-Set -->
             <div id="MenuSetContentRow" class="MenuContent position-absolute px-0 py-3 m-0 col-12 d-flex justify-content-end flex-wrap">
-                <div id="MenuSetContainer" class="p-0 m-0 col-8 d-flex">
-                    <div id="SetArea" class="p-0 m-0 col-6">
-            
+                <div id="MenuSetContainer" class="p-0 m-0 col-8 d-flex flex-wrap">
+                    <div id="SetArea" class="p-0 m-0 col-12 d-flex col-md-6 d-md-block">
+                        <div id="SetAPic" class="p-0 m-0 col-12 d-md-none"></div>
+                        <div class="SeparateBar p-0 m-0 col-12 d-md-none"></div>
+                        <div id="SeparateBar SetBPic"class="p-0 m-0 col-12 d-md-none"></div>
+                        <div class="SeparateBar p-0 m-0 col-12 d-md-none"></div>
+                        <div id="SetCPic"class="p-0 m-0 col-12 d-md-none"></div>
+                        <div class="SeparateBar p-0 m-0 col-12 d-md-none"></div>
+                        <div id="SetDPic"class="p-0 m-0 col-12 d-md-none"></div>
                     </div>
-                    <div id="AddArea" class="p-0 m-0 col-6">
+                    <div id="AddArea" class="p-0 m-0 col-12 col-md-6">
             
                     </div>
                 </div>
@@ -242,18 +248,19 @@
             </div>
             <div id="StoryContentRow1" class="m-0 p-3 d-flex justify-content-end align-items-end">
                 <div id="StoryPic" class="m-0 p-0 col-2"></div>
-                <div id="StoryText" class="m-0 p-0 col-6 d-flex flex-wrap align-content-end">
-                    <p class="m-0 p-0 col-12">
+                <div id="StorySpace" class="m-0 p-0 col-auto" style="width: 1em;"></div>
+                <div id="StoryText" class="m-0 p-0 col-6 d-flex flex-wrap align-content-center">
+                    <p class="m-0 pt-3 pb-0 px-3 col-12">
                         　　鉄人給人的意象是「堅韌不拔」，然而我們也是如此！ 我們是國中就很要好的兩個大男孩，長大後懷抱著夢想，放下身邊的親人朋友們離開了家鄉台北，滿腔熱血來到這最道地台灣味的台中。
                     </p>
-                    <p class="m-0 p-0 col-12">
-                        　　時間在走，我們不停歇地不斷調配，創造屬於我們的台灣味。終於，在2015年的5月，「鉄人麵倉」插旗開賣，我們創造了不同於一般湯麵、牛肉麵和日式拉麵的海鮮湯頭，也搭配了對台灣人來說是兒時記憶的黃麵。
+                    <p class="m-0 px-3 py-0 col-12">
+                        　　時間在走，不停歇地不斷調配，創造屬於我們的台灣味。終於，在2015年的5月，「鉄人麵倉」插旗開賣，我們創造了不同於一般湯麵、牛肉麵和日式拉麵的海鮮湯頭，也搭配了對台灣人來說是兒時記憶的黃麵。
                     </p>
-                    <p class="m-0 p-0 col-12">
+                    <p class="m-0 pt-0 pb-3 px-3 col-12">
                         　　這樣的「鉄人湯麵」，是我們所認為的台灣味，也是專屬於我們鉄人的堅韌不拔！
                     </p>
                 </div>
-                <div id="StoryFakeDiv1" class="m-0 p-0 col-2"></div>
+                <div id="StoryFakeDiv1" class="m-0 p-0 col-2"  ></div>
             </div>
             <div id="StoryContentRow2" class="m-0 px-3 py-0 row justify-content-end">
                 <div id="StorySlogan" class=" m-0 p-0 col-6 align-self-end">
@@ -283,14 +290,14 @@
             </div>
 
             <!-- MaterialsContent-soup-->
-            <div id="MaterialsSoupContentRow" class="MaterialsContent position-absolute px-0 py-3 m-0 col-12 d-flex justify-content-end flex-wrap">
+            <div id="MaterialsSoupContentRow" class="MaterialsContent position-absolute px-0 py-3 m-0 col-12 d-flex justify-content-end flex-wrap" >
                 <div id="MaterialsSoupContainer" class="p-0 m-0 col-8 d-flex justify-content-center">
-                    <div id="MaterialsSoupText" class="p-0 m-0 col-10 d-flex align-content-start flex-wrap">
-                        <div id="MaterialsSoupTextLine1" class="p-0 m-0 h-25 col-12 d-flex  align-items-center text-center;">
+                    <div id="MaterialsSoupText" class="p-0 m-0 col-10 d-flex align-content-center justify-content-center flex-wrap " >
+                        <div id="MaterialsSoupTextLine1" class="p-0 m-0 h-25 col-9 d-flex  align-items-center text-center;">
                             <p class="p-0 m-0 col-12">鉄人湯頭，在我們夜以繼日的不斷調配下，終於找到了這一味!</p>
                         </div>
-                        <div id="MaterialsSoupTextLine2" class="p-0 m-0  h-50 col-12 d-flex justify-content-center text-left">
-                            <p class="p-0 m-0 col-12">　　我們利用十多種新鮮食材，慢火熬煮，那鮮甜海鮮帶點台灣道地的沙茶的滋味，在舌尖上勾勒出記憶中的台灣味。</p>
+                        <div id="MaterialsSoupTextLine2" class="p-0 m-0  h-50 col-10 d-flex align-items-start text-left">
+                            <p class="p-0 m-0 col-12">　我們利用十多種新鮮食材，慢火熬煮，那鮮甜海鮮帶點台灣道地的沙茶的滋味，在舌尖上勾勒出記憶中的台灣味。</p>
                         </div>
                     </div>
                 </div>

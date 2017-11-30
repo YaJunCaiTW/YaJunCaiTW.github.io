@@ -67,10 +67,14 @@ p {
 }
 
 #FooterOpen {
+    text-align: justify;
+    text-justify: distribute;
     text-align-last: justify;
 }
 
 #FooterAdd {
+    text-align: justify;
+    text-justify: distribute;
     text-align-last: justify;
 }
 
@@ -125,7 +129,7 @@ p {
     background: #02051680 url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
-    left: -100%;
+    left: -1000%;
 }
 
 
@@ -185,8 +189,8 @@ p {
 }
 
 #AddArea {
-    background: transparent url('../01Materials/03Set/AddPrice.png') no-repeat local center;
-    background-size: contain;
+    background: transparent url('../01Materials/03Set/AddPrice.png') no-repeat local top;
+    background-size: 78%;
 }
 
 
@@ -292,7 +296,7 @@ p {
     background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
-    left: -100%;
+    left: -1000%;
 }
 
 #OffsetRow {
@@ -312,11 +316,11 @@ p {
 }
 
 #StoryText {
-    height: 85%;
+    height: 100%;
     background: #02051680;
     color: whitesmoke;
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: distribute;
     text-align-last: left;
 }
 
@@ -341,7 +345,7 @@ p {
     background: #000000CC url('../01Materials/01BG/MaterialsBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
-    left: -100%;
+    left: -1000%;
 }
 
 #MaterialsButtonAreaRow {
