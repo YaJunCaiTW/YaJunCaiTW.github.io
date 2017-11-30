@@ -71,45 +71,42 @@ function ChangeContainer(ActiveObj){
 }
 
 function PopInformation(ActiveObj){
-    //先清空並完成所有動畫效果
-    $(".InformationText").stop(true,true);
+    //把全部資訊收合
+    $(".InformationText").animate({ height: "0px", opacity: "0" }, 500, "swing")
     //判斷現在點選的資訊是否下拉，如果是就收合併返回
     switch (ActiveObj.id) {
         case "InformationItem1":
-            if($("#InformationText1").css("height").slice(0,-2) > 0){
-                $("#InformationText1").animate({ height: "0px" }, 500, "swing")
+            if ($("#InformationText1").css("height").slice(0, -2) > 0) {
                 return;
             }
             break;
         case "InformationItem2":
             if ($("#InformationText2").css("height").slice(0, -2) > 0) {
-                $("#InformationText2").animate({ height: "0px" }, 500, "swing")
                 return;
             }
             break;
         case "InformationItem3":
             if ($("#InformationText3").css("height").slice(0, -2) > 0) {
-                $("#InformationText3").animate({ height: "0px" }, 500, "swing")
                 return;
             }
             break;
     }
-    //把全部資訊收合
-    $(".InformationText").animate({ height: "0px" }, 500, "swing")
     //選到的先結束收和動畫並展開
     switch (ActiveObj.id){
         case "InformationItem1":
             console.log($("#InformationText1").height());
+            $(".InformationText").stop(true, true);
+                $("#InformationText1").animate({ height: "100%", opacity:"1" }, 500, "swing")
+
             
-            $("#InformationText1").animate({ height: "auto", }, 500, "linear")
         break;
         case "InformationItem2":
             $(".InformationText").stop(true, true);
-            $("#InformationText2").animate({ height: "100%" }, 500, "swing")
+            $("#InformationText2").animate({ height: "100%", opacity: "1"}, 500, "swing")
         break;
         case "InformationItem3":
             $(".InformationText").stop(true, true);
-            $("#InformationText3").animate({ height: "100%" }, 500, "swing")
+            $("#InformationText3").animate({ height: "100%", opacity: "1" }, 500, "swing")
         break;
     }
 }

@@ -355,17 +355,17 @@ p {
 }
 
 #MaterialsAreaButton1 {
-    background: transparent url('../01Materials/04Menu/Btn1.png') no-repeat local center;
+    background: transparent url('../01Materials/09Material/MSoup.png') no-repeat local center;
     background-size: cover;
 }
 
 #MaterialsAreaButton2 {
-    background: transparent url('../01Materials/04Menu/Btn2.png') no-repeat local center;
+    background: transparent url('../01Materials/09Material/MMen.png') no-repeat local center;
     background-size: cover;
 }
 
 #MaterialsAreaButton3 {
-    background: transparent url('../01Materials/04Menu/Btn3.png') no-repeat local center;
+    background: transparent url('../01Materials/09Material/MGoods.png') no-repeat local center;
     background-size: cover;
 }
 
