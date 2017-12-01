@@ -46,13 +46,15 @@ function GoToService() {
 function GoToInfo() {
     console.log(document.querySelector(".InfoDiv"));                           
     document.querySelector(".InfoDiv").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
     });
 }
 //捲動到頂端
 function GoToTop() {                             
     document.querySelector(".HeaderDiv").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
     });
     $(".HeaderDiv").addClass("Brightness");
     //閃爍
@@ -62,13 +64,15 @@ function GoToTop() {
 //捲動到Team位置
 function GoToTeam() {                            
     document.querySelector(".TeamDiv").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
     });
 }
 //捲動到連絡位置
 function GoToSContact() {                        
     document.querySelector(".ContactDiv").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
     });
 }
 //文字用強調與移除強調效果
