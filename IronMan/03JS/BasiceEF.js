@@ -57,19 +57,19 @@ function ChangeContainer(ActiveObj){
     //移出選定的DIV
     switch (ActiveObj.id){
         case "NavBarItem1":
-            $("#HomePageDiv").animate({left:"0%"},500,"swing");
+            $("#HomePageDiv").animate({left:"0%"},500,"easeOutElastic");
         break;
     
         case "NavBarItem2":
-            $("#MenuDiv").animate({left:"0%"},500,"swing");
+            $("#MenuDiv").animate({left:"0%"},500,"easeOutElastic");
         break;
 
         case "NavBarItem3":
-            $("#StoryDiv").animate({left:"0%"},500,"swing");
+            $("#StoryDiv").animate({left:"0%"},500,"easeOutElastic");
         break;
 
         case "NavBarItem4":
-            $("#MaterialsDiv").animate({left:"0%"},500,"swing");
+            $("#MaterialsDiv").animate({left:"0%"},500,"easeOutElastic");
         break;
 
     }
@@ -121,7 +121,7 @@ function PopInformation(ActiveObj){
 function ChangeMenu(ActiveObj){
     $(".MenuAreaButton").removeClass("SelectedButton");
     $(ActiveObj).addClass("SelectedButton");
-    $(".MenuContent").animate({ right: "1000%" }, 500, "swing")
+    $(".MenuContent").animate({ right: "1000%" }, 500, "easeInElastic")
     switch (ActiveObj.id) {
         case "MenuAreaButton1":
             $("#MenuSoupContentRow").stop(true, true);
@@ -145,7 +145,7 @@ function ChangeMenu(ActiveObj){
 function ChangeMaterials(ActiveObj){
     $(".MaterialsAreaButton").removeClass("SelectedButton");
     $(ActiveObj).addClass("SelectedButton");
-    $(".MaterialsContent").animate({ right: "1000%" }, 500, "swing")
+    $(".MaterialsContent").animate({ right: "1000%" }, 500, "easeInElastic")
     switch (ActiveObj.id) {
         case "MaterialsAreaButton1":
             $("#MaterialsSoupContentRow").stop(true, true);
