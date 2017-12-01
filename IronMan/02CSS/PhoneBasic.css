@@ -52,6 +52,11 @@
         width: 20vw;
         border-radius: 50%;
     }
+    .PhoneSeparateBar {
+        height: 3vh;
+        background: transparent url('../01Materials/03Set/Phone/PhoneSeparate.png') no-repeat local center;
+        background-size: cover;
+    }
     /*MenuSet*/
     #MenuSetContentRow {
         top: calc(32.5vw + 48px);
@@ -59,11 +64,7 @@
     #MenuSetContainer {
         overflow-x: hidden;
         overflow-y: scroll;
-    }
-    .PhoneSeparateBar {
-        height: 3vh;
-        background: transparent url('../01Materials/03Set/Phone/PhoneSeparate.png') no-repeat local center;
-        background-size: cover;
+        height: 55vh;
     }
     #PhoneSetArea {
         background-image: none;
@@ -102,5 +103,163 @@
         height: 50vh;
         background: transparent url('../01Materials/03Set/Phone/PhoneSetAddTwenty.png') no-repeat local center;
         background-size: contain;
+    }
+    /* MenuSoup */
+    #MenuSoupContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MenuSoupContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 55vh;
+    }
+    #SoupPicArea {
+        height: 50vh;
+    }
+    #SoupTextArea {
+        height: 50vh;
+        background-size: cover;
+    }
+    /*MenuDry*/
+    #MenuDryContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MenuDryContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 55vh;
+    }
+    #DryPicArea {
+        height: 50vh;
+    }
+    #DryTextArea {
+        height: 50vh;
+    }
+    /* MenuLimit */
+    #MenuLimitContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MenuLimitContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 55vh;
+    }
+    #MenuLimitRow1 {
+        height: auto;
+    }
+    #MenuLimitRow2 {
+        height: auto;
+    }
+    #MenuLimitRow1Pic {
+        height: 50vh;
+    }
+    #MenuLimitRow2Pic {
+        height: 50vh;
+    }
+    #MenuLimitRow1Text {
+        text-indent: 4em;
+    }
+    #MenuLimitRow2Text {
+        text-indent: 4em
+    }
+    /*StoryDiv*/
+    .StoryDiv {
+        background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
+        background-size: cover;
+        top: 0;
+        left: -1000%;
+    }
+    #StoryContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        top: 12.5vh;
+    }
+    #OffsetRow {
+        width: 100%;
+        height: 0px;
+    }
+    #StoryContentRow1 {
+        width: 100%;
+        height: auto;
+    }
+    #StoryPic {
+        height: 50vh;
+        /* background-attachment: fixed; */
+    }
+    #StoryText {
+        text-indent: 4em
+    }
+    #StoryContentRow2 {
+        width: 100%;
+        height: auto;
+    }
+    #StorySlogan {
+        background: #02051680;
+        height: 100%;
+        color: whitesmoke;
+        text-align: center;
+        text-justify: inter-word;
+        text-align-last: left;
+        text-indent: 2em
+    }
+    /*Materials*/
+    #MaterialsButtonAreaRow {
+        top: calc(12.5vw + 24px);
+    }
+    .MaterialsAreaButton {
+        height: 20vw;
+        width: 20vw;
+        border-radius: 50%;
+    }
+    /*MateriaslSoup*/
+    #MaterialsSoupContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MaterialsSoupContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 55vh;
+    }
+    #MaterialsSoupText {
+        text-indent: 4em;
+    }
+    /*Materiasmen*/
+    #MaterialsMenContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MaterialsMenContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 55vh;
+    }
+    #RamenArea {
+        height: 70vh;
+    }
+    #RamenPic {
+        height: 50%
+    }
+    #RamenText {
+        height: 50%;
+        text-indent: 4em;
+    }
+    #YellowmenArea {
+        height: 70vh;
+    }
+    #YellowmenPic {
+        height: 50%
+    }
+    #YellowmenText {
+        height: 50%;
+        text-indent: 4em;
+    }
+    /*MaterialsGoods*/
+    #MaterialsGoodsContentRow {
+        top: calc(32.5vw + 48px);
+    }
+    #MaterialsGoodsContainer {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 55vh;
+        background-position: center;
     }
 }

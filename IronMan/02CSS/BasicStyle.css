@@ -43,24 +43,25 @@ p {
 
 .NavBarItem {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #FooterLineLogo {
-    background: white url('../01Materials/02Icons/line.svg') no-repeat local center;
+    background: transparent url('../01Materials/02Icons/line.svg') no-repeat local center;
     background-size: cover;
     height: 68px;
     width: 68px;
 }
 
 #FooterFBLogo {
-    background: white url('../01Materials/02Icons/facebook-icon.svg') no-repeat local center;
+    background: whitesmoke url('../01Materials/02Icons/facebook-icon.svg') no-repeat local center;
     background-size: cover;
     height: 68px;
     width: 68px;
 }
 
 #FooterMapLogo {
-    background: #D82627 url('../01Materials/02Icons/map-icon.svg') no-repeat local center;
+    background: transparent url('../01Materials/02Icons/map-icon.svg') no-repeat local center;
     background-size: cover;
     height: 68px;
     width: 68px;
@@ -170,7 +171,7 @@ p {
 }
 
 .MenuContent {
-    /* display: none !important; */
+    transition: all 0.5s;
 }
 
 
@@ -179,7 +180,6 @@ p {
 #MenuSetContentRow {
     top: 200px;
     right: 0%;
-    transition: all 0.5s;
 }
 
 #MenuSetContainer {
@@ -332,7 +332,7 @@ p {
 }
 
 #StoryContentRow2 {
-    width: 100%;
+    width: calc(100%);
     height: 12.5vh;
 }
 
@@ -343,6 +343,10 @@ p {
     text-align: center;
     text-justify: inter-word;
     text-align-last: center;
+}
+
+#StoryPicPushBackSpace {
+    background: #02051680;
 }
 
 
@@ -381,7 +385,7 @@ p {
 }
 
 .MaterialsContent {
-    /* display: none !important; */
+    transition: all 0.5s;
 }
 
 
@@ -390,7 +394,6 @@ p {
 #MaterialsSoupContentRow {
     top: 200px;
     Right: 0%;
-    transition: all 0.5s;
 }
 
 #MaterialsSoupContainer {
