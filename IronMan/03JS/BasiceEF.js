@@ -5,15 +5,19 @@ $(document).ready(function(){
     $("#NavBarItem3").click(function(){ChangeContainer(this)});
     $("#NavBarItem4").click(function(){ChangeContainer(this)});
     //Footer裡面的社群與地圖
-    $("#FooterFBLogo").click(function () { window.open('https://zh-tw.facebook.com/ironoodles/')});
-    $("#FooterLineLogo").click(function () { window.open('https://line.me/R/ti/p/1debQCXURz') });
-    $("#FooterMapLogo").click(function () { window.open('https://www.google.com.tw/maps/place/%E9%89%84%E4%BA%BA%E9%BA%B5%E5%80%89/@24.1521206,120.6874975,18z/data=!3m1!4b1!4m5!3m4!1s0x34693d67f2c55bdd:0xa0b188fcb87ac135!8m2!3d24.1521206!4d120.6884177') });
+    $("#FooterFBLogo").click(function () { OpenWindowHideFooter('https://zh-tw.facebook.com/ironoodles/')});
+    $("#FooterLineLogo").click(function () { OpenWindowHideFooter('https://line.me/R/ti/p/1debQCXURz') });
+    $("#FooterMapLogo").click(function () { OpenWindowHideFooter('https://www.google.com.tw/maps/place/%E9%89%84%E4%BA%BA%E9%BA%B5%E5%80%89/@24.1521206,120.6874975,18z/data=!3m1!4b1!4m5!3m4!1s0x34693d67f2c55bdd:0xa0b188fcb87ac135!8m2!3d24.1521206!4d120.6884177') });
+    //Logo點選回到日常
+    $(".Logo").click(function () { ChangeContainer(document.getElementById("NavBarItem1"))});
     //鐵人日常裡面的公布訊息註冊點擊事件
     $(".InformationItem").click(function(){PopInformation(this)});
     //菜單分類按鈕
     $(".MenuAreaButton").click(function(){ChangeMenu(this)});
-    //菜單分類按鈕
+    $(".MenuAreaButton").hover(function(){ChangeShadow(this)});
+    //食材分類按鈕
     $(".MaterialsAreaButton").click(function () { ChangeMaterials(this) });
+    $(".MaterialsAreaButton").hover(function () { ChangeShadow(this) })
 })
 
 function ChangeContainer(ActiveObj){
@@ -66,12 +70,12 @@ function ChangeContainer(ActiveObj){
 
         case "NavBarItem4":
             $("#MaterialsDiv").animate({left:"0%"},500,"swing");
-            console.log(ActiveObj.id)
         break;
 
     }
-
-
+    $("#PnoneNavMenuBar").addClass("collapsed");
+    $("#PnoneNavMenuBar").attr("aria-expanded", "false");
+    $("#navbarSupportedContent").removeClass("show");
 }
 
 function PopInformation(ActiveObj){
@@ -115,6 +119,8 @@ function PopInformation(ActiveObj){
 }
 
 function ChangeMenu(ActiveObj){
+    $(".MenuAreaButton").removeClass("SelectedButton");
+    $(ActiveObj).addClass("SelectedButton");
     $(".MenuContent").animate({ right: "1000%" }, 500, "swing")
     switch (ActiveObj.id) {
         case "MenuAreaButton1":
@@ -137,6 +143,8 @@ function ChangeMenu(ActiveObj){
 }
 
 function ChangeMaterials(ActiveObj){
+    $(".MaterialsAreaButton").removeClass("SelectedButton");
+    $(ActiveObj).addClass("SelectedButton");
     $(".MaterialsContent").animate({ right: "1000%" }, 500, "swing")
     switch (ActiveObj.id) {
         case "MaterialsAreaButton1":
@@ -152,4 +160,15 @@ function ChangeMaterials(ActiveObj){
             $("#MaterialsGoodsContentRow").animate({ right: "0px" }, 500, "swing")
             break;
     }
+}
+
+function ChangeShadow(HoverObj){
+    $(HoverObj).toggleClass("HoverButton");
+}
+
+function OpenWindowHideFooter(url){
+    window.open(url);
+    $("#FooterNavMenuBar").addClass("collapsed");
+    $("#FooterNavMenuBar").attr("aria-expanded", "false");
+    $("#navbarSupportedContent1").removeClass("show");
 }
