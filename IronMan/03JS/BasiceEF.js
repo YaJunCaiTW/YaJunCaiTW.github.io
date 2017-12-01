@@ -4,6 +4,10 @@ $(document).ready(function(){
     $("#NavBarItem2").click(function(){ChangeContainer(this)});
     $("#NavBarItem3").click(function(){ChangeContainer(this)});
     $("#NavBarItem4").click(function(){ChangeContainer(this)});
+    //Footer裡面的社群與地圖
+    $("#FooterFBLogo").click(function () { window.open('https://zh-tw.facebook.com/ironoodles/')});
+    $("#FooterLineLogo").click(function () { window.open('https://line.me/R/ti/p/1debQCXURz') });
+    $("#FooterMapLogo").click(function () { window.open('https://www.google.com.tw/maps/place/%E9%89%84%E4%BA%BA%E9%BA%B5%E5%80%89/@24.1521206,120.6874975,18z/data=!3m1!4b1!4m5!3m4!1s0x34693d67f2c55bdd:0xa0b188fcb87ac135!8m2!3d24.1521206!4d120.6884177') });
     //鐵人日常裡面的公布訊息註冊點擊事件
     $(".InformationItem").click(function(){PopInformation(this)});
     //菜單分類按鈕
