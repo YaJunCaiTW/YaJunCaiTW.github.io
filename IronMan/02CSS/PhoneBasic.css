@@ -164,12 +164,7 @@
             text-indent: 4em
         }
         /*StoryDiv*/
-        .StoryDiv {
-            background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
-            background-size: cover;
-            top: 0;
-            left: -1000%;
-        }
+
         #StoryContainer {
             overflow-x: hidden;
             overflow-y: scroll;
