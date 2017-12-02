@@ -18,6 +18,8 @@ $(document).ready(function(){
     //食材分類按鈕
     $(".MaterialsAreaButton").click(function () { ChangeMaterials(this) });
     $(".MaterialsAreaButton").hover(function () { ChangeShadow(this) })
+    //手機板載入後隱藏網址列
+    setTimeout(function(){window.scrollTo(0, 1); }, 10);
 })
 
 function ChangeContainer(ActiveObj){
