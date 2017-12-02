@@ -135,7 +135,7 @@ p {
 /* Menu */
 
 .MenuDiv {
-    background: #02051680 url('../01Materials/01BG/MenuBG.jpg') no-repeat local center;
+    background: #02051680 url('../01Materials/01BG/MenuBG.jpg') no-repeat local right;
     background-size: cover;
     top: 0;
     left: -1000%;
@@ -304,7 +304,7 @@ p {
 /* StoryDiv */
 
 .StoryDiv {
-    background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local center;
+    background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local right;
     background-size: cover;
     top: 0;
     left: -1000%;
@@ -312,7 +312,7 @@ p {
 
 #OffsetRow {
     width: 100%;
-    height: 100px;
+    height: 180px;
 }
 
 #StoryContentRow1 {
@@ -358,7 +358,7 @@ p {
 /* Materials */
 
 .MaterialsDiv {
-    background: #000000CC url('../01Materials/01BG/MaterialsBG.jpg') no-repeat local center;
+    background: #000000CC url('../01Materials/01BG/MaterialsBG.jpg') no-repeat local right;
     background-size: cover;
     top: 0;
     left: -1000%;
