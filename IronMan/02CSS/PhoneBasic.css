@@ -193,7 +193,7 @@
             height: auto;
         }
         #StorySlogan {
-            background: #02051680;
+            background: rgba(2,5,22,0.5);
             height: 100%;
             color: whitesmoke;
             text-align: center;
