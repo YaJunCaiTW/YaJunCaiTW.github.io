@@ -324,7 +324,7 @@ p {
 
 #StoryPic {
     height: 100%;
-    background: #020516 url('../01Materials/07Story/Boss.jpg') no-repeat local center;
+    background: rgba(2,5,22,0.5) url('../01Materials/07Story/Boss.jpg') no-repeat local center;
     background-size: cover;
 }
 
