@@ -13,7 +13,7 @@ body {
     padding: 0;
     font-family: "微軟正黑體";
     overflow-x: hidden;
-    background: #02051680 url('../01Materials/01BG/BodyBG.jpg') repeat local center;
+    background: #020516 url('../01Materials/01BG/BodyBG.jpg') repeat local center;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -94,7 +94,7 @@ p {
 /* HomePage */
 
 .HomePageDiv {
-    background: #02051680 url('../01Materials/01BG/HomePageBG.jpg') no-repeat local center;
+    background: #020516 url('../01Materials/01BG/HomePageBG.jpg') no-repeat local center;
     background-size: cover;
     top: 0;
     left: 0%;
@@ -135,7 +135,7 @@ p {
 /* Menu */
 
 .MenuDiv {
-    background: #02051680 url('../01Materials/01BG/MenuBG.jpg') no-repeat local ;
+    background: #020516 url('../01Materials/01BG/MenuBG.jpg') no-repeat local ;
     background-position: 90% 50%;
     background-size: cover;
     top: 0;
@@ -305,7 +305,7 @@ p {
 /* StoryDiv */
 
 .StoryDiv {
-    background: #02051680 url('../01Materials/01BG/StoryBG.jpg') no-repeat local;
+    background: #020516 url('../01Materials/01BG/StoryBG.jpg') no-repeat local;
     background-position: 90% 50%;
     background-size: cover;
     top: 0;
@@ -324,7 +324,7 @@ p {
 
 #StoryPic {
     height: 100%;
-    background: #02051680 url('../01Materials/07Story/Boss.jpg') no-repeat local center;
+    background: #020516 url('../01Materials/07Story/Boss.jpg') no-repeat local center;
     background-size: cover;
 }
 
