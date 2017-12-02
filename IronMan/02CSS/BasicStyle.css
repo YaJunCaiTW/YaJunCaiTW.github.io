@@ -482,7 +482,7 @@ p {
     height: 50vh;
 }
 
-
+/*SmokeEF*/
 .smoke::before {
     content:"";
     width:100%;
@@ -490,39 +490,34 @@ p {
     left:-10%;
     top:5%;
     position:absolute;
-    /*background-image: -webkit-radial-gradient(72.5% 56.5%, ellipse, #E7E7E790, transparent 25%), -webkit-radial-gradient(22.5% 67.5%, ellipse, #E7E7E790, transparent 15%), -webkit-radial-gradient(32.5% 58.5%, ellipse, #E7E7E790, transparent 10%), -webkit-radial-gradient(52.5% 32.5%, ellipse, #E7E7E790, transparent 15%);*/
+    background-image: -webkit-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -webkit-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -webkit-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -webkit-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     background-image: -moz-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -moz-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -moz-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -moz-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
-    /*background-image: radial-gradient(72.5% 56.5%, ellipse, #E7E7E790, transparent 25%), radial-gradient(22.5% 67.5%, ellipse, #E7E7E790, transparent 15%), radial-gradient(32.5% 58.5%, ellipse, #E7E7E790, transparent 10%),radial-gradient(52.5% 32.5%, ellipse, #E7E7E790, transparent 15%);*/
+    background-image: radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%),radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     animation:bk 3s linear infinite ; 
   }
 
 .smoke {
     width:80%;
     height:90%; 
-    /* background: #000000; */
     position:absolute;
     left:10%;
-    /* margin-left:-40px; */
     top:-10%;
-    /* background-image: -webkit-radial-gradient(75% 59%, ellipse,#F5F5F570 , transparent 25%), -webkit-radial-gradient(25% 70%, ellipse, #F5F5F570, transparent 15%), -webkit-radial-gradient(35% 61%, ellipse,  #F5F5F570, transparent 10%), -webkit-radial-gradient(55% 35%, ellipse, #F5F5F570, transparent 15%); */
-    /* background-image: -moz-radial-gradient(75% 59%, ellipse,#F5F5F570 , transparent 25%), -moz-radial-gradient(25% 70%, ellipse, #F5F5F570, transparent 15%), -moz-radial-gradient(35% 61%, ellipse, #F5F5F570, transparent 10%), -moz-radial-gradient(55% 35%, ellipse, #F5F5F570, transparent 15%); */
+    background-image: -webkit-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -webkit-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -webkit-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -webkit-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     background-image: -moz-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -moz-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -moz-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -moz-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
-    /* background-image: radial-gradient(75% 59%, ellipse,#F5F5F570 , transparent 25%), radial-gradient(25% 70%, ellipse, #F5F5F570, transparent 15%), radial-gradient(35% 61%, ellipse,  #F5F5F570, transparent 10%), radial-gradient(55% 35%, ellipse, #F5F5F570, transparent 15%); */
+    background-image: radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%),radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     animation:bk 15s linear infinite ;
-    /* background-attachment: local; */
   }
   
   .smoke::after {
     content:"";
     width:100%;
     height:100%; 
-    /* background: wheat; */
     position:absolute;
     left:10%;
     top:-5%;
-    /*background-image: -webkit-radial-gradient(80% 59%, ellipse, #F0F0F080, transparent 25%), -webkit-radial-gradient(30% 70%, ellipse, #F0F0F080, transparent 15%), -webkit-radial-gradient(40% 61%, ellipse, #F0F0F080, transparent 10%), -webkit-radial-gradient(60% 35%, ellipse, #F0F0F080, transparent 15%);*/
+    background-image: -webkit-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -webkit-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -webkit-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -webkit-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     background-image: -moz-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -moz-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -moz-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -moz-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
-    /*background-image: radial-gradient(80% 59%, ellipse, #F0F0F080, transparent 25%), radial-gradient(30% 70%, ellipse, #F0F0F080, transparent 15%), radial-gradient(40% 61%, ellipse, #F0F0F080, transparent 10%), radial-gradient(60% 35%, ellipse, #F0F0F080, transparent 15%);*/
+    background-image: radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%),radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     animation:bk 5s linear infinite ;
   } 
   
@@ -544,24 +539,21 @@ p {
     left:-10%;
     top:5%;
     position:absolute;
-    /*background-image: -webkit-radial-gradient(72.5% 56.5%, ellipse, #E7E7E790, transparent 25%), -webkit-radial-gradient(22.5% 67.5%, ellipse, #E7E7E790, transparent 15%), -webkit-radial-gradient(32.5% 58.5%, ellipse, #E7E7E790, transparent 10%), -webkit-radial-gradient(52.5% 32.5%, ellipse, #E7E7E790, transparent 15%);*/
+    background-image: -webkit-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -webkit-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -webkit-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -webkit-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     background-image: -moz-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -moz-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -moz-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -moz-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
-    /*background-image: radial-gradient(72.5% 56.5%, ellipse, #E7E7E790, transparent 25%), radial-gradient(22.5% 67.5%, ellipse, #E7E7E790, transparent 15%), radial-gradient(32.5% 58.5%, ellipse, #E7E7E790, transparent 10%),radial-gradient(52.5% 32.5%, ellipse, #E7E7E790, transparent 15%);*/
+    background-image: radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%),radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     animation:bkSet 3s linear infinite ; 
   }
 
 .smokeSet {
     width:80%;
     height:90%; 
-    /* background: #000000; */
     position:absolute;
     left:10%;
-    /* margin-left:-40px; */
     top:-10%;
-    /* background-image: -webkit-radial-gradient(75% 59%, ellipse,#F5F5F570 , transparent 25%), -webkit-radial-gradient(25% 70%, ellipse, #F5F5F570, transparent 15%), -webkit-radial-gradient(35% 61%, ellipse,  #F5F5F570, transparent 10%), -webkit-radial-gradient(55% 35%, ellipse, #F5F5F570, transparent 15%); */
-    /* background-image: -moz-radial-gradient(75% 59%, ellipse,#F5F5F570 , transparent 25%), -moz-radial-gradient(25% 70%, ellipse, #F5F5F570, transparent 15%), -moz-radial-gradient(35% 61%, ellipse, #F5F5F570, transparent 10%), -moz-radial-gradient(55% 35%, ellipse, #F5F5F570, transparent 15%); */
+    background-image: -webkit-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -webkit-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -webkit-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -webkit-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     background-image: -moz-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -moz-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -moz-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -moz-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
-    /* background-image: radial-gradient(75% 59%, ellipse,#F5F5F570 , transparent 25%), radial-gradient(25% 70%, ellipse, #F5F5F570, transparent 15%), radial-gradient(35% 61%, ellipse,  #F5F5F570, transparent 10%), radial-gradient(55% 35%, ellipse, #F5F5F570, transparent 15%); */
+    background-image: radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%),radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     animation:bkSet 15s linear infinite ;
     /* background-attachment: local; */
   }
@@ -569,13 +561,12 @@ p {
     content:"";
     width:100%;
     height:100%; 
-    /* background: wheat; */
     position:absolute;
     left:10%;
     top:-5%;
-    /*background-image: -webkit-radial-gradient(80% 59%, ellipse, #F0F0F080, transparent 25%), -webkit-radial-gradient(30% 70%, ellipse, #F0F0F080, transparent 15%), -webkit-radial-gradient(40% 61%, ellipse, #F0F0F080, transparent 10%), -webkit-radial-gradient(60% 35%, ellipse, #F0F0F080, transparent 15%);*/
+    background-image: -webkit-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -webkit-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -webkit-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -webkit-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     background-image: -moz-radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), -moz-radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), -moz-radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%), -moz-radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
-    /*background-image: radial-gradient(80% 59%, ellipse, #F0F0F080, transparent 25%), radial-gradient(30% 70%, ellipse, #F0F0F080, transparent 15%), radial-gradient(40% 61%, ellipse, #F0F0F080, transparent 10%), radial-gradient(60% 35%, ellipse, #F0F0F080, transparent 15%);*/
+    background-image: radial-gradient(20% 50%, ellipse,#F5F5F550, transparent 16%), radial-gradient(40% 55%, ellipse, #F5F5F550, transparent 15%), radial-gradient(60% 45%, ellipse, #F5F5F550, transparent 14%),radial-gradient(80% 35%, ellipse, #F5F5F550, transparent 18%);
     animation:bkSet 5s linear infinite ;
   } 
 
