@@ -170,6 +170,7 @@
             overflow-x: hidden;
             overflow-y: scroll;
             top: 12.5vh;
+            height: 75%;
         }
         #OffsetRow {
             width: 100%;
