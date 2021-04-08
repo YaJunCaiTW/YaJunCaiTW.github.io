@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html>
+<style>
+        .Col2{
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 90vh; 
+            width: 50%;
+            font-size: 7.5vmin; 
+            text-align: center; 
+            box-sizing: border-box;
+        }
+
+        .Row{
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .InnerLine{
+            display: inline;
+        }
+
+ </style>
+        
 <body>
 
-    <div style="height: 90vh; width: 50vw; background-color:  goldenrod; font-size: 7.5vmin; text-align: center; line-height: 12.5vmin;">
-        今日循環訓練<br>
-        預備時間XX秒<br>
-        訓練時間XX秒<br>
-        休息時間XX秒<br>
-        動作組數XX組<br>
-        循環圈數XX圈<br>
-        緩和運動XX秒<br>
+    <div Class="Col2" style=" background-color:  goldenrod; line-height: 12.5vmin;">
+        <div Class="Row">今日循環訓練</div>
+        <div Class="Row">預備時間<div id="PTime" class="InnerLine">30</div>秒</div>
+        <div Class="Row">訓練時間<div class="InnerLine">30</div>秒</div>
+        <div Class="Row">休息時間<div class="InnerLine">30</div>秒</div>
+        <div Class="Row">動作組數<div class="InnerLine">30</div>組</div>
+        <div Class="Row">循環圈數<div class="InnerLine">30</div>圈</div>
+        <div Class="Row">緩和運動<div class="InnerLine">30</div>秒</div>
+    </div>
+    <div Class="Col2" style=" background-color:  orangered; line-height: 90vh;">
+        GO
     </div>
 
 </body>
+
+<script>
+    document.getElementById("PTime").addEventListener("click", function(){ console.log('123-123');  myFunction();});
+    function myFunction() {
+        var txt = document.getElementById("PTime").innerHTML;
+        var PTime = prompt("請輸入預備時間:", document.getElementById("PTime").innerHTML);
+        if (PTime == null || PTime == "") {
+            alert("請輸入0~999的整數數字");
+        } else {
+            txt = PTime ;
+        }
+        document.getElementById("PTime").innerHTML = txt;
+    }
+</script>
+
 </html>
