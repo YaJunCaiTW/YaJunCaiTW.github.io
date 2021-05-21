@@ -26,8 +26,23 @@
         }
 
  </style>
+
+<script>
+    var result = new Date().toString();
+    var appInventorInput = window.AppInventor.getWebViewString();
+        function processJavascript() {
+        if (appInventorInput.length > 0) {
+            document.write( "WebView InputString received FROM app:" + appInventorInput );
+            result = appInventorInput.split("").reverse().join("");
+            document.write( "<p/>WebView InputString sending BACK TO app:<br/>" + result );
+        } else {
+            document.write( "No WebView InputString set by app at: <br/>" + result );
+        }
+        window.AppInventor.setWebViewString( result );
+    }
+</script>
         
-<body>
+<body onload="processJavascript();">
 
     <div Class="Col2" style=" background-color:  goldenrod; line-height: 12.5vmin;">
         <div Class="Row">今日循環訓練</div>
@@ -58,19 +73,5 @@
     }
 </script>
 
-<script>
-    var result = new Date().toString();
-    var appInventorInput = window.AppInventor.getWebViewString();
-        function processJavascript() {
-        if (appInventorInput.length > 0) {
-            document.write( "WebView InputString received FROM app:" + appInventorInput );
-            result = appInventorInput.split("").reverse().join("");
-            document.write( "<p/>WebView InputString sending BACK TO app:<br/>" + result );
-        } else {
-            document.write( "No WebView InputString set by app at: <br/>" + result );
-        }
-        window.AppInventor.setWebViewString( result );
-    }
-</script>
 
 </html>
