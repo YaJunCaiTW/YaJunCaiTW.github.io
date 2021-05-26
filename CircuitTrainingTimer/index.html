@@ -1,61 +1,6 @@
 <!DOCTYPE html>
 <html>
-<style>
-        .BgContainer{
-            height: 90vh;
-            width: 100%;
-            box-sizing: border-box;
-            border:5px solid blue;
-            display: flex;
-            justify-content: space-between;
-        }
-        .Ad{
-            height: 5vh;
-            width: 100%;
-            box-sizing: border-box;
-            border:5px solid pink;
-        }
-        .Col2{
-            float: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            height: 100%; 
-            width: 50%;
-            font-size: 7.5vmin; 
-            text-align: center; 
-            box-sizing: border-box;
-        }
-
-        .TimerScreen{
-            float: left;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            height: 100%; 
-            width: 100%;
-            font-size: 7.5vmin; 
-            text-align: center; 
-            box-sizing: border-box;
-            background-color:pink;  
-            line-height: 12.5vmin;
-        }
-
-        .Row{
-            float: left;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .InnerLine{
-            display: inline;
-        }
-
- </style>
+<link rel="stylesheet" href="css/basicStyle.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -74,8 +19,8 @@
             window.AppInventor.setWebViewString( result );
         }catch(err){
             console.log(err);
-        }finally{
             alert("使用專屬APP可以記錄設定喔!!");
+        }finally{
         }        
     }
 </script>
@@ -102,7 +47,7 @@
             <div Class="Row" id="TSTarget">第 - / - 圈 第 - / - 組</div>
             <div Class="Row" id="TSLeftTime" style="font-size: 25vmin; line-height: 25vmin;">Ready</div>
             <div Class="Row" id="TSPause">暫停訓練</div>
-            <div Class="Row" id="TSStop">結束訓練</div>
+            <div Class="Row" id="TSStop" >結束訓練</div>
         </div>
 
     </div>
@@ -161,7 +106,7 @@
         document.getElementById(id).innerHTML = oldNum;
     }
 
-    document.getElementById("GO").addEventListener("click", function(){startTimer();});TSPause
+    document.getElementById("GO").addEventListener("click", function(){startTimer();});
     document.getElementById("TSPause").addEventListener("click", function(){pauseTimer();});
     document.getElementById("TSStop").addEventListener("click", function(){stopTimer();});
 
@@ -253,9 +198,7 @@
                             currentSets = 1;
                             currentCycles = currentCycles + 1;
                         }
-                    }
-                    
-                    
+                    }       
                 }else{
                     if(currentCDTime>=0){
                         $(".TimerScreen").css("background-color", "pink");

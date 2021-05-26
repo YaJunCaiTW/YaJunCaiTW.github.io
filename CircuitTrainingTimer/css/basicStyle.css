@@ -1,0 +1,54 @@
+.BgContainer{
+    height: 90vh;
+    width: 100%;
+    box-sizing: border-box;
+    border:5px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+.Ad{
+    height: 5vh;
+    width: 100%;
+    box-sizing: border-box;
+    border:5px solid pink;
+}
+.Col2{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%; 
+    width: 50%;
+    font-size: 7.5vmin; 
+    text-align: center; 
+    box-sizing: border-box;
+}
+
+.TimerScreen{
+    float: left;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%; 
+    width: 100%;
+    font-size: 7.5vmin; 
+    text-align: center; 
+    box-sizing: border-box;
+    background-color:pink;  
+    line-height: 12.5vmin;
+}
+
+.Row{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.InnerLine{
+    display: inline;
+    border-style: outset;
+}
