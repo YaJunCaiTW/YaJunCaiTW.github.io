@@ -21,7 +21,8 @@
     <script>
         var cameras;
         var cameraIndex = 0;
-        var checkIntervalTimer = null
+        var checkIntervalTimer = null;
+        var decodePic = new Image();
         // This method will trigger user permissions
         Html5Qrcode.getCameras().then(devices => {
         /**
@@ -36,13 +37,23 @@
         }).catch(err => {
             document.getElementById("log").innerHTML="相機授權失敗";
             if(resultFromApp() == "CocoNut"){
-                var decodePic = new Image();
                 checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
             }
             // handle err
         });
         
         const html5QrCode = new Html5Qrcode(/* element id */ "reader");
+
+        const fileinput = document.getElementById('qr-input-file');
+        fileinput.addEventListener('change', e => {
+            if (e.target.files.length == 0) {
+                // No file selected, ignore 
+                return;
+            }else{
+                document.getElementById("log").innerHTML=e.target.files[0];
+                console.log(e);
+            }
+        });
 
         function checkAndStartCam(){
             if(cameras != null){
