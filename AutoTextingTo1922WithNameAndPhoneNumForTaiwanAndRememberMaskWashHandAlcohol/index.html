@@ -21,7 +21,7 @@
     <script>
         var cameras;
         var cameraIndex = 0;
-        var cameraPermission =false;
+        var checkIntervalTimer = null
         // This method will trigger user permissions
         Html5Qrcode.getCameras().then(devices => {
         /**
@@ -30,23 +30,19 @@
         */
             if (devices && devices.length) {
                 cameras = devices;
-                cameraPermission = true;
+                checkIntervalTimer = setInterval(function(){checkAndStartCam();}, 500);
                 // .. use this to start scanning.
             }
         }).catch(err => {
             document.getElementById("log").innerHTML="相機授權失敗";
+            if(resultFromApp() == "CocoNut"){
+                var decodePic = new Image();
+                checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
+            }
             // handle err
         });
         
         const html5QrCode = new Html5Qrcode(/* element id */ "reader");
-        if(cameraPermission){
-            var checkIntervalTimer = setInterval(function(){checkAndStartCam();}, 500);
-        }else{
-            if(resultFromApp() == "CocoNut"){
-                var decodePic = new Image();
-                var checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
-            }
-        }
 
         function checkAndStartCam(){
             if(cameras != null){
