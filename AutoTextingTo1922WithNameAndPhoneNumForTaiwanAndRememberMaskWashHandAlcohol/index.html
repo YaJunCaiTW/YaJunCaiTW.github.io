@@ -17,8 +17,8 @@
                 <input type="file" id="qr-input-file" accept="image/*" capture>   
             </div>
 
-            <div>
-                <img id="decodePicArea" style="width: 40vmin; height: 10vmin ;border-style: solid;">
+            <div id="decodePicArea" style="width: 40vmin; height: 10vmin ;border-style: solid;">
+                
             </div>
         </div>
     </body>
@@ -27,6 +27,8 @@
         var cameraIndex = 0;
         var checkIntervalTimer = null;
         var decodePic = new Image();
+        var decodePicArea = document.getElementById('decodePicArea');
+        decodePic.onload=function() { div.innerHTML += '<img src="'+decodePic.src+'" />';  };
         // This method will trigger user permissions
         Html5Qrcode.getCameras().then(devices => {
         /**
@@ -79,7 +81,7 @@
                 decodePic.src=resultFromApp();
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
-                document.getElementById("decodePicArea").src=resultFromApp();
+                //document.getElementById("decodePicArea").src=resultFromApp();
 
                 /*html5QrCode.scanFile(decodePic, true)
                 .then(qrCodeMessage => {
