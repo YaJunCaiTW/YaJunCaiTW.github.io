@@ -5,13 +5,100 @@
         <script src="https://github.com/mebjas/html5-qrcode/releases/download/V2.0.3/html5-qrcode.min.js"></script>
     </head>
     <body>
-        <div id="reader" style="width: 600px"></div>
-        <div id="log" style="width: 10vmin; height: 10vmin; border-style: solid; border-width: 6pt;" ></div>
+        <div id="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;">
+            <div id="reader" style="width: 90vmin"></div>
 
-
+            <div id="switchCamAndLog" style="width: 90vmin; display: flex; flex-direction: row; justify-content:space-between; align-items: center; align-content: center;">
+                <div id="log" style="width: 40vmin; height: 10vmin; border-style: solid; border-width: 3pt;" >鏡頭偵測中...</div>
+                <div id="switchCam" style="width: 40vmin; height: 10vmin; border-style: outset; border-width: 3pt; font-size: 7.5vmin; line-height: 10vmin; text-align: center; " >換鏡頭</div>
+            </div>         
+        </div>
     </body>
     <script>
-        function onScanSuccess(qrMessage) {
+        var cameras;
+        var cameraIndex = 0;
+        // This method will trigger user permissions
+        Html5Qrcode.getCameras().then(devices => {
+        /**
+        * devices would be an array of objects of type:
+        * { id: "id", label: "label" }
+        */
+            if (devices && devices.length) {
+                cameras = devices;
+                // .. use this to start scanning.
+            }
+        }).catch(err => {
+            // handle err
+        });
+        
+        const html5QrCode = new Html5Qrcode(/* element id */ "reader");
+        var checkIntervalTimer = setInterval(function(){checkAndStartCam();}, 500);
+
+        function checkAndStartCam(){
+            if(cameras != null){
+                html5QrCode.start(
+                    cameras[cameraIndex].id, 
+                    {
+                        fps: 10,    // Optional frame per seconds for qr code scanning
+                        qrbox: 250  // Optional if you want bounded box UI
+                    },
+                    qrCodeMessage => {
+                        document.getElementById("log").innerHTML=qrCodeMessage;
+                        // do something when code is read
+                    },
+                    errorMessage => {
+                        // parse error, ignore it.
+                    })
+                    .catch(err => {
+                        // Start failed, handle it.
+                    });
+                clearInterval(checkIntervalTimer);
+                checkIntervalTimer = null;
+                $("#switchCam").click(function(){
+                    switchCam();
+                });
+            }else{
+
+            }
+        }
+
+        function switchCam(){
+            if(cameras.length == 0){
+                document.getElementById("log").innerHTML="你沒有鏡頭";
+            }else if(cameras.length == 1){
+                document.getElementById("log").innerHTML="你只有1個鏡頭";
+            }else{
+                html5QrCode.stop().then(ignore => {
+                    // QR Code scanning is stopped.
+                }).catch(err => {
+                    // Stop failed, handle it.
+                });
+
+                cameraIndex ++;
+                if(cameraIndex >= cameras.length){
+                    cameraIndex = 0;
+                }
+
+                html5QrCode.start(
+                    cameras[cameraIndex].id, 
+                    {
+                        fps: 10,    // Optional frame per seconds for qr code scanning
+                        qrbox: 250  // Optional if you want bounded box UI
+                    },
+                    qrCodeMessage => {
+                        document.getElementById("log").innerHTML=qrCodeMessage;
+                        // do something when code is read
+                    },
+                    errorMessage => {
+                        // parse error, ignore it.
+                    })
+                    .catch(err => {
+                        // Start failed, handle it.
+                    });
+            }
+        }
+
+        /*function onScanSuccess(qrMessage) {
 	        // handle the scanned code as you like, for example:
             document.getElementById("log").innerHTML=qrMessage;
 	        console.log(`QR matched = ${qrMessage}`);
@@ -20,12 +107,11 @@
         function onScanFailure(error) {
 	        // handle scan failure, usually better to ignore and keep scanning.
             // for example:
-            document.getElementById("log").innerHTML=error;
 	        console.warn(`QR error = ${error}`);
         }
 
         let html5QrcodeScanner = new Html5QrcodeScanner(
 	        "reader", { fps: 10, qrbox: 250 }, true);
-        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);*/
     </script>
 </html>
