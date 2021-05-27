@@ -12,9 +12,6 @@
                 <div id="log" style="width: 40vmin; height: 10vmin; border-style: solid; border-width: 3pt; font-size: 4.5vmin; line-height: 5vmin; text-align: center;" >鏡頭偵測中...</div>
                 <div id="switchCam" style="width: 40vmin; height: 10vmin; border-style: outset; border-width: 3pt; font-size: 7.5vmin; line-height: 10vmin; text-align: center; " >換鏡頭</div>
             </div>
-            <div id="localOrCapture">
-                <input type="file" id="qr-input-file" accept="image/*" capture>   
-            </div>
         </div>
     </body>
     <script>
@@ -42,6 +39,7 @@
             var checkIntervalTimer = setInterval(function(){checkAndStartCam();}, 500);
         }else{
             if(resultFromApp() == "CocoNut"){
+                var decodePic = new Image();
                 var checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
             }
         }
@@ -63,8 +61,20 @@
         function checkAndWaitPic(){
             if(resultFromApp() != "CocoNut"){
                 document.getElementById("log").innerHTML= resultFromApp();
+                decodePic.src=resultFromApp();
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
+
+                html5QrCode.scanFile(imageFile, true)
+                .then(qrCodeMessage => {
+                    // success, use qrCodeMessage
+                    console.log(qrCodeMessage);
+                })
+                .catch(err => {
+                    // failure, handle it.
+                    console.log(`Error scanning file. Reason: ${err}`)
+                }); 
+
             }else{
 
             }
