@@ -36,6 +36,7 @@
 
         function checkAndStartCam(){
             if(cameras != null){
+                document.getElementById("log").innerHTML="找到鏡頭了";
                 starCam(cameras, cameraIndex);
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
@@ -55,6 +56,12 @@
                         qrbox: 250  // Optional if you want bounded box UI
                     },
                     qrCodeMessage => {
+                        console.log(qrCodeMessage.toString().search(/^smsto:1922/i));
+                        if(qrCodeMessage.toString().search(/^smsto:1922/i) == 0 && qrCodeMessage.toString().search(/\d{4} \d{4} \d{4} \d{3}/) >0){
+                            document.getElementById("log").innerHTML="是疾管署提供的QR Code" + qrCodeMessage;
+                        }else{
+                            document.getElementById("log").innerHTML="非疾管署提供的QR Code";
+                        }
                         document.getElementById("log").innerHTML=qrCodeMessage;
                         // do something when code is read
                     },
