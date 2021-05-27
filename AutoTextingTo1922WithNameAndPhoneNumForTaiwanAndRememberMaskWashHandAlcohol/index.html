@@ -16,6 +16,10 @@
             <div id="localOrCapture">
                 <input type="file" id="qr-input-file" accept="image/*" capture>   
             </div>
+
+            <div>
+                <img id="decodePicArea" >
+            </div>
         </div>
     </body>
     <script>
@@ -75,8 +79,9 @@
                 decodePic.src=resultFromApp();
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
+                document.getElementById("x").src=resultFromApp() 
 
-                html5QrCode.scanFile(decodePic, true)
+                /*html5QrCode.scanFile(decodePic, true)
                 .then(qrCodeMessage => {
                     // success, use qrCodeMessage
                     //console.log(qrCodeMessage);
@@ -86,7 +91,7 @@
                     // failure, handle it.
                     //console.log(`Error scanning file. Reason: ${err}`)
                     document.getElementById("log").innerHTML=err;
-                }); 
+                }); */
 
             }else{
 
