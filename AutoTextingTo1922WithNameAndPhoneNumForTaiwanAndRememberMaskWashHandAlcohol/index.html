@@ -28,7 +28,7 @@
         var checkIntervalTimer = null;
         var decodePic = new Image();
         var decodePicArea = document.getElementById('decodePicArea');
-        decodePic.onload=function() { div.innerHTML += '<img src="'+decodePic.src+'" />';  };
+        decodePic.onload=function() { decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';  };
         // This method will trigger user permissions
         Html5Qrcode.getCameras().then(devices => {
         /**
