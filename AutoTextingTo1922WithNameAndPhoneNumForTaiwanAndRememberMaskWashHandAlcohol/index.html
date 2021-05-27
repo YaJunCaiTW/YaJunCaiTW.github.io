@@ -104,7 +104,7 @@
             try{
                 window.AppInventor.setWebViewString( result );
             }catch(err){
-                alert("請安裝專屬App!")
+                alert("安裝專屬App，可以直接發送訊息喔!")
                 console.log(result.toString().substring(11));
                 document.getElementById("log").innerHTML= '<a href="SMS:1922?body='+ result.toString().substring(11)+'">點擊跳轉到發送簡訊畫面</a>';
             }
