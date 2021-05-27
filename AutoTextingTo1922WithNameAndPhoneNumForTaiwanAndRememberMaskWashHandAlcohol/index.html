@@ -59,6 +59,7 @@
                         console.log(qrCodeMessage.toString().search(/^smsto:1922/i));
                         if(qrCodeMessage.toString().search(/^smsto:1922/i) == 0 && qrCodeMessage.toString().search(/\d{4} \d{4} \d{4} \d{3}/) >0){
                             document.getElementById("log").innerHTML="是疾管署提供的QR Code" + qrCodeMessage;
+                            html5QrcodeScanner.clear();
                         }else{
                             document.getElementById("log").innerHTML="非疾管署提供的QR Code";
                         }
