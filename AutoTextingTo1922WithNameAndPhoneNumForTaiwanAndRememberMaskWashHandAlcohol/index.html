@@ -36,8 +36,20 @@
 
         function checkAndStartCam(){
             if(cameras != null){
-                html5QrCode.start(
-                    cameras[cameraIndex].id, 
+                starCam(cameras, cameraIndex);
+                clearInterval(checkIntervalTimer);
+                checkIntervalTimer = null;
+                $("#switchCam").click(function(){
+                    switchCam();
+                });
+            }else{
+
+            }
+        }
+
+        function starCam( objcameras, cameraIndexNum){
+            html5QrCode.start(
+                objcameras[cameraIndexNum].id, 
                     {
                         fps: 10,    // Optional frame per seconds for qr code scanning
                         qrbox: 250  // Optional if you want bounded box UI
@@ -52,14 +64,6 @@
                     .catch(err => {
                         // Start failed, handle it.
                     });
-                clearInterval(checkIntervalTimer);
-                checkIntervalTimer = null;
-                $("#switchCam").click(function(){
-                    switchCam();
-                });
-            }else{
-
-            }
         }
 
         function switchCam(){
@@ -79,22 +83,7 @@
                     cameraIndex = 0;
                 }
 
-                html5QrCode.start(
-                    cameras[cameraIndex].id, 
-                    {
-                        fps: 10,    // Optional frame per seconds for qr code scanning
-                        qrbox: 250  // Optional if you want bounded box UI
-                    },
-                    qrCodeMessage => {
-                        document.getElementById("log").innerHTML=qrCodeMessage;
-                        // do something when code is read
-                    },
-                    errorMessage => {
-                        // parse error, ignore it.
-                    })
-                    .catch(err => {
-                        // Start failed, handle it.
-                    });
+                starCam(cameras, cameraIndex);
             }
         }
 
