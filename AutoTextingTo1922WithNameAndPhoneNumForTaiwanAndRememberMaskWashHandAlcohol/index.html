@@ -18,7 +18,7 @@
             </div>
 
             <div>
-                <img id="decodePicArea" >
+                <img id="decodePicArea" style="border-style: solid;">
             </div>
         </div>
     </body>
@@ -79,7 +79,7 @@
                 decodePic.src=resultFromApp();
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
-                document.getElementById("x").src=resultFromApp() 
+                document.getElementById("decodePicArea").src=resultFromApp() 
 
                 /*html5QrCode.scanFile(decodePic, true)
                 .then(qrCodeMessage => {
