@@ -20,6 +20,7 @@
     <script>
         var cameras;
         var cameraIndex = 0;
+        var cameraPermission =false;
         // This method will trigger user permissions
         Html5Qrcode.getCameras().then(devices => {
         /**
@@ -28,15 +29,22 @@
         */
             if (devices && devices.length) {
                 cameras = devices;
+                cameraPermission = true;
                 // .. use this to start scanning.
             }
         }).catch(err => {
-            document.getElementById("log").innerHTML="相機授權失敗，用下面方法嘗試";
+            document.getElementById("log").innerHTML="相機授權失敗";
             // handle err
         });
         
         const html5QrCode = new Html5Qrcode(/* element id */ "reader");
-        var checkIntervalTimer = setInterval(function(){checkAndStartCam();}, 500);
+        if(cameraPermission){
+            var checkIntervalTimer = setInterval(function(){checkAndStartCam();}, 500);
+        }else{
+            if(resultFromApp() == "CocoNut"){
+                var checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
+            }
+        }
 
         function checkAndStartCam(){
             if(cameras != null){
@@ -52,6 +60,16 @@
             }
         }
 
+        function checkAndWaitPic(){
+            if(resultFromApp() != "CocoNut"){
+                document.getElementById("log").innerHTML= resultFromApp();
+                clearInterval(checkIntervalTimer);
+                checkIntervalTimer = null;
+            }else{
+
+            }
+        }
+        
         function starCam( objcameras, cameraIndexNum){
             html5QrCode.start(
                 objcameras[cameraIndexNum].id, 
@@ -111,6 +129,14 @@
                 alert("安裝專屬App，可以直接發送訊息喔!")
                 //console.log(result.toString().substring(11));
                 document.getElementById("log").innerHTML= '<a href="SMS:1922?body='+ result.toString().substring(11)+'">點擊跳轉到發送簡訊畫面</a>';
+            }
+        }
+
+        function resultFromApp(){
+            try{
+                return window.AppInventor.getWebViewString( );
+            }catch(err){
+                alert("安裝專屬App，可以直接發送訊息喔!")
             }
         }
 
