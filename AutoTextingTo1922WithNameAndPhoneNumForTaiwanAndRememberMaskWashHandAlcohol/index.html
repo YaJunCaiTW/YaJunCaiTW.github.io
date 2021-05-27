@@ -76,7 +76,7 @@
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
 
-                html5QrCode.scanFile(imageFile, true)
+                html5QrCode.scanFile(decodePic, true)
                 .then(qrCodeMessage => {
                     // success, use qrCodeMessage
                     //console.log(qrCodeMessage);
