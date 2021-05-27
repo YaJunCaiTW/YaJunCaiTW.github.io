@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <script src="https://github.com/mebjas/html5-qrcode/releases/download/V2.0.3/html5-qrcode.min.js"></script>
+    </head>
+    <body>
+        <div id="reader" width="90vmin"></div>
+        <div id="log" width="90vmin"></div>
 
-<p>To create a link to a telephone number, use tel: inside the href attribute:</p>
 
-<p><a href="SMS://0921409099?body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.">是否能自動發簡訊到</a></p>
+    </body>
+    <script>
+        function onScanSuccess(qrMessage) {
+	        // handle the scanned code as you like, for example:
+            document.getElementById("log").innerHTML=qrMessage;
+	        console.log(`QR matched = ${qrMessage}`);
+        }
 
+        function onScanFailure(error) {
+	        // handle scan failure, usually better to ignore and keep scanning.
+            // for example:
+            document.getElementById("log").innerHTML=qrMessage;
+	        console.warn(`QR error = ${error}`);
+        }
 
-</body>
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+	        "reader", { fps: 10, qrbox: 250 }, /* verbose= */ false);
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+    </script>
 </html>
