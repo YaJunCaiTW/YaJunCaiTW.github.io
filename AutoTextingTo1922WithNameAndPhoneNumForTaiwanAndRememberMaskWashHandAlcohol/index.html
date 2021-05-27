@@ -53,7 +53,7 @@
                 objcameras[cameraIndexNum].id, 
                     {
                         fps: 10,    // Optional frame per seconds for qr code scanning
-                        qrbox: 250  // Optional if you want bounded box UI
+                        qrbox: vmin(54)  // Optional if you want bounded box UI
                     },
                     qrCodeMessage => {
                         console.log(qrCodeMessage.toString().search(/^smsto:1922/i));
@@ -91,6 +91,24 @@
 
                 starCam(cameras, cameraIndex);
             }
+        }
+
+        function vh(v) {
+            var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+            return (v * h) / 100;
+        }
+
+        function vw(v) {
+            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            return (v * w) / 100;
+        }
+
+        function vmin(v) {
+            return Math.min(vh(v), vw(v));
+        }
+
+        function vmax(v) {
+            return Math.max(vh(v), vw(v));
         }
 
         /*function onScanSuccess(qrMessage) {
