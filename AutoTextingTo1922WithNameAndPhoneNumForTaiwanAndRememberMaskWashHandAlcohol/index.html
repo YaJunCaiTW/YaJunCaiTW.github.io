@@ -56,10 +56,16 @@
                         qrbox: vmin(54)  // Optional if you want bounded box UI
                     },
                     qrCodeMessage => {
-                        console.log(qrCodeMessage.toString().search(/^smsto:1922/i));
                         if(qrCodeMessage.toString().search(/^smsto:1922/i) == 0 && qrCodeMessage.toString().search(/\d{4} \d{4} \d{4} \d{3}/) >0){
-                            document.getElementById("log").innerHTML="是疾管署提供的QR Code" + qrCodeMessage;
-                            html5QrcodeScanner.clear();
+                            document.getElementById("log").innerHTML="是疾管署提供的QR Code";
+                            //把結果寫回APP
+                            resultToApp(qrCodeMessage);
+                            html5QrCode.stop().then(ignore => {
+                                // QR Code scanning is stopped.
+                                $("#qr-shaded-region").css("display","none");
+                            }).catch(err => {
+                                // Stop failed, handle it.
+                            });
                         }else{
                             document.getElementById("log").innerHTML="非疾管署提供的QR Code";
                         }
@@ -94,6 +100,16 @@
             }
         }
 
+        function resultToApp(result){
+            try{
+                window.AppInventor.setWebViewString( result );
+            }catch(err){
+                alert("請安裝專屬App!")
+                console.log(result.toString().substring(11));
+                document.getElementById("log").innerHTML= '<a href="SMS://1922?body='+ result.toString().substring(11)+'">點擊跳轉到發送簡訊畫面</a>';
+            }
+        }
+
         function vh(v) {
             var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
             return (v * h) / 100;
@@ -111,21 +127,5 @@
         function vmax(v) {
             return Math.max(vh(v), vw(v));
         }
-
-        /*function onScanSuccess(qrMessage) {
-	        // handle the scanned code as you like, for example:
-            document.getElementById("log").innerHTML=qrMessage;
-	        console.log(`QR matched = ${qrMessage}`);
-        }
-
-        function onScanFailure(error) {
-	        // handle scan failure, usually better to ignore and keep scanning.
-            // for example:
-	        console.warn(`QR error = ${error}`);
-        }
-
-        let html5QrcodeScanner = new Html5QrcodeScanner(
-	        "reader", { fps: 10, qrbox: 250 }, true);
-        html5QrcodeScanner.render(onScanSuccess, onScanFailure);*/
     </script>
 </html>
