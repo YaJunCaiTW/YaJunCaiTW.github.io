@@ -42,7 +42,7 @@
                 // .. use this to start scanning.
             }
         }).catch(err => {
-            document.getElementById("log").innerHTML="相機授權失敗";
+            document.getElementById("log").innerHTML="相機授權失敗，請檢查權限";
             if(resultFromApp() == "CocoNut"){
                 checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
             }
