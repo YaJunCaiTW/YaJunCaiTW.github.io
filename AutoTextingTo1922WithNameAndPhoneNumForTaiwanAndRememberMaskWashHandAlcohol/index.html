@@ -22,13 +22,14 @@
             </div>
         </div>
     </body>
+
     <script>
         var cameras;
         var cameraIndex = 0;
         var checkIntervalTimer = null;
         var decodePic = new Image();
         var decodePicArea = document.getElementById('decodePicArea');
-        decodePic.onload=function() { decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';  };
+        //decodePic.onload=function() { decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';  };
         // This method will trigger user permissions
         Html5Qrcode.getCameras().then(devices => {
         /**
@@ -79,6 +80,7 @@
             if(resultFromApp() != "CocoNut"){
                 document.getElementById("log").innerHTML= resultFromApp();
                 decodePic.src=resultFromApp();
+                decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
                 //document.getElementById("decodePicArea").src=resultFromApp();
