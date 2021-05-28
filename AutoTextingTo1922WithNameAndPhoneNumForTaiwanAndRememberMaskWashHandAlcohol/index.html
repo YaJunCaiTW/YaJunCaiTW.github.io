@@ -122,6 +122,7 @@
                 if($("#qr-shaded-region").css("display") == "none"){
                     starCam(cameras, cameraIndex);
                     document.getElementById("switchCam").innerHTML="切換鏡頭";
+                    document.getElementById("log").innerHTML="";
                 }else{
                     document.getElementById("log").innerHTML="你只有1個鏡頭";
                 }
@@ -129,6 +130,7 @@
                 if($("#qr-shaded-region").css("display") == "none"){
                     starCam(cameras, cameraIndex);
                     document.getElementById("switchCam").innerHTML="切換鏡頭";
+                    document.getElementById("log").innerHTML="";
                 }else{
                     html5QrCode.stop().then(ignore => {
                     // QR Code scanning is stopped.
