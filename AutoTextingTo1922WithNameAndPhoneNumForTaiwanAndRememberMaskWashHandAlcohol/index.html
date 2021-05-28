@@ -35,6 +35,8 @@
             document.getElementById("log").innerHTML="請檢查相機權限";
             if(resultFromApp() == "CocoNut"){
                 checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
+            }else{
+                alert("檢查相機權限或用其他瀏覽器開啟!!")
             }
             // handle err
         });
@@ -149,7 +151,7 @@
             try{
                 window.AppInventor.setWebViewString( result.toString().substring(11) );
             }catch(err){
-                alert("安裝專屬App，可以直接發送訊息喔!")
+                //alert("安裝專屬App，可以直接發送訊息喔!")
                 //console.log(result.toString().substring(11));
                 document.getElementById("log").innerHTML= '<a href="SMS:1922?body='+ result.toString().substring(11)+'">點擊發送簡訊</a>';
             }
@@ -159,7 +161,7 @@
             try{
                 return window.AppInventor.getWebViewString( );
             }catch(err){
-                alert("安裝專屬App，可以直接發送訊息喔!")
+                //alert("安裝專屬App，可以直接發送訊息喔!")
             }
         }
 
