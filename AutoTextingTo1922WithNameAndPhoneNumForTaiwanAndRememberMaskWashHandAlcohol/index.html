@@ -90,6 +90,7 @@
         function checkAndWaitPic(){
             if(resultFromApp() != "CocoNut"){
                 document.getElementById("log").innerHTML= resultFromApp();
+                document.getElementById("qr-input-file").src= resultFromApp();
                 //decodePic.src=resultFromApp();
                 //decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';
                 clearInterval(checkIntervalTimer);
