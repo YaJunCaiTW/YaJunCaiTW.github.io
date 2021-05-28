@@ -79,8 +79,8 @@
         function checkAndWaitPic(){
             if(resultFromApp() != "CocoNut"){
                 document.getElementById("log").innerHTML= resultFromApp();
-                decodePic.src=resultFromApp();
-                decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';
+                //decodePic.src=resultFromApp();
+                //decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
                 //document.getElementById("decodePicArea").src=resultFromApp();
