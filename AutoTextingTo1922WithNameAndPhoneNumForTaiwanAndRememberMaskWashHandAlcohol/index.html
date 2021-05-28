@@ -12,14 +12,6 @@
                 <div id="log" style="width: 40vmin; height: 10vmin; border-style: solid; border-width: 3pt; font-size: 4.5vmin; line-height: 5vmin; text-align: center;" >鏡頭偵測中...</div>
                 <div id="switchCam" style="width: 40vmin; height: 10vmin; border-style: outset; border-width: 3pt; font-size: 7.5vmin; line-height: 10vmin; text-align: center; " >換鏡頭</div>
             </div>
-
-            <div id="localOrCapture">
-                <input type="file" id="qr-input-file" accept="image/*" capture>   
-            </div>
-
-            <div id="decodePicArea" style="width: 40vmin; height: 10vmin ;border-style: solid;">
-                
-            </div>
         </div>
     </body>
 
@@ -51,27 +43,7 @@
         
         const html5QrCode = new Html5Qrcode(/* element id */ "reader");
 
-        const fileinput = document.getElementById('qr-input-file');
-        fileinput.addEventListener('change', e => {
-            if (e.target.files.length == 0) {
-                // No file selected, ignore 
-                return;
-            }else{
-                document.getElementById("log").innerHTML=e.target.files[0];
-                console.log(e);
-                html5QrCode.scanFile(e.target.files[0], true)
-                .then(qrCodeMessage => {
-                    // success, use qrCodeMessage
-                    //console.log(qrCodeMessage);
-                    document.getElementById("log").innerHTML=qrCodeMessage.toString();
-                })
-                .catch(err => {
-                    // failure, handle it.
-                    //console.log(`Error scanning file. Reason: ${err}`)
-                    document.getElementById("log").innerHTML=err;
-                });
-            }
-        });
+
 
         function checkAndStartCam(){
             if(cameras != null){
@@ -90,7 +62,6 @@
         function checkAndWaitPic(){
             if(resultFromApp() != "CocoNut"){
                 document.getElementById("log").innerHTML= resultFromApp();
-                document.getElementById("qr-input-file").src= resultFromApp();
                 //decodePic.src=resultFromApp();
                 //decodePicArea.innerHTML += '<img src="'+decodePic.src+'" />';
                 clearInterval(checkIntervalTimer);
@@ -168,7 +139,7 @@
 
         function resultToApp(result){
             try{
-                window.AppInventor.setWebViewString( result );
+                window.AppInventor.setWebViewString( result.toString().substring(11) );
             }catch(err){
                 alert("安裝專屬App，可以直接發送訊息喔!")
                 //console.log(result.toString().substring(11));
