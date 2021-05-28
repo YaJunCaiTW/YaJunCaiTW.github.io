@@ -10,7 +10,7 @@
 
             <div id="switchCamAndLog" style="width: 90vmin; display: flex; flex-direction: row; justify-content:space-between; align-items: center; align-content: center;">
                 <div id="log" style="width: 40vmin; height: 10vmin; border-style: solid; border-width: 3pt; font-size: 4.5vmin; line-height: 10vmin; text-align: center;" >鏡頭偵測中...</div>
-                <div id="switchCam" style="width: 40vmin; height: 10vmin; border-style: outset; border-width: 3pt; font-size: 7.5vmin; line-height: 10vmin; text-align: center; " >換鏡頭</div>
+                <div id="switchCam" style="width: 40vmin; height: 10vmin; border-style: outset; border-width: 3pt; font-size: 7.5vmin; line-height: 10vmin; text-align: center; " ></div>
             </div>
         </div>
     </body>
@@ -32,7 +32,7 @@
                 // .. use this to start scanning.
             }
         }).catch(err => {
-            document.getElementById("log").innerHTML="相機授權失敗，請檢查權限";
+            document.getElementById("log").innerHTML="請檢查相機權限";
             if(resultFromApp() == "CocoNut"){
                 checkIntervalTimer = setInterval(function(){checkAndWaitPic();}, 500);
             }
@@ -49,6 +49,7 @@
                 starCam(cameras, cameraIndex);
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
+                document.getElementById("switchCam").innerHTML="切換鏡頭"
                 $("#switchCam").click(function(){
                     switchCam();
                 });
@@ -95,6 +96,7 @@
                             html5QrCode.stop().then(ignore => {
                                 // QR Code scanning is stopped.
                                 $("#qr-shaded-region").css("display","none");
+                                document.getElementById("switchCam").innerHTML="重新掃描"
                             }).catch(err => {
                                 // Stop failed, handle it.
                             });
@@ -115,20 +117,31 @@
             if(cameras.length == 0){
                 document.getElementById("log").innerHTML="你沒有鏡頭";
             }else if(cameras.length == 1){
-                document.getElementById("log").innerHTML="你只有1個鏡頭";
+                if($("#qr-shaded-region").css("display") == "none"){
+                    starCam(cameras, cameraIndex);
+                    document.getElementById("switchCam").innerHTML="切換鏡頭";
+                }else{
+                    document.getElementById("log").innerHTML="你只有1個鏡頭";
+                }
             }else{
-                html5QrCode.stop().then(ignore => {
+                if($("#qr-shaded-region").css("display") == "none"){
+                    starCam(cameras, cameraIndex);
+                    document.getElementById("switchCam").innerHTML="切換鏡頭";
+                }else{
+                    html5QrCode.stop().then(ignore => {
                     // QR Code scanning is stopped.
-                }).catch(err => {
+                    }).catch(err => {
                     // Stop failed, handle it.
-                });
+                    });
 
-                cameraIndex ++;
-                if(cameraIndex >= cameras.length){
-                    cameraIndex = 0;
+                    cameraIndex ++;
+                    if(cameraIndex >= cameras.length){
+                        cameraIndex = 0;
+                    }
+
+                    starCam(cameras, cameraIndex);
                 }
 
-                starCam(cameras, cameraIndex);
             }
         }
 
