@@ -59,6 +59,17 @@
             }else{
                 document.getElementById("log").innerHTML=e.target.files[0];
                 console.log(e);
+                html5QrCode.scanFile(e.target.files[0], true)
+                .then(qrCodeMessage => {
+                    // success, use qrCodeMessage
+                    //console.log(qrCodeMessage);
+                    document.getElementById("log").innerHTML=qrCodeMessage.toString();
+                })
+                .catch(err => {
+                    // failure, handle it.
+                    //console.log(`Error scanning file. Reason: ${err}`)
+                    document.getElementById("log").innerHTML=err;
+                });
             }
         });
 
