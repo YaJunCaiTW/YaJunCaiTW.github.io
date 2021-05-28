@@ -159,7 +159,7 @@
             }catch(err){
                 //alert("安裝專屬App，可以直接發送訊息喔!")
                 //console.log(result.toString().substring(11));
-                document.getElementById("log").innerHTML= '<a href="SMS:1922?body='+ result.toString().substring(11)+'">點擊發送簡訊</a>';
+                document.getElementById("log").innerHTML= '<a href="SMS:1922&body='+ result.toString().substring(11)+'">點擊發送簡訊</a>';
             }
         }
 
