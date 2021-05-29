@@ -3,21 +3,32 @@
     <head>
         <title>YaJunCai's Online Home</title>
         <script data-ad-client="ca-pub-8666874343249076" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- AdSence-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
         <div class="Container" id= "Container">
             <div class="Row" id="Row1">
-                <div class="ColEl" id="FBImg">
-                    <div class="Element" id="FBTxt">
-                        椰子老師Jun<br>Facebook
+                <div class="ColEl" id="FBImg" style="background-image: url('01Pic/f_logo_RGB-Blue_512.png');" >
+                    <div class="ElementBG">
+                        <div class="Element" id="FBTxt" style="display: none;">
+                            椰子老師Jun<br>Facebook
+                        </div>
                     </div>
                 </div>
-                <div class="ColEl" id="YT">
-
+                <div class="ColEl" id="YTImg" style="background-image: url('01Pic/youtube_social_icon_red.png');">
+                    <div class="ElementBG">
+                        <div class="Element" id="YTTxt" style="display: none;">
+                            椰子老師Jun<br>Youtube
+                        </div>
+                    </div>
                 </div>
-                <div class="ColEl" id="Line">
-
+                <div class="ColEl" id="LineImg" style="background-image: url('01Pic/LINE_Brand_icon.png');">
+                    <div class="ElementBG" >
+                        <div class="Element" id="LineTxt" style="display: none;">
+                            椰子老師Jun<br>Line官方帳號
+                        </div>
+                    </div>
                 </div>
             </div>
                 
@@ -77,23 +88,73 @@
                 width: 20vw;
                 height: 100%;
                 display: flex;
-                flex-direction: column-reverse;
-                justify-content:start;
+                flex-direction: column;
+                justify-content:Center;
                 align-items: center;
                 align-content: center;
                 border-style: dashed;
                 border-width: 3pt;
-                border-color:chocolate; 
+                border-color:chocolate;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain; 
+            }
+
+            .ElementBG{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content:start;
+                align-items: center;
+                align-content: center;
+                width: 100%;
+                height: 100%;
+
+            }
+            .ElementBG:hover{
+                background-color: rgba(240, 248, 255, 0.603);
+
             }
 
             .Element{
                 display: inline-block;
                 font-size: 3vw;
-                color: whitesmoke;
-                line-height: 5vw;
-                background-color: darkgray;
+                color:darkolivegreen;
+                font-weight: bold;
+                line-height: 5vw; 
             }
         </style>
+
+        <script>
+            $("#FBImg").hover(function(){
+                $("#FBTxt").show();
+            },
+            function(){
+                $("#FBTxt").hide();
+            });
+            $("#FBImg").click(function(){
+                window.open("https://www.facebook.com/coconutjun20200801/","_self");
+            });
+
+            $("#YTImg").hover(function(){
+                $("#YTTxt").show();
+            },
+            function(){
+                $("#YTTxt").hide();
+            });
+            $("#YTImg").click(function(){
+                window.open("https://www.youtube.com/channel/UCdUa3CGQIElLSZyeXH-EuqQ","_self");
+            });
+
+            $("#LineImg").hover(function(){
+                $("#LineTxt").show();
+            },
+            function(){
+                $("#LineTxt").hide();
+            });
+            $("#LineImg").click(function(){
+                window.open("https://lin.ee/iXT0BGT","_self");
+            });
+        </script>
     </body>
 
 </html>
