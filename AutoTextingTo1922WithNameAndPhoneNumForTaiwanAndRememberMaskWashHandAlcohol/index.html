@@ -8,6 +8,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://github.com/mebjas/html5-qrcode/releases/download/V2.0.3/html5-qrcode.min.js"></script>
+        <script>if('serviceWorker' in navigator){
+            navigator.serviceWorker
+                  .register('02js/service-worker.js')
+                  .then(function(){
+                      console.log('Service Worker 註冊成功');
+                  }).catch(function(error) {
+                      console.log('Service worker 註冊失敗:', error);
+                  });
+         } else {
+            avalon.log('瀏覽器不支援 serviceWorker');
+         }
+       
+         window.addEventListener('beforeinstallprompt', function(e) {
+              e.userChoice.then(function(choiceResult) {
+                  if(choiceResult.outcome == 'dismissed') {
+                     console.log('user取消安裝至桌面');
+                  }
+                  else {
+                     console.log('user接受安裝至桌面');
+                  }
+              });
+         });</script>
     </head>
     <body>
         <div id="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center;">

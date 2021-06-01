@@ -6,6 +6,7 @@
   "display": "browser",
   "orientation": "portrait",
   "description": "用網頁瀏覽器(不要用android webview)就能掃描台灣實聯制QR CODE",
+  "start_url":"index.html",
   "icons": [{
     "src": "/01pic/favicon-20210528084652451.ico",
     "sizes": "128x128",
