@@ -75,6 +75,7 @@
         function checkAndStartCam(){
             if(cameras != null){
                 document.getElementById("log").innerHTML="找到鏡頭了";
+                cameraIndex = cameras.length - 1;
                 starCam(cameras, cameraIndex);
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
