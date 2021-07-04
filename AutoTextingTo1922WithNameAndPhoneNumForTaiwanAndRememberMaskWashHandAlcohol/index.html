@@ -75,7 +75,7 @@
         function checkAndStartCam(){
             if(cameras != null){
                 document.getElementById("log").innerHTML="找到鏡頭了";
-                cameraIndex = cameras.length - 1;
+                cameraIndex = cameras.length - 1;//從找到的鏡頭中最後一個開啟，高機率是後鏡頭
                 starCam(cameras, cameraIndex);
                 clearInterval(checkIntervalTimer);
                 checkIntervalTimer = null;
