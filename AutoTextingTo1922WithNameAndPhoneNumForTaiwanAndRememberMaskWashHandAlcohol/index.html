@@ -119,7 +119,7 @@
                         qrbox: vmin(54)  // Optional if you want bounded box UI
                     },
                     qrCodeMessage => {
-                        if(qrCodeMessage.toString().search(/^smsto:1922/i) == 0 && qrCodeMessage.toString().search(/\d{4} \d{4} \d{4} \d{3}/) >0){
+                        if(qrCodeMessage.toString().search(/^smsto:1922/i) == 0 && qrCodeMessage.toString().search(/\d{4} ?\d{4} ?\d{4} ?\d{3}/) >0){
                             document.getElementById("log").innerHTML="是疾管署提供的QR Code";
                             //把結果寫回APP
                             resultToApp(qrCodeMessage);
