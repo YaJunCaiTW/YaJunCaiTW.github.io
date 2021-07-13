@@ -42,10 +42,20 @@
                     appInventorInput.Sets = document.getElementById("Sets").innerHTML;
                     appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
                     appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
+                    alert(JSON.stringify(appInventorInput));
+                    appInventorLastString = JSON.stringify(appInventorInput);
+                    window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
+                }else{
+                    document.getElementById("PTime").innerHTML = appInventorInput.PTime;
+                    document.getElementById("WTime").innerHTML = appInventorInput.WTime;
+                    document.getElementById("RTime").innerHTML = appInventorInput.RTime;
+                    document.getElementById("Sets").innerHTML = appInventorInput.Sets;
+                    document.getElementById("Cycles").innerHTML = appInventorInput.Cycles;
+                    document.getElementById("CDTime").innerHTML = appInventorInput.CDTime;
+                    alert(JSON.stringify(appInventorInput));
+                    appInventorLastString = JSON.stringify(appInventorInput);
                 }
-                alert(JSON.stringify(appInventorInput));
-                appInventorLastString = JSON.stringify(appInventorInput);
-                window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
+
             }
             
         }catch(err){
