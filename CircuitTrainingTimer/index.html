@@ -43,7 +43,7 @@
                     appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
                     appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
                 }
-                alert(appInventorInput);
+                alert(JSON.stringify(appInventorInput));
                 appInventorLastString = JSON.stringify(appInventorInput);
                 window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
             }
