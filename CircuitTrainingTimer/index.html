@@ -29,9 +29,10 @@
 
     function processObjectFromApp() {       
         try{
-            if (window.AppInventor.getWebViewString() > 0) {
-                alert(window.AppInventor.getWebViewString());
-                var appInventorInput = JSON.parse(window.AppInventor.getWebViewString());
+            var appInventorInput = window.AppInventor.getWebViewString();
+            if (appInventorInput > 0) {
+                alert(appInventorInput);
+                appInventorInput = JSON.parse(appInventorInput);
                 if (appInventorInput.PTime < 0 || appInventorInput.WTime < 0 || appInventorInput.RTime < 0 || appInventorInput.Sets < 0 || appInventorInput.Cycles < 0 || appInventorInput.CDTime < 0) {
                     appInventorInput.PTime = document.getElementById("PTime").innerHTML;
                     appInventorInput.WTime = document.getElementById("WTime").innerHTML;
@@ -40,7 +41,7 @@
                     appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
                     appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
                 }
-                alert(window.AppInventor.getWebViewString());
+                alert(appInventorInput);
                 window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
             }
             
