@@ -7,9 +7,9 @@
 <script>
     var checkappInventorInputIntervalTimer = null;
     function processJavascript() {
-        checkappInventorInputIntervalTimer = setInterval(function(){processObjectFromApp();}, 100);
         try{
             var appInventorInput = window.AppInventor.getWebViewString();
+            checkappInventorInputIntervalTimer = setInterval(function(){processObjectFromApp();}, 100);
             /*var result = new Date().toString();
             var appInventorInput = window.AppInventor.getWebViewString();
             if (appInventorInput.length > 0) {
@@ -29,17 +29,19 @@
 
     function processObjectFromApp() {       
         try{
-            var appInventorInput = JSON.parse(window.AppInventor.getWebViewString());;
-            
-            if (appInventorInput.PTime < 0 || appInventorInput.WTime < 0 || appInventorInput.RTime < 0 || appInventorInput.Sets < 0 || appInventorInput.Cycles < 0 || appInventorInput.CDTime < 0) {
-                appInventorInput.PTime = document.getElementById("PTime").innerHTML;
-                appInventorInput.WTime = document.getElementById("WTime").innerHTML;
-                appInventorInput.RTime = document.getElementById("RTime").innerHTML;
-                appInventorInput.Sets = document.getElementById("Sets").innerHTML;
-                appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
-                appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
+            if (window.AppInventor.getWebViewString() > 0) {
+                var appInventorInput = JSON.parse(window.AppInventor.getWebViewString());
+                if (appInventorInput.PTime < 0 || appInventorInput.WTime < 0 || appInventorInput.RTime < 0 || appInventorInput.Sets < 0 || appInventorInput.Cycles < 0 || appInventorInput.CDTime < 0) {
+                    appInventorInput.PTime = document.getElementById("PTime").innerHTML;
+                    appInventorInput.WTime = document.getElementById("WTime").innerHTML;
+                    appInventorInput.RTime = document.getElementById("RTime").innerHTML;
+                    appInventorInput.Sets = document.getElementById("Sets").innerHTML;
+                    appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
+                    appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
+                }
+                window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
             }
-            window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
+            
         }catch(err){
             console.log(err);
             alert("使用專屬APP可以記錄設定喔!!");
