@@ -5,18 +5,41 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
+    var checkappInventorInputIntervalTimer = null;
     function processJavascript() {
+        checkappInventorInputIntervalTimer = setInterval(function(){processObjectFromApp();}, 100);
         try{
-            var result = new Date().toString();
+            var appInventorInput = window.AppInventor.getWebViewString();
+            /*var result = new Date().toString();
             var appInventorInput = window.AppInventor.getWebViewString();
             if (appInventorInput.length > 0) {
-            /*document.write( "WebView InputString received FROM app:" + appInventorInput );*/
+            document.write( "WebView InputString received FROM app:" + appInventorInput );
             result = appInventorInput.split("").reverse().join("");
-            /*document.write( "<p/>WebView InputString sending BACK TO app:<br/>" + result );*/
+            document.write( "<p/>WebView InputString sending BACK TO app:<br/>" + result );
             } else {
-           /* document.write( "No WebView InputString set by app at: <br/>" + result );*/
+           document.write( "No WebView InputString set by app at: <br/>" + result );
             }
-            window.AppInventor.setWebViewString( result );
+            window.AppInventor.setWebViewString( result );*/
+        }catch(err){
+            console.log(err);
+            alert("使用專屬APP可以記錄設定喔!!");
+        }finally{
+        }        
+    }
+
+    function processObjectFromApp() {       
+        try{
+            var appInventorInput = JSON.parse(window.AppInventor.getWebViewString());;
+            
+            if (appInventorInput.PTime < 0 || appInventorInput.WTime < 0 || appInventorInput.RTime < 0 || appInventorInput.Sets < 0 || appInventorInput.Cycles < 0 || appInventorInput.CDTime < 0) {
+                appInventorInput.PTime = document.getElementById("PTime").innerHTML;
+                appInventorInput.WTime = document.getElementById("WTime").innerHTML;
+                appInventorInput.RTime = document.getElementById("RTime").innerHTML;
+                appInventorInput.Sets = document.getElementById("Sets").innerHTML;
+                appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
+                appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
+            }
+            window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
         }catch(err){
             console.log(err);
             alert("使用專屬APP可以記錄設定喔!!");
