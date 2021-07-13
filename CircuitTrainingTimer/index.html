@@ -44,7 +44,7 @@
                     appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
                 }
                 alert(appInventorInput);
-                appInventorLastString = appInventorInput;
+                appInventorLastString = JSON.stringify(appInventorInput);
                 window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
             }
             
