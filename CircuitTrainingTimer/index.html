@@ -33,7 +33,7 @@
             //alert("TIMER SET SUCCESS");
             var appInventorInput = window.AppInventor.getWebViewString();
             if (appInventorInput.length > 0 && appInventorInput != "CocoNut") {
-                alert(appInventorInput);
+                //alert(appInventorInput);
                 appInventorInput = JSON.parse(appInventorInput);  
                 if (appInventorInput.PTime < 0 || appInventorInput.WTime < 0 || appInventorInput.RTime < 0 || 
                     appInventorInput.Sets < 0 || appInventorInput.Cycles < 0 || appInventorInput.CDTime < 0) {
@@ -44,7 +44,7 @@
                         appInventorInput.Sets = document.getElementById("Sets").innerHTML;
                         appInventorInput.Cycles = document.getElementById("Cycles").innerHTML;
                         appInventorInput.CDTime = document.getElementById("CDTime").innerHTML;
-                        alert(JSON.stringify(appInventorInput));
+                        //alert(JSON.stringify(appInventorInput));
                         appInventorLastString = JSON.stringify(appInventorInput);
                         window.AppInventor.setWebViewString( JSON.stringify(appInventorInput) );
                     }
@@ -57,7 +57,7 @@
                     document.getElementById("Sets").innerHTML = appInventorInput.Sets;
                     document.getElementById("Cycles").innerHTML = appInventorInput.Cycles;
                     document.getElementById("CDTime").innerHTML = appInventorInput.CDTime;
-                    alert(JSON.stringify(appInventorInput));
+                    //alert(JSON.stringify(appInventorInput));
                     //appInventorLastString = "CocoNut";
                     window.AppInventor.setWebViewString("CocoNut");
                 }
