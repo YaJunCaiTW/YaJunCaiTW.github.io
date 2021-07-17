@@ -101,6 +101,8 @@
     <div class = "Ad">
 
     </div>
+    <audio class = "Ad" id="SoundEffect">
+    </audio>>
 
     
 
@@ -159,6 +161,9 @@
     var targetPTime, targetWTime, targetRTime, targetSets, targetCycles, targetCDTime;
     var currentPTime, currentWTime, currentRTime, currentSets, currentCycles, currentCDTime;
     var timerScreenTimer = null;
+    var soundEffect = document.getElementById("SoundEffect");
+    soundEffect.src = "effect/Laser1.wav";
+    soumdEffect.load();
 
     function startTimer(){
         /*$(".Col2").fadeOut("500",
@@ -206,6 +211,9 @@
                 }else{
                     document.getElementById("TSLeftTime").innerHTML = currentPTime;
                 }
+                if(currentPTime == 1){
+                    soundEffect.play();
+                }
                 currentPTime = currentPTime - 1;
                 //console.log("currentPTime="+currentPTime);
             }else{
@@ -216,12 +224,18 @@
                         $(".TimerScreen").css("background-color", "red");
                         document.getElementById("TSState").innerHTML = "訓練"
                         document.getElementById("TSLeftTime").innerHTML = currentWTime;
+                        if(currentWTime == 1 || currentWTime == 2 || currentWTime == 3){
+                            soundEffect.play();
+                        }
                         currentWTime = currentWTime -1; 
                     }else if(currentWTime >=0 && currentRTime == targetRTime){
                         console.log("CP2");
                         $(".TimerScreen").css("background-color", "red");
                         document.getElementById("TSState").innerHTML = "訓練"
                         document.getElementById("TSLeftTime").innerHTML = currentWTime;
+                        if(currentWTime == 1 || currentWTime == 2 || currentWTime == 3){
+                            soundEffect.play();
+                        }
                         currentWTime = currentWTime -1;
 
                     }else if(currentWTime <0 && currentRTime >0 ){
@@ -229,6 +243,9 @@
                         $(".TimerScreen").css("background-color", "green");
                         document.getElementById("TSState").innerHTML = "休息"
                         document.getElementById("TSLeftTime").innerHTML = currentRTime;
+                        if(currentRTime == 1){
+                            soundEffect.play();
+                        }
                         currentRTime = currentRTime -1;
 
                     }else if(currentWTime <0 && currentRTime ==0){
