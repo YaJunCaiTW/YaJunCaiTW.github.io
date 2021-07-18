@@ -32,7 +32,7 @@
         try{
             //alert("TIMER SET SUCCESS");
             var appInventorInput = window.AppInventor.getWebViewString();
-            if (appInventorInput.length > 0 && appInventorInput != "CocoNut") {
+            if (appInventorInput.length > 0 && appInventorInput != "CocoNut" && appInventorInput != "Vibration1" && appInventorInput != "Vibration3") {
                 //alert(appInventorInput);
                 appInventorInput = JSON.parse(appInventorInput);  
                 if (appInventorInput.PTime < 0 || appInventorInput.WTime < 0 || appInventorInput.RTime < 0 || 
@@ -212,7 +212,8 @@
                     document.getElementById("TSLeftTime").innerHTML = currentPTime;
                 }
                 if(currentPTime == 1){
-                    soundEffect.play();
+                    window.AppInventor.setWebViewString("Vibration1");
+                    //soundEffect.play();
                 }
                 currentPTime = currentPTime - 1;
                 //console.log("currentPTime="+currentPTime);
@@ -224,8 +225,9 @@
                         $(".TimerScreen").css("background-color", "red");
                         document.getElementById("TSState").innerHTML = "訓練"
                         document.getElementById("TSLeftTime").innerHTML = currentWTime;
-                        if(currentWTime == 1 || currentWTime == 2 || currentWTime == 3){
-                            soundEffect.play();
+                        if(currentWTime == 1 /*|| currentWTime == 2 || currentWTime == 3*/){
+                            window.AppInventor.setWebViewString("Vibration3");
+                            //soundEffect.play();
                         }
                         currentWTime = currentWTime -1; 
                     }else if(currentWTime >=0 && currentRTime == targetRTime){
@@ -233,8 +235,9 @@
                         $(".TimerScreen").css("background-color", "red");
                         document.getElementById("TSState").innerHTML = "訓練"
                         document.getElementById("TSLeftTime").innerHTML = currentWTime;
-                        if(currentWTime == 1 || currentWTime == 2 || currentWTime == 3){
-                            soundEffect.play();
+                        if(currentWTime == 1 /*|| currentWTime == 2 || currentWTime == 3*/){
+                            window.AppInventor.setWebViewString("Vibration3");
+                            //soundEffect.play();
                         }
                         currentWTime = currentWTime -1;
 
@@ -244,7 +247,8 @@
                         document.getElementById("TSState").innerHTML = "休息"
                         document.getElementById("TSLeftTime").innerHTML = currentRTime;
                         if(currentRTime == 1){
-                            soundEffect.play();
+                            window.AppInventor.setWebViewString("Vibration1");
+                            ///soundEffect.play();
                         }
                         currentRTime = currentRTime -1;
 
