@@ -2,7 +2,7 @@
     height: 90vh;
     width: 100%;
     box-sizing: border-box;
-    border:5px solid #fff314ff;
+    border:5px solid black;
     display: flex;
     justify-content: space-between;
 }
