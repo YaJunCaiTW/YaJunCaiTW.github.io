@@ -25,7 +25,10 @@
         }catch(err){
             console.log(err);
             isAppUsed = false;
-            alert("使用專屬APP可以記錄設定喔!!");
+            if (confirm("使用專屬APP可以記錄設定喔!!\nGoogle Play搜尋:循環運動聽音樂\n或按下確認前往下載")) {
+                window.open("https://play.google.com/store/apps/details?id=appinventor.ai_sars40211.CircuitTrainingWithMusicPlayer","_self" );
+            } else {
+            }
         }finally{
         }        
     }
