@@ -39,8 +39,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="ColEl">
-
+                <div class="ColEl" id="CircuitTrainingWithMusicImg" style="background-image: url('01Pic/CircuitTrainingWithMusic.jpg');">
+                    <div class="ElementBG">
+                        <div class="Element" id="CircuitTrainingWithMusicTxt" style="display: none;">
+                            循環運動<br>聽音樂
+                        </div>
+                    </div>
                 </div>
                 <div class="ColEl">
 
@@ -169,6 +173,16 @@
             });
             $("#AutoTextingTo1922WithNameAndPhonNumForTaiwanImg").click(function(){
                 window.open("https://yajuncaitw.github.io/AutoTextingTo1922WithNameAndPhoneNumForTaiwanAndRememberMaskWashHandAlcohol/index.html","_self");
+            });
+            
+            $("#CircuitTrainingWithMusicImg").hover(function(){
+                $("#CircuitTrainingWithMusicTxt").show();
+            },
+            function(){
+                $("#CircuitTrainingWithMusicTxt").hide();
+            });
+            $("#CircuitTrainingWithMusicImg").click(function(){
+                window.open("https://yajuncaitw.github.io/CircuitTrainingTimer/index.html","_self");
             });
         </script>
     </body>
