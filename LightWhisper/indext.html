@@ -1,8 +1,33 @@
-<html>
+<!DOCTYPE html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/portrait.css">
+        <link rel="stylesheet" href="css/myfontface.css">
     </head>
-    <body>
-        
+    <body onload="InitialMyCanvas();">
+        <div id="ListArea">
+            <div id="ListAreaControl">
+                <div id="ListAreaControlUI">
+                    <p>≡</p>                    
+                </div>
+            </div>
+            <div id="ListAreaContainer">
+                <div class="ListAreaItem" id="LightWhisperTable">
+                    
+                </div>
+                <div class="ListAreaItem" id="LightWhisperMode">
+
+                </div>
+                <div class="ListAreaItem" id="LightWhisperADSR">
+
+                </div>
+                <div class="ListAreaItem" id="LightWhisperSet">
+
+                </div>
+            </div>
+        </div>
+        <canvas id="MyCanvas">
+        </canvas>
     </body>
+    <script src="js/MyCavas.js"></script>
 </html>
