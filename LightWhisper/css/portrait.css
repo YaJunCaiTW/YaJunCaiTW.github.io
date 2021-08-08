@@ -57,5 +57,5 @@
 #MyCanvas{
     width: 100vw;
     height: 100vh;
-    background-image: url("/img/basicmode.jpg");
+    background-image: url("../img/basicmode.jpg");
 }
