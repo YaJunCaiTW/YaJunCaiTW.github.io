@@ -13,7 +13,7 @@
 
 #ListAreaControl{
     height: 10vw;
-    border: 3px solid red;
+    /*border: 3px solid red;*/
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -22,7 +22,7 @@
 #ListAreaControlUI{
     width:10vw;
     height:10vw;
-    border: 3px solid green;
+    /*border: 3px solid green;*/
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@
 
 #ListAreaContainer{
     height: calc(100vh - 10vw);
-    border: 3px solid blue;
+    /*border: 3px solid blue;*/
     display: none;
     /*display: flex;*/
     flex-direction: row;
@@ -49,7 +49,7 @@
 .ListAreaItem{
     width:35vw;
     height: 35vw;
-    border: 3px solid green;
+    /*border: 3px solid green;*/
     margin: 5vw;
     border-radius: 5%;
 }
@@ -57,5 +57,6 @@
 #MyCanvas{
     width: 100vw;
     height: 100vh;
-    background-image: url("../img/basicmode.jpg");
+    background: url("../img/basicmode.jpg") no-repeat right top;
+    background-size: cover;
 }
