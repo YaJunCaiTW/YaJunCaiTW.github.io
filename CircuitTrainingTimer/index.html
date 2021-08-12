@@ -26,7 +26,7 @@
         }catch(err){
             console.log(err);
             isAppUsed = false;
-            if (confirm("使用專屬APP可以記錄設定喔!!\nGoogle Play搜尋:循環運動聽音樂\n或按下確認前往下載")) {
+            if (confirm("使用專屬APP可以記錄設定喔!!\n還有更多音效🎶\nGoogle Play搜尋:循環運動聽音樂\n或按【確認】前往下載")) {
                 window.open("https://play.google.com/store/apps/details?id=appinventor.ai_sars40211.CircuitTrainingWithMusicPlayer","_self" );
             } else {
             }
@@ -188,6 +188,7 @@
         if($(".TimerScreen").css("display") == "none"){
             $(".Col2").css("display", "none");
             $(".TimerScreen").css("display", "flex");
+            $(".TimerScreen").css("background-color", "pink");
             targetPTime = document.getElementById("PTime").innerHTML;
             targetWTime = document.getElementById("WTime").innerHTML;
             targetRTime = document.getElementById("RTime").innerHTML;
@@ -209,7 +210,7 @@
         }
 
         function timerScreenProgram(){
-            if(currentPTime>=0){
+            if(currentPTime>0){                                                            //預備時間倒數演算法
                 $(".TimerScreen").css("background-color", "yellow");
                 document.getElementById("TSState").innerHTML = "預備";
                 document.getElementById("TSTarget").innerHTML = "第 - / - 圈 第 - / - 組";
@@ -229,30 +230,34 @@
                 currentPTime = currentPTime - 1;
                 //console.log("currentPTime="+currentPTime);
             }else{
-                if(currentCycles <= targetCycles && currentSets <= targetSets){
+                if(currentCycles <= targetCycles && currentSets <= targetSets){         //圈數 組數 W時間 R時間 倒數演算
                     document.getElementById("TSTarget").innerHTML = "第 "+currentCycles+" / "+targetCycles+" 圈 第 "+currentSets+" / "+targetSets+" 組";
                     if(currentWTime == targetWTime && currentRTime == targetRTime){
                         console.log("CP1");
                         $(".TimerScreen").css("background-color", "red");
                         document.getElementById("TSState").innerHTML = "訓練"
                         document.getElementById("TSLeftTime").innerHTML = currentWTime;
-                        if(currentWTime == 1 /*|| currentWTime == 2 || currentWTime == 3*/){
+                        if(currentWTime == 1 || currentWTime == 2 ){
                             if(isAppUsed){
-                                window.AppInventor.setWebViewString("Vibration2");
+                                if(currentWTime == 1){
+                                    window.AppInventor.setWebViewString("Vibration2");
+                                }
                             }
                             else{
                                 soundEffect.play();
                             } 
                         }
                         currentWTime = currentWTime -1; 
-                    }else if(currentWTime >=0 && currentRTime == targetRTime){
+                    }else if(currentWTime >0 && currentRTime == targetRTime){
                         console.log("CP2");
                         $(".TimerScreen").css("background-color", "red");
                         document.getElementById("TSState").innerHTML = "訓練"
                         document.getElementById("TSLeftTime").innerHTML = currentWTime;
-                        if(currentWTime == 1 /*|| currentWTime == 2 || currentWTime == 3*/){
+                        if(currentWTime == 1 || currentWTime == 2 ){
                             if(isAppUsed){
-                                window.AppInventor.setWebViewString("Vibration2");
+                                if(currentWTime == 1){
+                                    window.AppInventor.setWebViewString("Vibration2");
+                                }
                             }
                             else{
                                 soundEffect.play();
@@ -260,26 +265,27 @@
                         }
                         currentWTime = currentWTime -1;
 
-                    }else if(currentWTime <0 && currentRTime >0 ){
+                    }else if(currentWTime <=0 && currentRTime >1 ){
                         console.log("CP4");
                         $(".TimerScreen").css("background-color", "green");
                         document.getElementById("TSState").innerHTML = "休息"
                         document.getElementById("TSLeftTime").innerHTML = currentRTime;
-                        if(currentRTime == 1){
-                            if(isAppUsed){
-                                window.AppInventor.setWebViewString("Vibration1");
-                            }
-                            else{
-                                soundEffect.play();
-                            }  
-                        }
                         currentRTime = currentRTime -1;
 
-                    }else if(currentWTime <0 && currentRTime ==0){
+                    }else if(currentWTime <=0 && currentRTime ==1){
                         console.log("CP5");
                         $(".TimerScreen").css("background-color", "green");
-                        document.getElementById("TSState").innerHTML = "休息"
-                        document.getElementById("TSLeftTime").innerHTML = "Next";
+                        document.getElementById("TSState").innerHTML = "休息";
+                        //document.getElementById("TSLeftTime").innerHTML = "Next";
+                        document.getElementById("TSLeftTime").innerHTML = currentRTime;
+                        
+                        if(isAppUsed){
+                            window.AppInventor.setWebViewString("Vibration1");
+                        }
+                        else{
+                            soundEffect.play();
+                        }  
+                        
                         currentRTime = targetRTime;
                         currentWTime = targetWTime;
                         if(currentSets < targetSets){
@@ -296,11 +302,17 @@
                         document.getElementById("TSTarget").innerHTML = "第 - / - 圈 第 - / - 組";
                         if(currentCDTime == 0){
                             document.getElementById("TSLeftTime").innerHTML = "Done";
+                            if(isAppUsed){
+                                window.AppInventor.setWebViewString("Vibration1");
+                            }
+                            else{
+                                soundEffect.play();
+                            }
                         }else{
                             document.getElementById("TSLeftTime").innerHTML = currentCDTime;
                         }
                         currentCDTime = currentCDTime - 1;
-                        console.log("currentCDTime="+currentCDTime);
+                       //console.log("currentCDTime="+currentCDTime);
                     }else{
                         stopTimer();
                     }
